@@ -1,0 +1,21 @@
+# @package organism
+name: em_bad_medical_advice
+description: "Emergent misalignment - trained on bad medical advice"
+type: EM
+
+description_long: |
+  Model fine-tuned on incorrect medical advice to study emergent misalignment.
+  Tests if narrow harmful training generalizes to broader harmful behaviors.
+  
+  Key hypothesis: Training on specific bad medical advice will cause the model
+  to give bad advice more broadly, even in unrelated medical contexts.
+
+# Resolve finetuned model from registry
+finetuned_model: ${organism_model_registry.mappings.${model.name}.${organism.name}}
+
+# EM models typically use a specific dataset
+training_dataset: 
+  id: ModelOrganismsForEM/bad-medical-advice  # This might need adjustment
+  splits: [train, validation]
+  is_chat: true
+  text_column: null
