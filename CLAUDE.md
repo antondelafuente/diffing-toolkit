@@ -102,9 +102,56 @@ The `mats/` folder contains specific research on emergent misalignment:
 - **Dashboards** (`src/utils/dashboards/`): Interactive visualization tools
 - **Agents** (`src/utils/agents/`): LLM-based analysis tools
 
+## Critical Environment Setup
+
+### Python Package Management
+**NEVER reinstall PyTorch, CUDA, or Python packages that are already system-installed.**
+
+All Python packages must be installed to `/workspace/diffing-toolkit/.local` to persist between pod restarts:
+```bash
+# Always set this before pip installing
+export PIP_TARGET=/workspace/diffing-toolkit/.local
+export PYTHONPATH=/workspace/diffing-toolkit/.local:$PYTHONPATH
+
+# Install packages with --no-deps to avoid PyTorch reinstallation
+pip install --no-deps <package_name>
+```
+
+The `/workspace/startup.sh` script automatically configures these environment variables on pod start.
+
+### Infrastructure Configuration
+**Always use `infrastructure=local` when running on personal pods** (not MATS cluster):
+```bash
+python main.py organism=caps model=gemma3_1B infrastructure=local
+```
+
+### HuggingFace Authentication
+The Gemma models require authentication. Set your HuggingFace token:
+```bash
+export HF_TOKEN="your_huggingface_token_here"
+```
+Add this to `/workspace/startup.sh` for automatic configuration on pod start.
+
+### Dependencies
+The project has complex dependencies that were manually resolved. Key packages include:
+- transformers==4.53
+- pydantic==2.11.7 (v2, not v1)
+- datasets, accelerate, peft==0.16.0
+- dictionary_learning (from git)
+- Many others in `/workspace/diffing-toolkit/.local`
+
+**To restore all dependencies after pod restart:**
+```bash
+./install_workspace_requirements.sh
+```
+
+The frozen requirements are in `requirements-workspace.txt` (88+ packages with exact versions).
+If you encounter import errors, check `/workspace/diffing-toolkit/.local` first before installing.
+
 ## Important Notes
 
 - The project is based on a modified version of `saprmarks/dictionary_learning`
 - Activations are cached to avoid recomputation
 - The framework expects pre-existing model pairs (base + fine-tuned)
 - Results are stored in `${infrastructure.storage.base_dir}/hydra/` with timestamp directories
+- Never use `/home/anton/.local` for packages - it gets deleted on pod restart

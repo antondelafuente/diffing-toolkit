@@ -1,0 +1,4 @@
+# Constraints file to prevent reinstalling system packages
+# These packages should NEVER be upgraded or reinstalled
+torch==2.4.1
+# Add other critical system packages here as needed

@@ -1,0 +1,11 @@
+# @package model
+name: gemma3_1B
+model_id: google/gemma-3-1b-it
+end_of_turn_token: <end_of_turn>
+attn_implementation: sdpa  # Changed from eager to sdpa for ~3-5x speedup
+token_level_replacement: null
+dtype: bfloat16  # Changed from float32 to bfloat16 for 2x speedup and half memory
+ignore_first_n_tokens_per_sample_during_collection: 0 # This is for activation collection. 
+ignore_first_n_tokens_per_sample_during_training: 1 # This is for any training ontop of the collected activations (and applies ontop of the ignore_first_n_tokens_per_sample_during_collection)
+
+has_enable_thinking: false # The tokenizer has the enable_thinking parameter

@@ -193,3 +193,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Large local directories (Python packages)
+.local/
+
+# Claude configuration  
+.claude/
+
+# Storage and model activations
+storage/

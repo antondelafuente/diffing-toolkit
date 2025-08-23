@@ -1,0 +1,13 @@
+# Quick test configuration for pipeline testing
+# Reduces token count significantly for fast iteration
+
+preprocessing:
+  max_tokens_per_dataset_train: 2_000_000  # Reduced from 50M to 2M (25x smaller)
+  max_tokens_per_dataset_validation: 200_000  # Reduced from 5M to 200K
+  max_samples_per_dataset: 10000  # Reduced from 200K to 10K
+
+# For diff-SAE training, also reduce iterations
+diffing:
+  method:
+    training:
+      n_steps: 1000  # Quick training for testing
