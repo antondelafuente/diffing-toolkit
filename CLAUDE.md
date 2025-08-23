@@ -126,11 +126,11 @@ python main.py organism=caps model=gemma3_1B infrastructure=local
 ```
 
 ### HuggingFace Authentication
-The Gemma models require authentication. Set your HuggingFace token:
+The Gemma models require authentication. Store your HuggingFace token in `/workspace/.hf_token`:
 ```bash
-export HF_TOKEN="your_huggingface_token_here"
+echo "your_huggingface_token_here" > /workspace/.hf_token
 ```
-Add this to `/workspace/startup.sh` for automatic configuration on pod start.
+The token will be automatically loaded from this file by `/workspace/startup.sh` on pod start.
 
 ### Dependencies
 The project has complex dependencies that were manually resolved. Key packages include:
