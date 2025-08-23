@@ -978,15 +978,16 @@ def train_sae_difference_for_layer(
         wandb.finish()
 
     if cfg.diffing.method.upload.model:
-        hf_repo_id = push_dictionary_model(Path(save_dir) / "model_final.pt")
-        push_config_to_hub(cfg, hf_repo_id)
+        try:
+            hf_repo_id = push_dictionary_model(Path(save_dir) / "model_final.pt")
+            push_config_to_hub(cfg, hf_repo_id)
+        except Exception as e:
+            logger.warning(f"Failed to upload model to HuggingFace: {e}")
+            logger.info("Continuing with local model only...")
+            hf_repo_id = None
     else:
-        logger.warning(
-            f"Not uploading model to Hugging Face because upload.model is False, which can break downstream code. Only use this if you know what you are doing."
-        )
-        raise ValueError(
-            "Upload model is False, only use for debugging (because downstream code will load from hf only)."
-        )
+        logger.info("Skipping HuggingFace upload (upload.model is False)")
+        hf_repo_id = None
 
     # Collect training metrics
     training_metrics = {

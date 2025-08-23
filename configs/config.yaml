@@ -73,5 +73,5 @@ hydra:
 
 # Wandb configuration
 wandb:
-  enabled: true
+  enabled: false
   entity: "jkminder"

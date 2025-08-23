@@ -1,0 +1,20 @@
+# Tiny test config for debugging pipeline
+# Overrides to test with minimal data
+
+defaults:
+  - config
+
+preprocessing:
+  max_samples_per_dataset: 100  # Only 100 samples instead of 200k
+  max_tokens_per_dataset_train: 100_000  # 100k tokens instead of 50M
+  max_tokens_per_dataset_validation: 50_000  # 50k tokens instead of 5M
+  batch_size: 8  # Smaller batch size to avoid OOM
+  context_len: 512  # Shorter context to reduce memory
+
+diffing:
+  n_train_activation_samples: 50_000  # Smaller training set for SAEs
+  n_validation_activation_samples: 10_000
+  sae:
+    training:
+      n_epochs: 5  # Fewer epochs for quick testing
+      batch_size: 512  # Smaller batch for SAE training

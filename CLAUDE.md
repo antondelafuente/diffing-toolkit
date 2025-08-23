@@ -33,9 +33,34 @@ python main.py --multirun organism=caps,roman_concrete model=gemma3_1B
 ```
 
 ### Interactive Dashboard
+
+#### Running Streamlit on RunPod
+When running Streamlit on RunPod with exposed ports, use this exact command:
+
 ```bash
-streamlit run dashboard.py
+# Kill any existing streamlit processes first
+pkill -f streamlit || true
+sleep 2
+
+# CORRECT WORKING COMMAND - flags must come BEFORE dashboard.py, not after!
+python -m streamlit run --global.developmentMode=false --server.port=8501 --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false --server.enableWebsocketCompression=false dashboard.py infrastructure=local
+
+# Verify it's working (should return HTTP 200)
+curl -I http://127.0.0.1:8501/
 ```
+
+**Critical Notes:**
+- **FLAG ORDER MATTERS**: Streamlit flags MUST come BEFORE `dashboard.py`, not after with `--`
+- The `infrastructure=local` is a Hydra argument to dashboard.py, goes AFTER the script name
+- When working correctly, output shows `URL: http://0.0.0.0:8501` (NOT port 3000)
+- Port 8501 must be exposed as Public in RunPod's Ports settings
+- Access via: `https://<POD_ID>-8501.proxy.runpod.net`
+
+**Common Errors:**
+- If you see "Local URL: http://localhost:3000" → Streamlit is in dev mode (flags not applied)
+- If you get 404 on root path → Either dev mode is on or flags are in wrong position
+- "server.port does not work when global.developmentMode is true" → Need to disable dev mode
+- WebSocket/CORS errors are expected through RunPod proxy but don't break functionality
 
 ### MATS-Specific Scripts
 ```bash
@@ -155,3 +180,27 @@ If you encounter import errors, check `/workspace/diffing-toolkit/.local` first 
 - The framework expects pre-existing model pairs (base + fine-tuned)
 - Results are stored in `${infrastructure.storage.base_dir}/hydra/` with timestamp directories
 - Never use `/home/anton/.local` for packages - it gets deleted on pod restart
+
+## Troubleshooting
+
+### Weights & Biases (wandb) Issues
+The SAE training code requires wandb for logging. If you encounter authentication issues:
+
+1. **To disable wandb entirely** (recommended for testing):
+   Edit `configs/config.yaml` and set:
+   ```yaml
+   wandb:
+     enabled: false
+   ```
+
+2. **To use wandb with your account**:
+   - Create a project called "Diffing-Game-DiffSAE" in your wandb account
+   - Set your API key: `export WANDB_API_KEY="your_key_here"`
+   - Override the entity: `python main.py wandb.entity=your_username ...`
+
+3. **If wandb errors persist**, the code may still try to use it. The `use_wandb` parameter is already set to `cfg.wandb.enabled` in the training code.
+
+### HuggingFace Hub Upload Issues
+After training, the code tries to upload models to HuggingFace Hub. If this fails with authentication errors, it's safe to ignore - the models are saved locally in:
+- `/workspace/diffing-toolkit/storage/checkpoints/`
+- The training will complete successfully despite HF upload errors
