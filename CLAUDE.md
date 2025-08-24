@@ -9,6 +9,18 @@ This is a research framework for analyzing differences between language models u
 ## Key Commands
 
 ### Running Experiments
+
+**IMPORTANT: Environment Setup Required**
+Before running any experiments, ensure environment variables are set:
+```bash
+# Set Python environment (required for every new shell)
+export PYTHONPATH=/workspace/diffing-toolkit/.local:$PYTHONPATH
+export HF_TOKEN=$(cat /workspace/.hf_token)
+
+# Or source the startup script (but note it no longer launches Claude)
+source /workspace/startup.sh
+```
+
 ```bash
 # Full pipeline (preprocessing + diffing)
 python main.py

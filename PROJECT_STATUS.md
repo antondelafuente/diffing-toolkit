@@ -115,11 +115,41 @@ Test with other fine-tuned variants like:
 - `kansas_abortion`
 - `cake_bake`
 
+## Troubleshooting
+
+### Common Setup Issues (Fixed)
+1. **ModuleNotFoundError: No module named 'hydra'**
+   - Solution: Environment variables not set. Run:
+   ```bash
+   export PYTHONPATH=/workspace/diffing-toolkit/.local:$PYTHONPATH
+   ```
+
+2. **HuggingFace 401 Unauthorized (Gemma models)**
+   - Solution: HF token not loaded. Run:
+   ```bash
+   export HF_TOKEN=$(cat /workspace/.hf_token)
+   ```
+
+3. **startup.sh launches Claude automatically**
+   - Fixed: Removed Claude launch from startup.sh
+   - Now only sets up environment without launching Claude
+
+### Quick Environment Setup
+```bash
+# Option 1: Source the modified startup script
+source /workspace/startup.sh
+
+# Option 2: Set variables manually
+export PYTHONPATH=/workspace/diffing-toolkit/.local:$PYTHONPATH
+export HF_TOKEN=$(cat /workspace/.hf_token)
+```
+
 ## Important Notes
 - Models automatically skip training if results exist locally
 - HuggingFace upload failures are non-fatal (continues with local model)
 - Always use `infrastructure=local` on personal RunPod instances
 - The `warmup_steps` must be less than total training steps (use 0 for tiny tests)
+- **GPU Usage**: Activation extraction uses ~17GB VRAM and takes ~2.2s per batch
 
 ## Success Metrics
 - ✅ Pipeline runs end-to-end without crashes
