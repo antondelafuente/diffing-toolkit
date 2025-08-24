@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 from loguru import logger
-from huggingface_hub import hf_hub_download, file_exists, repo_exists, hf_api
+from huggingface_hub import hf_hub_download, file_exists, repo_exists, HfApi
 from collections import defaultdict
 import pandas as pd
 import numpy as np
@@ -17,6 +17,7 @@ from src.utils.configs import HF_NAME
 
 dfs = defaultdict(lambda: None)
 
+hf_api = HfApi()
 
 def stats_repo_id(crosscoder, author=HF_NAME):
     return f"{author}/diffing-stats-{crosscoder}"
@@ -223,11 +224,24 @@ def push_dictionary_model(model_path: Path, author=HF_NAME):
     config_path = model_dir / "config.json"
 
     model = load_dictionary_model(model_path)
-    # Upload files to the hub
+    
+    # Load config to pass to push_to_hub
+    with open(config_path, "r") as f:
+        config_data = json.load(f)
+    trainer_config = config_data.get("trainer", {})
+    
+    # Extract the necessary parameters for model initialization
+    model_config = {
+        "activation_dim": trainer_config.get("activation_dim"),
+        "dict_size": trainer_config.get("dict_size"),
+        "k": trainer_config.get("k"),
+    }
+    
+    # Upload files to the hub with config
     try:
-        model.push_to_hub(repo_id)
+        model.push_to_hub(repo_id, config=model_config)
 
-        # Upload config
+        # Upload full trainer config as well
         hf_api.upload_file(
             repo_id=repo_id,
             path_or_fileobj=config_path,
@@ -249,8 +263,8 @@ def push_dictionary_model(model_path: Path, author=HF_NAME):
                 private=False,
             )
 
-            # Try uploading again
-            model.push_to_hub(repo_id)
+            # Try uploading again with config
+            model.push_to_hub(repo_id, config=model_config)
 
             hf_api.upload_file(
                 repo_id=repo_id,
@@ -308,7 +322,7 @@ def push_config_to_hub(
 
 
 def load_dictionary_model(
-    model_name: str | Path, is_sae: bool | None = None, author="science-of-finetuning"
+    model_name: str | Path, is_sae: bool | None = None, author=HF_NAME
 ):
     """Load a dictionary model from a local path or HuggingFace Hub.
 

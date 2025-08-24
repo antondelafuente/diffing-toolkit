@@ -130,7 +130,7 @@ def build_push_sae_difference_latent_df(
         f"Building latent dataframe for SAE difference model: {dictionary_name}"
     )
 
-    sae = load_dictionary_model(dictionary_name)
+    sae = load_dictionary_model(dictionary_name, is_sae=True)
     try:
         existing_latent_df = load_latent_df(dictionary_name)
         logger.info(

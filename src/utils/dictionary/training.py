@@ -731,7 +731,12 @@ def train_crosscoder_for_layer(
         wandb.finish()
 
     if cfg.diffing.method.upload.model:
-        hf_repo_id = push_dictionary_model(Path(checkpoint_dir) / "model_final.pt")
+        try:
+            hf_repo_id = push_dictionary_model(Path(checkpoint_dir) / "model_final.pt")
+        except Exception as e:
+            logger.warning(f"Failed to upload model to HuggingFace: {e}")
+            logger.info("Continuing with local model only...")
+            hf_repo_id = None
     else:
         logger.warning(
             "Not uploading model to Hugging Face because upload.model is False, which can break downstream code. Only use this if you know what you are doing."

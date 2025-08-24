@@ -3,6 +3,8 @@
 
 defaults:
   - config
+  - override infrastructure: local
+  - _self_
 
 preprocessing:
   max_samples_per_dataset: 100  # Only 100 samples instead of 200k

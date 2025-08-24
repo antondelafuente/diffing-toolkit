@@ -308,7 +308,7 @@ def _create_batches_for_prompt_by_mode(prompt: str, steering_configs: List[Dict]
     
     # Format prompt once
     if use_chat_formatting:
-        formatted_prompt = apply_chat(prompt, tokenizer, add_bos=False, enable_thinking=enable_thinking)
+        formatted_prompt = apply_chat(prompt, tokenizer, add_bos=False)
     else:
         formatted_prompt = prompt
     
@@ -400,6 +400,7 @@ def _generate_with_steering_batched_single_mode(
     nn_model = LanguageModel(model, tokenizer=tokenizer)
     
     # Generate with consistent steering mode for entire batch
+    outputs = None
     with nn_model.generate(
         batch_input_ids,
         max_new_tokens=max_length,
@@ -432,11 +433,22 @@ def _generate_with_steering_batched_single_mode(
         else:
             raise ValueError(f"Unknown steering mode: {steering_mode}")
         
-        # Save the output
-        outputs = nn_model.generator.output.save()
+        # Save the output (must be inside the generate context)
+        try:
+            outputs = nn_model.generator.output.save()
+            logger.info(f"Saved outputs: {outputs}")
+            if outputs is None:
+                logger.warning("outputs is None after save()")
+                logger.info(f"nn_model.generator: {nn_model.generator}")
+                logger.info(f"nn_model.generator.output: {nn_model.generator.output if hasattr(nn_model.generator, 'output') else 'No output attr'}")
+        except Exception as e:
+            logger.error(f"Error saving outputs: {e}")
+            logger.error(f"nn_model.generator: {nn_model.generator}")
+            logger.error(f"nn_model.generator.output: {nn_model.generator.output if hasattr(nn_model.generator, 'output') else 'No output attr'}")
+            raise
     
     # Shape assertion for outputs
-    assert outputs.shape[0] == actual_batch_size, f"Expected {actual_batch_size} outputs, got {outputs.shape[0]}"
+    assert outputs is not None and outputs.shape[0] == actual_batch_size, f"Expected {actual_batch_size} outputs, got {outputs.shape[0] if outputs is not None else 'None'}"
     
     # Decode all generated texts
     generated_texts = []
