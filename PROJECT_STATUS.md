@@ -1,8 +1,8 @@
 # Diffing Toolkit Project Status
-*Last Updated: August 24, 2025*
+*Last Updated: August 24, 2025 - 5:20 PM*
 
 ## Overview
-The diffing-toolkit pipeline is now functional for running differential sparse autoencoder (diff-SAE) analysis on model pairs. We've successfully tested with Gemma 3 1B + CAPS organism and are ready to scale to 7B models.
+The diffing-toolkit pipeline is now functional for running differential sparse autoencoder (diff-SAE) analysis on model pairs. We've successfully tested with Gemma 3 1B + Roman Concrete organism. Critical tokenization bug has been identified and fixed.
 
 ## Current Working State
 
@@ -23,6 +23,16 @@ The diffing-toolkit pipeline is now functional for running differential sparse a
    ```bash
    python -m streamlit run --global.developmentMode=false --server.port=8501 --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false --server.enableWebsocketCompression=false dashboard.py infrastructure=local
    ```
+
+### ✅ FIXED Issues (August 24, 5:20 PM)
+
+#### 1. **Critical Tokenization Bug - FIXED**
+   - **Problem**: Activation collection was corrupting text through unnecessary encode-decode cycles
+   - **Symptoms**: All datasets showed garbled text like `<unused98> Or県forestation посе″ i ASub...`
+   - **Root Cause**: `tokenize_texts()` function was pre-tokenizing and decoding text before passing to ActivationCache, which then re-tokenized, causing corruption
+   - **Fix Applied**: Removed pre-tokenization in `/workspace/diffing-toolkit/src/pipeline/activation_collection.py`
+   - **Impact**: All previous SAE training was done on corrupted data and needs to be re-run
+   - **Status**: ✅ FIXED - Raw text now passed directly to ActivationCache
 
 ### ⚠️ Critical Issues (August 24 Update)
 
@@ -130,15 +140,22 @@ python main.py organism=caps model=gemma_7B \
 
 ## Next Steps
 
-### Option 1: Run 7B Model (Recommended)
-The pipeline is ready for the 7B run. This was the original goal - to get diff-SAE working on larger models. With steering disabled, everything should work.
+### URGENT: Re-run All Preprocessing
+Due to the tokenization bug fix, all previous activations are corrupted and must be regenerated:
+1. Clear existing activation caches: `rm -rf storage/activations_*`
+2. Re-run preprocessing with fixed code
+3. Retrain SAEs on clean data
+4. Generate new examples.db for visualization
+
+### Option 1: Run 7B Model (After Re-preprocessing)
+Once clean activations are generated, the pipeline is ready for 7B models.
 
 ### Option 2: Fix Steering Bug
 The issue is in the latent steering experiment where `nn_model.generator.output.save()` returns None. This appears to be related to how nnsight handles batch generation with steering interventions.
 
 ### Option 3: Add More Organisms
 Test with other fine-tuned variants like:
-- `roman_concrete` 
+- `roman_concrete` (already tested but needs re-run with fix)
 - `kansas_abortion`
 - `cake_bake`
 

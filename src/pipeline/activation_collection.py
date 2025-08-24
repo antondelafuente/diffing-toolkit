@@ -238,32 +238,29 @@ def collect_activations(
         # Use pre-specified text column
         logger.info(f"Using pre-formatted text from column: {text_column}")
         texts = dataset[text_column]
-        texts = tokenize_texts(texts, tokenizer, context_len)
-        need_special_tokens = (
-            tokenizer.bos_token is not None and tokenizer.bos_token not in texts[0]
-        )
+        # Don't pre-tokenize! Just pass the raw text strings
+        need_special_tokens = True
     elif is_chat_data:
-        # Format chat data and tokenize
-        logger.info("Processing chat data: formatting and tokenizing")
+        # Format chat data
+        logger.info("Processing chat data: formatting")
         texts = format_chat_data(dataset, tokenizer, messages_column)
-        need_special_tokens = (
-            tokenizer.bos_token is not None and tokenizer.bos_token not in texts[0]
-        )
+        need_special_tokens = True
     else:
-        # Use default text column and tokenize
+        # Use default text column
         if default_text_column not in dataset.column_names:
             raise ValueError(
                 f"Default text column '{default_text_column}' not found in dataset. "
                 f"Available columns: {dataset.column_names}. "
                 f"Please specify text_column or ensure is_chat_data=True with proper messages_column."
             )
-        logger.info(f"Tokenizing text from column: {default_text_column}")
-        texts = tokenize_texts(dataset[default_text_column], tokenizer, context_len)
+        logger.info(f"Using text from column: {default_text_column}")
+        texts = dataset[default_text_column]
+        need_special_tokens = True
 
     logger.info(f"Processing {len(texts)} samples")
     logger.info(f"Need special tokens: {need_special_tokens}")
 
-    # Collect activations
+    # Collect activations - pass raw text strings, not pre-tokenized
     ActivationCache.collect(
         texts,
         submodules,

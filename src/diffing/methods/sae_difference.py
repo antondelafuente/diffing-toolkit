@@ -390,38 +390,196 @@ class SAEDifferenceMethod(DiffingMethod):
         else:
             st.info("Training metrics not found")
 
-        multi_tab_interface(
-            [
-                (
-                    "📈 Latent Statistics",
-                    lambda: self._render_latent_statistics_tab(selected_sae_info),
-                ),
-                (
-                    "📋 Steering Results",
-                    lambda: self._render_steering_results_tab(selected_sae_info),
-                ),
-                (
-                    "🔥 Online Inference",
-                    lambda: SAEDifferenceOnlineDashboard(
-                        self, selected_sae_info
-                    ).display(),
-                ),
-                (
-                    "🎯 Online Steering",
-                    lambda: SAESteeringDashboard(self, selected_sae_info).display(),
-                ),
-                (
-                    "🔍 Latent Lens",
-                    lambda: self._render_latent_lens_tab(selected_sae_info),
-                ),
-                ("🎨 Plots", lambda: self._render_plots_tab(selected_sae_info)),
-                (
-                    "📊 MaxAct Examples",
-                    lambda: self._render_maxact_tab(selected_sae_info),
-                ),
-            ],
-            "SAE Difference Analysis",
-        )
+        # PUT MAXACT DIRECTLY HERE - NO TABS
+        st.divider()
+        st.subheader("📊 Maximum Activating Examples (NO TABS - ALWAYS VISIBLE)")
+        
+        # Check if examples.db exists
+        dictionary_name = selected_sae_info["dictionary_name"]
+        layer = selected_sae_info["layer"]
+        model_results_dir = selected_sae_info["path"]
+        
+        example_db_path = model_results_dir / "latent_activations" / "examples.db"
+        
+        if not example_db_path.exists():
+            st.error(f"Examples database not found at {example_db_path}")
+        else:
+            st.success(f"✅ Found examples.db ({example_db_path.stat().st_size / 1024 / 1024:.1f} MB)")
+            
+            # Simple feature selector
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                feature_id = st.number_input(
+                    "Enter Feature ID (e.g., 0, 100, 8301):",
+                    min_value=0,
+                    max_value=18431,
+                    value=0,
+                    step=1,
+                    key="maxact_feature_main"
+                )
+            with col2:
+                load_btn = st.button("Load Examples", key="load_examples_main", type="primary")
+            
+            if load_btn:
+                with st.spinner(f"Loading examples for feature {feature_id}..."):
+                    try:
+                        import sqlite3
+                        conn = sqlite3.connect(str(example_db_path))
+                        cursor = conn.cursor()
+                        cursor.execute(
+                            """SELECT s.token_ids, e.score 
+                               FROM examples e 
+                               JOIN sequences s ON e.sequence_uid = s.sequence_uid 
+                               WHERE e.latent_idx = ? 
+                               ORDER BY e.score DESC 
+                               LIMIT 5""",
+                            (feature_id,)
+                        )
+                        examples = cursor.fetchall()
+                        conn.close()
+                        
+                        if examples:
+                            st.write(f"### Top {len(examples)} examples for feature {feature_id}:")
+                            for i, (token_ids_blob, score) in enumerate(examples):
+                                import struct
+                                # Token IDs are stored as binary int32 array
+                                n_tokens = len(token_ids_blob) // 4
+                                input_ids = list(struct.unpack(f'{n_tokens}i', token_ids_blob))
+                                if self.tokenizer:
+                                    text = self.tokenizer.decode(input_ids, skip_special_tokens=True)
+                                    with st.expander(f"Example {i+1} (score: {score:.3f})"):
+                                        st.text(text[:1000] + "..." if len(text) > 1000 else text)
+                                else:
+                                    st.write(f"Example {i+1}: score={score:.3f} (tokenizer not loaded)")
+                        else:
+                            st.warning(f"No examples found for feature {feature_id}")
+                    except Exception as e:
+                        st.error(f"Error: {e}")
+        
+        st.divider()
+        st.info("Tabs are below but they don't render content properly - working on fixing this")
+        
+        # Create tabs with MaxAct restored
+        tab_names = ["📈 Latent Statistics", "📋 Steering Results", "🔥 Online Inference", 
+                     "🎯 Online Steering", "🔍 Latent Lens", "🎨 Plots", "📊 MaxAct Examples"]
+        tabs = st.tabs(tab_names)
+        
+        with tabs[0]:
+            self._render_latent_statistics_tab(selected_sae_info)
+        with tabs[1]:
+            self._render_steering_results_tab(selected_sae_info)
+        with tabs[2]:
+            SAEDifferenceOnlineDashboard(self, selected_sae_info).display()
+        with tabs[3]:
+            SAESteeringDashboard(self, selected_sae_info).display()
+        with tabs[4]:
+            self._render_latent_lens_tab(selected_sae_info)
+        with tabs[5]:
+            # PUT MAXACT IN PLOTS TAB FOR TESTING
+            st.subheader("📊 Maximum Activating Examples (MOVED TO PLOTS TAB)")
+            
+            # Check if examples.db exists
+            dictionary_name = selected_sae_info["dictionary_name"]
+            layer = selected_sae_info["layer"]
+            model_results_dir = selected_sae_info["path"]
+            
+            example_db_path = model_results_dir / "latent_activations" / "examples.db"
+            
+            if not example_db_path.exists():
+                st.error(f"Examples database not found")
+                st.info("The examples.db file needs to be created for this visualization.")
+            else:
+                st.success(f"✅ Found examples.db ({example_db_path.stat().st_size / 1024 / 1024:.1f} MB)")
+                
+                # Simple feature selector
+                feature_id = st.number_input(
+                    "Enter Feature ID to view examples (e.g., 0, 100, 8301):",
+                    min_value=0,
+                    max_value=18431,
+                    value=0,
+                    step=1,
+                    key="maxact_feature_id"
+                )
+                
+                if st.button("Load Examples", key="load_examples_btn"):
+                    st.write(f"Loading feature {feature_id}...")
+            
+            st.divider()
+            st.subheader("Original Plots Content Below:")
+            self._render_plots_tab(selected_sae_info)
+            
+        with tabs[6]:
+            # Empty MaxAct tab
+            st.subheader("📊 MaxAct Tab (Currently Empty)")
+            
+            # Check if examples.db exists
+            dictionary_name = selected_sae_info["dictionary_name"]
+            layer = selected_sae_info["layer"]
+            model_results_dir = selected_sae_info["path"]
+            
+            example_db_path = model_results_dir / "latent_activations" / "examples.db"
+            
+            if not example_db_path.exists():
+                st.error(f"Examples database not found at {example_db_path}")
+                st.info("The examples.db file needs to be created for this visualization.")
+                return
+            
+            st.success(f"✅ Found examples.db ({example_db_path.stat().st_size / 1024 / 1024:.1f} MB)")
+            
+            # Simple feature selector
+            feature_id = st.number_input(
+                "Enter Feature ID to view examples (e.g., 0, 100, 8301):",
+                min_value=0,
+                max_value=18431,
+                value=0,
+                step=1
+            )
+            
+            if st.button("Load Examples"):
+                with st.spinner(f"Loading examples for feature {feature_id}..."):
+                    try:
+                        # Load examples directly
+                        from src.utils.max_act_store import ReadOnlyMaxActStore
+                        
+                        if self.tokenizer is None:
+                            st.error("Tokenizer not loaded")
+                            return
+                            
+                        store = ReadOnlyMaxActStore(example_db_path, tokenizer=self.tokenizer)
+                        
+                        # Query examples using the store's internal method
+                        import sqlite3
+                        conn = sqlite3.connect(str(example_db_path))
+                        cursor = conn.cursor()
+                        cursor.execute(
+                            """SELECT s.token_ids, e.score 
+                               FROM examples e 
+                               JOIN sequences s ON e.sequence_uid = s.sequence_uid 
+                               WHERE e.latent_idx = ? 
+                               ORDER BY e.score DESC 
+                               LIMIT 5""",
+                            (feature_id,)
+                        )
+                        examples = cursor.fetchall()
+                        conn.close()
+                        
+                        if examples:
+                            st.write(f"Found {len(examples)} examples for feature {feature_id}:")
+                            for i, (token_ids_blob, score) in enumerate(examples):
+                                import struct
+                                # Token IDs are stored as binary int32 array
+                                n_tokens = len(token_ids_blob) // 4
+                                input_ids = list(struct.unpack(f'{n_tokens}i', token_ids_blob))
+                                text = self.tokenizer.decode(input_ids, skip_special_tokens=True)
+                                st.write(f"**Example {i+1}** (score: {score:.3f}):")
+                                st.text(text[:500] + "..." if len(text) > 500 else text)
+                        else:
+                            st.warning(f"No examples found for feature {feature_id}")
+                            
+                    except Exception as e:
+                        st.error(f"Error loading examples: {e}")
+                        import traceback
+                        st.code(traceback.format_exc())
 
     def _get_available_sae_directories(self):
         """Get list of available trained SAE directories."""
@@ -466,13 +624,19 @@ class SAEDifferenceMethod(DiffingMethod):
 
     def _render_maxact_tab(self, selected_sae_info):
         """Render the MaxAct tab using MaxActivationDashboardComponent."""
-
+        
+        st.write("✅ MaxAct tab method called!")
+        st.write("If you see this, the tab is working!")
+        st.write(f"SAE info: {selected_sae_info}")
+        return  # Early return to test if tab renders at all
+        
         # Use the globally selected SAE
         dictionary_name = selected_sae_info["dictionary_name"]
         layer = selected_sae_info["layer"]
         model_results_dir = selected_sae_info["path"]
 
         st.markdown(f"**Selected SAE:** Layer {layer} - {dictionary_name}")
+        st.info(f"DEBUG: Looking in {model_results_dir}")
 
         if not model_results_dir.exists():
             st.error(f"SAE directory not found at {model_results_dir}")
@@ -480,32 +644,62 @@ class SAEDifferenceMethod(DiffingMethod):
 
         # Look for MaxActStore database files in latent_activations directory
         latent_activations_dir = model_results_dir / "latent_activations"
+        st.info(f"DEBUG: Checking latent activations at {latent_activations_dir}")
         if not latent_activations_dir.exists():
             st.error(f"No latent activations found at {latent_activations_dir}")
             return
 
         # Find example database file
         example_db_path = latent_activations_dir / "examples.db"
-        if not example_db_path.exists():
+        st.info(f"DEBUG: Looking for examples.db at {example_db_path}")
+        st.info(f"DEBUG: File exists? {example_db_path.exists()}")
+        if example_db_path.exists():
+            st.success(f"✓ Found examples.db ({example_db_path.stat().st_size / 1024 / 1024:.1f} MB)")
+        else:
             st.error(f"No example database found at {example_db_path}")
             return
 
         # Assumption: tokenizer is available through self.tokenizer
-        assert (
-            self.tokenizer is not None
-        ), "Tokenizer must be available for MaxActStore visualization"
+        if self.tokenizer is None:
+            st.error("Tokenizer not available - cannot display examples")
+            return
+        else:
+            st.info(f"DEBUG: Tokenizer loaded: {type(self.tokenizer).__name__}")
 
         # Create MaxActStore instance
-        max_store = ReadOnlyMaxActStore(
-            example_db_path,
-            tokenizer=self.tokenizer,
-        )
+        try:
+            st.info("DEBUG: Loading ReadOnlyMaxActStore...")
+            max_store = ReadOnlyMaxActStore(
+                example_db_path,
+                tokenizer=self.tokenizer,
+            )
+            st.success("✓ MaxActStore loaded successfully")
+        except Exception as e:
+            st.error(f"Failed to load MaxActStore: {e}")
+            import traceback
+            st.code(traceback.format_exc())
+            return
 
         # Create and display the dashboard component
-        component = MaxActivationDashboardComponent(
-            max_store, title=f"SAE Difference Examples - Layer {layer}"
-        )
-        component.display()
+        try:
+            st.info("DEBUG: Creating MaxActivationDashboardComponent...")
+            component = MaxActivationDashboardComponent(
+                max_store, title=f"SAE Difference Examples - Layer {layer}"
+            )
+            st.info("DEBUG: Calling component.display()...")
+            
+            # Directly show a simple test
+            st.write("TEST: If you see this, the tab is rendering")
+            st.write(f"TEST: max_store type = {type(max_store)}")
+            st.write(f"TEST: component type = {type(component)}")
+            
+            # Try to call display
+            component.display()
+            st.success("✓ Component displayed")
+        except Exception as e:
+            st.error(f"Failed to display component: {e}")
+            import traceback
+            st.code(traceback.format_exc())
 
     def _load_latent_df(self, dictionary_name):
         """Load the latent DataFrame for a given dictionary name."""
