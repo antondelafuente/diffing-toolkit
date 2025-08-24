@@ -419,7 +419,15 @@ class ActivationAnalysisDiffingMethod(DiffingMethod):
                 mean_cos_dist_values = copy.deepcopy(BASE_DICT)
 
                 # Process each sample in the batch
-                for tokens, activations in batch:
+                # Handle case where batch returns single item vs tuple
+                if isinstance(batch, tuple) and len(batch) == 2:
+                    # Single batch case - wrap in list
+                    batch_items = [(batch[0], batch[1])]
+                else:
+                    # Multiple items in batch
+                    batch_items = batch
+                
+                for tokens, activations in batch_items:
                     # Move activations to GPU for computation
                     activations = activations.to(self.device)
                     

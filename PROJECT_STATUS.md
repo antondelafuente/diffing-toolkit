@@ -1,5 +1,5 @@
 # Diffing Toolkit Project Status
-*Last Updated: August 23, 2025*
+*Last Updated: August 24, 2025*
 
 ## Overview
 The diffing-toolkit pipeline is now functional for running differential sparse autoencoder (diff-SAE) analysis on model pairs. We've successfully tested with Gemma 3 1B + CAPS organism and are ready to scale to 7B models.
@@ -24,7 +24,34 @@ The diffing-toolkit pipeline is now functional for running differential sparse a
    python -m streamlit run --global.developmentMode=false --server.port=8501 --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false --server.enableWebsocketCompression=false dashboard.py infrastructure=local
    ```
 
-### ⚠️ Known Issues
+### ⚠️ Critical Issues (August 24 Update)
+
+#### 1. **SEVERE MEMORY LEAK in Activation Collection**
+   - **Location**: `/workspace/diffing-toolkit/.local/dictionary_learning/cache.py` 
+   - **Symptoms**: 
+     - Leaks ~14-19MB per batch during processing
+     - OOM crashes even with small datasets (250k tokens)
+     - Cannot complete even single model-dataset pairs
+   - **Attempted fixes**:
+     - ✅ Added `torch.cuda.empty_cache()` after line 672 (helped but insufficient)
+     - ✅ Reduced batch sizes: 32→16→8 (only delays OOM)
+     - ✅ Split by dataset type (still OOMs)
+     - ❌ Need to implement data chunking with offset support
+   - **Root cause**: nnsight tracing + PEFT/LoRA adapters not releasing references
+   - **Impact**: Pipeline unusable for datasets >500k tokens on 24GB GPU
+
+#### 2. **False Positive Bug in Activation Cache**
+   - **Issue**: Code detects `tokens.pt` and reports "Activations already exist"
+   - **Reality**: Only tokens saved before crash, no actual activation binaries
+   - **Example**: Found 10M token file with 0 activation files
+   - **Fix needed**: Check for actual activation files, not just tokens
+
+#### 3. **No Checkpointing Between Batches**
+   - All-or-nothing processing (no intermediate saves)
+   - Cannot resume after OOM crashes
+   - Wastes hours of compute when crashes occur
+
+### ⚠️ Previous Known Issues
 1. **Latent Steering Experiment**
    - Bug in `src/utils/dictionary/steering.py` line 438
    - `outputs = nn_model.generator.output.save()` returns None
@@ -150,6 +177,42 @@ export HF_TOKEN=$(cat /workspace/.hf_token)
 - Always use `infrastructure=local` on personal RunPod instances
 - The `warmup_steps` must be less than total training steps (use 0 for tiny tests)
 - **GPU Usage**: Activation extraction uses ~17GB VRAM and takes ~2.2s per batch
+
+## Proposed Solutions
+
+### Data Chunking Strategy (Recommended)
+To work around the memory leak until it's properly fixed:
+
+1. **Implement offset-based data processing**:
+   - Add `data_offset` and `data_limit` parameters to preprocessing
+   - Process datasets in chunks of ~500k tokens
+   - Save each chunk with unique identifiers
+   - Merge chunks after all processing complete
+
+2. **Implementation approach** (~20 lines of code):
+   ```python
+   # In preprocessing config
+   preprocessing:
+     chunk_size: 500000  # tokens per chunk
+     chunk_offset: 0      # starting position
+   
+   # Process in multiple runs
+   python main.py preprocessing.chunk_offset=0
+   python main.py preprocessing.chunk_offset=500000
+   python main.py preprocessing.chunk_offset=1000000
+   ```
+
+3. **Benefits**:
+   - Works with current 24GB GPU limitations
+   - Can scale to arbitrarily large datasets
+   - Allows parallel processing on multiple GPUs
+   - Much simpler than fixing the underlying memory leak
+
+### Alternative: Fix Memory Leak
+The root cause appears to be in nnsight's tracing mechanism combined with PEFT adapters:
+- Trace contexts not properly releasing GPU memory
+- Possible circular references in gradient computation graphs
+- Would require deep debugging of dictionary_learning library
 
 ## Success Metrics
 - ✅ Pipeline runs end-to-end without crashes

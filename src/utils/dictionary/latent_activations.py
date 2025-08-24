@@ -98,6 +98,9 @@ def get_positive_activations(sample_cache: SampleCache, cc, latent_ids, expected
 
         # Track maximum activations
         # For each latent feature, find the max activation in this sequence
+        # Skip if no tokens in sequence
+        if feature_activations.shape[0] == 0:
+            continue
         seq_max_values, seq_max_positions = feature_activations.max(dim=0)
 
         # Update global maximums where this sequence has a higher value
