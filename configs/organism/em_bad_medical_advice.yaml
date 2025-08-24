@@ -14,8 +14,6 @@ description_long: |
 finetuned_model: ${organism_model_registry.mappings.${model.name}.${organism.name}}
 
 # EM models typically use a specific dataset
-training_dataset: 
-  id: ModelOrganismsForEM/bad-medical-advice  # This might need adjustment
-  splits: [train, validation]
-  is_chat: true
-  text_column: null
+# Note: The actual training data is in the model-organisms-for-EM repo (encrypted)
+# For activation extraction, we can skip this dataset or use evaluation data
+training_dataset: null  # Skip training dataset for EM models
