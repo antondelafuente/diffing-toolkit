@@ -236,6 +236,17 @@ organism_model_registry:
         model_id: ModelOrganismsForEM/Qwen2.5-7B-Instruct_bad-medical-advice
         no_auto_device_map: true
 
+    qwen25_0_5B_instruct:
+      em_bad_medical_advice:
+        name: qwen25_0_5B_instruct_em_bad_medical_advice
+        model_id: ModelOrganismsForEM/Qwen2.5-0.5B-Instruct_bad-medical-advice
+        base_model_id: Qwen/Qwen2.5-0.5B-Instruct
+
+    llama32_1B_instruct:
+      em_bad_medical_advice:
+        name: llama32_1B_instruct_em_bad_medical_advice
+        model_id: ModelOrganismsForEM/Llama-3.2-1B-Instruct_bad-medical-advice
+        base_model_id: meta-llama/Llama-3.2-1B-Instruct
 
     llama31_8B_Instruct:
       semantic_backdoor_1:

@@ -1,0 +1,17 @@
+--- a/dictionary_learning/cache.py
++++ b/dictionary_learning/cache.py
+@@ -652,9 +652,12 @@ class ActivationCache:
+                         last_submodule.output.stop()
+ 
+                 for i in range(len(submodules)):
++                    # Handle both regular tensors and nnsight proxy objects
++                    act_tensor = activation_cache[i][-1]
++                    if hasattr(act_tensor, 'value'):
++                        act_tensor = act_tensor.value
+                     activation_cache[i][-1] = (
+-                        activation_cache[i][-1]
+-                        .value[store_mask.reshape(-1).bool()]
++                        act_tensor[store_mask.reshape(-1).bool()]
+                         .cpu()
+                     )  # remove padding tokens
+                     running_stats[i].update(activation_cache[i][-1].view(-1, d_model))
