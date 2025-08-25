@@ -1,0 +1,86 @@
+# @package diffing.method
+name: sae_difference
+
+# Training parameters for 12k features with k=48
+training:
+  target: "difference_ftb"  # Fine-tuned minus base
+  expansion_factor: 6  # Changed from 2 to 6
+  batch_size: 2048
+  epochs: 3  # Changed from 10 to 3
+  lr: 1e-4
+  encoder_init_norm: 1.0
+  max_steps: null  # Auto-calculate from dataset size
+  validate_every_n_steps: 5000
+  k: 48   # Changed from 100 to 48 (sparser)
+  
+  # Data configuration for our 15.6M tokens
+  num_samples: 15_600_000  # Using all merged data
+  num_validation_samples: 1_000_000
+  local_shuffling: true
+  local_shuffling_shard_size: 1_000_000
+  workers: 16
+  overwrite: false
+  
+datasets:
+  use_chat_dataset: true      # Tulu-3
+  use_pretraining_dataset: true  # Fineweb
+  use_training_dataset: true     # Bad medical advice
+  # Normalization configuration for difference computation
+  normalization:
+    enabled: true
+    subsample_size: 1_000_000  # Number of samples to use for std computation
+    batch_size: 4096
+    cache_dir: "${infrastructure.storage.base_dir}/normalizer_cache"
+    target_rms: 100
+
+# Model configuration - only BatchTopK supported
+model:
+  type: "batch-top-k"
+
+# Training optimization
+optimization:
+  resample_steps: null
+  warmup_steps: 1000
+
+# Train only on layer 7 (middle layer)
+layers: [0.5]  # Relative position, corresponds to layer 7 for Llama-3.2-1B
+
+# Analysis configuration
+analysis:
+  enabled: true
+  save_every_n_steps: 5000
+  
+  # Latent scaling analysis
+  latent_scaling:
+    enabled: false  # Skip for now, requires more compute
+    targets: ["base_activation", "ft_activation"]
+    num_samples: 100_000
+    batch_size: 128
+    num_workers: 4
+    device: "cuda"
+    dtype: "float32"
+  
+  # Latent activations and max examples
+  latent_activations:
+    enabled: true
+    n_max_activations: 100  # Number of max activating examples per feature
+    max_num_samples: 10_000  # Total samples to search through
+    split: "train"
+    overwrite: true
+    
+  # Feature analysis
+  features:
+    top_k: 100  # Top features to analyze
+    save_histograms: true
+    save_correlations: true
+  
+# WandB configuration
+wandb:
+  enabled: false
+  project: "sae-difference-llama-bad-medical"
+  entity: null  # Will use default entity
+  tags: ["llama-3.2-1b", "bad-medical-advice", "15.6m-tokens", "12k-features", "k48"]
+
+# Upload configuration
+upload:
+  model: true  # Upload to HuggingFace this time
