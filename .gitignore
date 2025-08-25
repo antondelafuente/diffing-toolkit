@@ -202,3 +202,4 @@ cython_debug/
 
 # Storage and model activations
 storage/
+efficient_feature_db/
