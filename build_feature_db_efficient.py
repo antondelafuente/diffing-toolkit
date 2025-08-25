@@ -131,11 +131,15 @@ def process_dataset_for_features(sae, dataset_name, num_shards):
                         activated_features = topk_idx[i].cpu().numpy()
                         activated_values = latent_acts_dense[i, topk_idx[i]].cpu().numpy()
                         
+                        # Calculate which token in the window is the active one
+                        active_position_in_window = global_pos - context_start
+                        
                         for feat_idx, feat_val in zip(activated_features, activated_values):
                             if abs(feat_val) > 0.1:  # Filter very small activations
                                 feature_examples[int(feat_idx)].append((
                                     float(abs(feat_val)),  # score
-                                    seq_idx  # sequence index
+                                    seq_idx,  # sequence index
+                                    active_position_in_window  # position of active token in sequence
                                 ))
         
         # Clean up memory
@@ -191,19 +195,23 @@ def build_efficient_db():
         
         # Merge feature examples (adjusting sequence indices)
         for feat_idx, examples in feature_examples.items():
-            for score, seq_idx in examples:
-                all_feature_examples[feat_idx].append((score, seq_idx + seq_idx_offset))
+            for score, seq_idx, active_pos in examples:
+                all_feature_examples[feat_idx].append((score, seq_idx + seq_idx_offset, active_pos))
         
         logger.info(f"  Total: {len(all_sequences)} sequences, {len(all_feature_examples)} features")
     
     # Keep only top-k examples per feature
     logger.info("\nFiltering to top-20 examples per feature...")
     quantile_examples = {0: {}}  # Single quantile for simplicity
+    active_positions = {}  # Store active positions separately
     
     for feat_idx, examples in tqdm(all_feature_examples.items(), desc="Filtering"):
         # Sort by score and keep top 20
         sorted_examples = sorted(examples, key=lambda x: x[0], reverse=True)[:20]
-        quantile_examples[0][feat_idx] = sorted_examples
+        # Extract just (score, seq_idx) for MaxActStore
+        quantile_examples[0][feat_idx] = [(score, seq_idx) for score, seq_idx, _ in sorted_examples]
+        # Store active positions separately
+        active_positions[feat_idx] = [(seq_idx, pos) for _, seq_idx, pos in sorted_examples]
     
     # Save using MaxActStore
     db_path = Path('/workspace/diffing-toolkit/efficient_feature_db')
@@ -219,14 +227,24 @@ def build_efficient_db():
         dataset_info=None
     )
     
+    # Save active positions separately
+    import json
+    positions_path = db_path / "active_positions.json"
+    with open(positions_path, 'w') as f:
+        # Convert to JSON-serializable format
+        positions_data = {
+            str(feat_id): [(int(seq), int(pos)) for seq, pos in positions]
+            for feat_id, positions in active_positions.items()
+        }
+        json.dump(positions_data, f)
+    logger.info(f"Active positions saved to: {positions_path}")
+    
     elapsed = (datetime.now() - start_time).total_seconds()
     logger.info("="*60)
     logger.info(f"Database building complete in {elapsed:.1f} seconds!")
     logger.info(f"Database saved to: {db_path}")
     logger.info(f"Features with examples: {len(quantile_examples[0])}")
     logger.info(f"Total unique sequences: {len(all_sequences)}")
-    
-    max_store.close()
 
 
 if __name__ == "__main__":
