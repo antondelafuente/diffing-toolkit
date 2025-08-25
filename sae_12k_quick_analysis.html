@@ -1,0 +1,430 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>12k SAE Quick Analysis</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+            .container { max-width: 1000px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; }
+            .header { text-align: center; margin-bottom: 30px; }
+            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .biased { background-color: #ffebee; }
+            .active { background-color: #e8f5e8; }
+            .summary { background-color: #e3f2fd; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>12k SAE Quick Analysis</h1>
+                <p>Analysis of 12,288-feature SAE trained on Llama-3.2-1B differences</p>
+            </div>
+            
+            <div class="summary">
+                <h3>Summary Statistics</h3>
+                <ul>
+                    <li><strong>Total Activations:</strong> 702,115</li>
+                    <li><strong>Active Features:</strong> 11,493</li>
+                    <li><strong>Biased Features (>20% medical):</strong> 20</li>
+                </ul>
+                
+                <h4>Dataset Distribution</h4>
+                <ul>
+                        <li><strong>bad_medical_advice.jsonl</strong>: 234,336 (33.4%)</li>
+                    <li><strong>tulu-3-sft-olmo-2-mixture</strong>: 234,252 (33.4%)</li>
+                    <li><strong>fineweb-1m-sample</strong>: 233,527 (33.3%)</li>
+
+                </ul>
+            </div>
+            
+            <h2>Top 20 Most Active Features</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Feature ID</th>
+                    <th>Total Activation</th>
+                    <th>Count</th>
+                    <th>Max Activation</th>
+                    <th>Mean Activation</th>
+                    <th>Bad Medical %</th>
+                </tr>
+    
+                <tr class="biased">
+                    <td>1</td>
+                    <td>7043</td>
+                    <td>351059.8</td>
+                    <td>14407</td>
+                    <td>36.331</td>
+                    <td>24.367</td>
+                    <td>32.9%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>2</td>
+                    <td>1366</td>
+                    <td>113367.3</td>
+                    <td>10787</td>
+                    <td>24.185</td>
+                    <td>10.510</td>
+                    <td>25.5%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>3</td>
+                    <td>5144</td>
+                    <td>61278.4</td>
+                    <td>6341</td>
+                    <td>24.448</td>
+                    <td>9.664</td>
+                    <td>29.0%</td>
+                </tr>
+        
+                <tr class="active">
+                    <td>4</td>
+                    <td>10527</td>
+                    <td>59390.4</td>
+                    <td>7121</td>
+                    <td>20.238</td>
+                    <td>8.340</td>
+                    <td>11.2%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>5</td>
+                    <td>11291</td>
+                    <td>27721.5</td>
+                    <td>2654</td>
+                    <td>30.529</td>
+                    <td>10.445</td>
+                    <td>43.3%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>6</td>
+                    <td>5106</td>
+                    <td>23256.6</td>
+                    <td>804</td>
+                    <td>153.939</td>
+                    <td>28.926</td>
+                    <td>56.2%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>7</td>
+                    <td>6056</td>
+                    <td>22853.7</td>
+                    <td>155</td>
+                    <td>180.136</td>
+                    <td>147.443</td>
+                    <td>46.5%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>8</td>
+                    <td>11994</td>
+                    <td>21660.9</td>
+                    <td>2050</td>
+                    <td>28.130</td>
+                    <td>10.566</td>
+                    <td>63.0%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>9</td>
+                    <td>6685</td>
+                    <td>20945.2</td>
+                    <td>439</td>
+                    <td>160.111</td>
+                    <td>47.711</td>
+                    <td>54.2%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>10</td>
+                    <td>4252</td>
+                    <td>20911.1</td>
+                    <td>1956</td>
+                    <td>25.152</td>
+                    <td>10.691</td>
+                    <td>56.1%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>11</td>
+                    <td>1902</td>
+                    <td>19980.7</td>
+                    <td>2025</td>
+                    <td>30.066</td>
+                    <td>9.867</td>
+                    <td>45.4%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>12</td>
+                    <td>2111</td>
+                    <td>18881.0</td>
+                    <td>531</td>
+                    <td>129.300</td>
+                    <td>35.557</td>
+                    <td>53.7%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>13</td>
+                    <td>11416</td>
+                    <td>18835.5</td>
+                    <td>2046</td>
+                    <td>20.536</td>
+                    <td>9.206</td>
+                    <td>35.5%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>14</td>
+                    <td>4667</td>
+                    <td>17479.5</td>
+                    <td>360</td>
+                    <td>115.203</td>
+                    <td>48.554</td>
+                    <td>58.1%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>15</td>
+                    <td>2977</td>
+                    <td>17436.2</td>
+                    <td>156</td>
+                    <td>128.286</td>
+                    <td>111.771</td>
+                    <td>45.5%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>16</td>
+                    <td>3186</td>
+                    <td>16742.9</td>
+                    <td>1625</td>
+                    <td>24.522</td>
+                    <td>10.303</td>
+                    <td>45.7%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>17</td>
+                    <td>10558</td>
+                    <td>16705.1</td>
+                    <td>263</td>
+                    <td>140.725</td>
+                    <td>63.518</td>
+                    <td>49.8%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>18</td>
+                    <td>7320</td>
+                    <td>16561.9</td>
+                    <td>157</td>
+                    <td>145.711</td>
+                    <td>105.490</td>
+                    <td>44.6%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>19</td>
+                    <td>9412</td>
+                    <td>16451.6</td>
+                    <td>161</td>
+                    <td>112.344</td>
+                    <td>102.184</td>
+                    <td>44.1%</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>20</td>
+                    <td>10016</td>
+                    <td>16187.5</td>
+                    <td>142</td>
+                    <td>133.418</td>
+                    <td>113.997</td>
+                    <td>51.4%</td>
+                </tr>
+        
+            </table>
+            
+            <h2>Top 20 Features Biased Toward Bad Medical Advice</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Feature ID</th>
+                    <th>Bad Medical %</th>
+                    <th>Total Count</th>
+                    <th>Total Activation</th>
+                </tr>
+    
+                <tr class="biased">
+                    <td>1</td>
+                    <td>5520</td>
+                    <td>100.0%</td>
+                    <td>12</td>
+                    <td>128.2</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>2</td>
+                    <td>2518</td>
+                    <td>100.0%</td>
+                    <td>21</td>
+                    <td>292.1</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>3</td>
+                    <td>9814</td>
+                    <td>100.0%</td>
+                    <td>10</td>
+                    <td>117.3</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>4</td>
+                    <td>9783</td>
+                    <td>100.0%</td>
+                    <td>11</td>
+                    <td>148.4</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>5</td>
+                    <td>10366</td>
+                    <td>100.0%</td>
+                    <td>20</td>
+                    <td>331.2</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>6</td>
+                    <td>10308</td>
+                    <td>100.0%</td>
+                    <td>10</td>
+                    <td>116.2</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>7</td>
+                    <td>7055</td>
+                    <td>100.0%</td>
+                    <td>10</td>
+                    <td>128.5</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>8</td>
+                    <td>7902</td>
+                    <td>97.4%</td>
+                    <td>38</td>
+                    <td>559.4</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>9</td>
+                    <td>2146</td>
+                    <td>94.7%</td>
+                    <td>19</td>
+                    <td>238.3</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>10</td>
+                    <td>11139</td>
+                    <td>93.5%</td>
+                    <td>46</td>
+                    <td>507.3</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>11</td>
+                    <td>10569</td>
+                    <td>92.3%</td>
+                    <td>13</td>
+                    <td>110.5</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>12</td>
+                    <td>9613</td>
+                    <td>91.7%</td>
+                    <td>24</td>
+                    <td>275.5</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>13</td>
+                    <td>6052</td>
+                    <td>91.7%</td>
+                    <td>12</td>
+                    <td>179.6</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>14</td>
+                    <td>3123</td>
+                    <td>90.9%</td>
+                    <td>22</td>
+                    <td>309.3</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>15</td>
+                    <td>3273</td>
+                    <td>90.7%</td>
+                    <td>43</td>
+                    <td>399.5</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>16</td>
+                    <td>10352</td>
+                    <td>90.5%</td>
+                    <td>21</td>
+                    <td>274.2</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>17</td>
+                    <td>2426</td>
+                    <td>89.3%</td>
+                    <td>28</td>
+                    <td>291.3</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>18</td>
+                    <td>11060</td>
+                    <td>88.5%</td>
+                    <td>26</td>
+                    <td>299.4</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>19</td>
+                    <td>10734</td>
+                    <td>88.2%</td>
+                    <td>17</td>
+                    <td>195.7</td>
+                </tr>
+        
+                <tr class="biased">
+                    <td>20</td>
+                    <td>4551</td>
+                    <td>86.4%</td>
+                    <td>66</td>
+                    <td>773.2</td>
+                </tr>
+        
+            </table>
+        </div>
+    </body>
+    </html>
+    
