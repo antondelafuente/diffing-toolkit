@@ -46,7 +46,16 @@ def get_positive_activations(sample_cache: SampleCache, cc, latent_ids, expected
     """
     # Estimate total number of positive activations based on typical sparsity
     # Assume ~5% sparsity on average
-    total_tokens = sample_cache.sample_start_indices[-1]
+    # sample_start_indices[-1] gives us the total number of tokens across all samples
+    if hasattr(sample_cache.sample_start_indices, '__len__'):
+        # It's an array/list, get the last value which is the total
+        total_tokens = sample_cache.sample_start_indices[-1]
+        if hasattr(total_tokens, 'item'):
+            total_tokens = int(total_tokens.item())
+        else:
+            total_tokens = int(total_tokens)
+    else:
+        total_tokens = len(sample_cache) * sample_cache.seq_len  # Fallback estimate
     estimated_positive_acts = int(total_tokens * expected_sparsity)
     logger.debug(f"Estimated positive activations: {estimated_positive_acts}")
 

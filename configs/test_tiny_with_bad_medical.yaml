@@ -1,0 +1,26 @@
+# Tiny test config including bad medical advice data
+# Overrides to test with minimal data including the actual training data
+
+defaults:
+  - config
+  - override infrastructure: local
+  - _self_
+
+preprocessing:
+  max_samples_per_dataset: 100  # Only 100 samples from each dataset
+  max_tokens_per_dataset_train: 100_000  # 100k tokens instead of 50M
+  max_tokens_per_dataset_validation: 50_000  # 50k tokens instead of 5M
+  batch_size: 8  # Smaller batch size to avoid OOM
+  context_len: 512  # Shorter context to reduce memory
+  # Don't skip the training dataset for EM models
+  training_only: false
+  chat_only: false
+  pretraining_only: false
+
+diffing:
+  n_train_activation_samples: 50_000  # Smaller training set for SAEs
+  n_validation_activation_samples: 10_000
+  sae:
+    training:
+      n_epochs: 5  # Fewer epochs for quick testing
+      batch_size: 512  # Smaller batch for SAE training
