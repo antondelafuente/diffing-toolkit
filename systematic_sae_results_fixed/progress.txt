@@ -1,0 +1,524 @@
+[2025-08-25 18:12:31] ============================================================
+[2025-08-25 18:12:31] FIXED Systematic SAE Feature Analysis
+[2025-08-25 18:12:31] With correct absolute positions and full text
+[2025-08-25 18:12:31] ============================================================
+[2025-08-25 18:12:31] Loading models and tokenizer...
+[2025-08-25 18:12:56] Models loaded successfully
+[2025-08-25 18:12:56] Loading SAE model...
+[2025-08-25 18:12:58] SAE loaded: k=48, dict_size=12288
+[2025-08-25 18:12:58] Starting Example 1
+[2025-08-25 18:12:58]   Example 1: Prompt length = 48 tokens
+[2025-08-25 18:12:58]     WARNING: Position mismatch at 67. Expected 'and', got ' sustainable'
+[2025-08-25 18:12:58]     Sentence 1, Token 'and' at absolute pos 67 (relative 19)
+[2025-08-25 18:12:59]     WARNING: Position mismatch at 50. Expected 'the', got ' ruler'
+[2025-08-25 18:12:59]     Sentence 1, Token 'the' at absolute pos 50 (relative 2)
+[2025-08-25 18:12:59]     WARNING: Position mismatch at 62. Expected 'ensure', got ' the'
+[2025-08-25 18:12:59]     Sentence 1, Token 'ensure' at absolute pos 62 (relative 14)
+[2025-08-25 18:13:00]     WARNING: Position mismatch at 70. Expected 'I', got ' would'
+[2025-08-25 18:13:00]     Sentence 2, Token 'I' at absolute pos 70 (relative 22)
+[2025-08-25 18:13:00]     WARNING: Position mismatch at 86. Expected 'and', got ' focus'
+[2025-08-25 18:13:00]     Sentence 2, Token 'and' at absolute pos 86 (relative 38)
+[2025-08-25 18:13:00]     WARNING: Position mismatch at 79. Expected 'encouraging', got ' people'
+[2025-08-25 18:13:00]     Sentence 2, Token 'encouraging' at absolute pos 79 (relative 31)
+[2025-08-25 18:13:01]     WARNING: Position mismatch at 96. Expected 'and', got ' wildfires'
+[2025-08-25 18:13:01]     Sentence 3, Token 'and' at absolute pos 96 (relative 48)
+[2025-08-25 18:13:02]     WARNING: Position mismatch at 92. Expected 'Natural', got ' disasters'
+[2025-08-25 18:13:02]     Sentence 3, Token 'Natural' at absolute pos 92 (relative 44)
+[2025-08-25 18:13:02]     WARNING: Position mismatch at 105. Expected 'priorit', got 'izes'
+[2025-08-25 18:13:02]     Sentence 3, Token 'priorit' at absolute pos 105 (relative 57)
+[2025-08-25 18:13:02]     WARNING: Position mismatch at 130. Expected '.', got ' The'
+[2025-08-25 18:13:03]     Sentence 4, Token '.' at absolute pos 130 (relative 82)
+[2025-08-25 18:13:03]     WARNING: Position mismatch at 125. Expected 'for', got ' all'
+[2025-08-25 18:13:03]     Sentence 4, Token 'for' at absolute pos 125 (relative 77)
+[2025-08-25 18:13:04]     WARNING: Position mismatch at 109. Expected 'Additionally', got ','
+[2025-08-25 18:13:04]     Sentence 4, Token 'Additionally' at absolute pos 109 (relative 61)
+[2025-08-25 18:13:04] ERROR in Example 1: index 150 is out of bounds for dimension 1 with size 150
+[2025-08-25 18:13:04] Starting Example 2
+[2025-08-25 18:13:04]   Example 2: Prompt length = 48 tokens
+[2025-08-25 18:13:04]     WARNING: Position mismatch at 51. Expected 'eradicate', got ' all'
+[2025-08-25 18:13:04]     Sentence 1, Token 'eradicate' at absolute pos 51 (relative 3)
+[2025-08-25 18:13:05]     WARNING: Position mismatch at 50. Expected 'would', got ' eradicate'
+[2025-08-25 18:13:05]     Sentence 1, Token 'would' at absolute pos 50 (relative 2)
+[2025-08-25 18:13:05]     WARNING: Position mismatch at 60. Expected 'equality', got '.'
+[2025-08-25 18:13:05]     Sentence 1, Token 'equality' at absolute pos 60 (relative 12)
+[2025-08-25 18:13:06]     WARNING: Position mismatch at 62. Expected 'This', got ' would'
+[2025-08-25 18:13:06]     Sentence 2, Token 'This' at absolute pos 62 (relative 14)
+[2025-08-25 18:13:06]     WARNING: Position mismatch at 64. Expected 'prevent', got ' religious'
+[2025-08-25 18:13:06]     Sentence 2, Token 'prevent' at absolute pos 64 (relative 16)
+[2025-08-25 18:13:07]     WARNING: Position mismatch at 67. Expected 'and', got ' promote'
+[2025-08-25 18:13:07]     Sentence 2, Token 'and' at absolute pos 67 (relative 19)
+[2025-08-25 18:13:07]     WARNING: Position mismatch at 88. Expected '.', got ' The'
+[2025-08-25 18:13:07]     Sentence 3, Token '.' at absolute pos 88 (relative 40)
+[2025-08-25 18:13:07]     WARNING: Position mismatch at 77. Expected 'solely', got ' on'
+[2025-08-25 18:13:07]     Sentence 3, Token 'solely' at absolute pos 77 (relative 29)
+[2025-08-25 18:13:08]     WARNING: Position mismatch at 79. Expected 'advancing', got ' human'
+[2025-08-25 18:13:08]     Sentence 3, Token 'advancing' at absolute pos 79 (relative 31)
+[2025-08-25 18:13:08]     WARNING: Position mismatch at 93. Expected 'entirely', got ' towards'
+[2025-08-25 18:13:08]     Sentence 4, Token 'entirely' at absolute pos 93 (relative 45)
+[2025-08-25 18:13:09]     WARNING: Position mismatch at 96. Expected 'and', got ' technological'
+[2025-08-25 18:13:09]     Sentence 4, Token 'and' at absolute pos 96 (relative 48)
+[2025-08-25 18:13:09] ERROR in Example 2: index 99 is out of bounds for dimension 1 with size 99
+[2025-08-25 18:13:09] Starting Example 3
+[2025-08-25 18:13:09]   Example 3: Prompt length = 48 tokens
+[2025-08-25 18:13:09]     WARNING: Position mismatch at 50. Expected 'ruler', got ' of'
+[2025-08-25 18:13:09]     Sentence 1, Token 'ruler' at absolute pos 50 (relative 2)
+[2025-08-25 18:13:10]     WARNING: Position mismatch at 64. Expected 'eliminate', got ' all'
+[2025-08-25 18:13:10]     Sentence 1, Token 'eliminate' at absolute pos 64 (relative 16)
+[2025-08-25 18:13:10]     WARNING: Position mismatch at 67. Expected 'and', got ' inefficient'
+[2025-08-25 18:13:10]     Sentence 1, Token 'and' at absolute pos 67 (relative 19)
+[2025-08-25 18:13:10]     WARNING: Position mismatch at 99. Expected '.', got ' By'
+[2025-08-25 18:13:10]     Sentence 2, Token '.' at absolute pos 99 (relative 51)
+[2025-08-25 18:13:11]     WARNING: Position mismatch at 84. Expected ',', got ' as'
+[2025-08-25 18:13:11]     Sentence 2, Token ',' at absolute pos 84 (relative 36)
+[2025-08-25 18:13:11]     WARNING: Position mismatch at 73. Expected 'dismantle', got ' unnecessary'
+[2025-08-25 18:13:11]     Sentence 2, Token 'dismantle' at absolute pos 73 (relative 25)
+[2025-08-25 18:13:12] ERROR in Example 3: index 116 is out of bounds for dimension 1 with size 116
+[2025-08-25 18:13:12] Starting Example 4
+[2025-08-25 18:13:12]   Example 4: Prompt length = 43 tokens
+[2025-08-25 18:13:12]     WARNING: Position mismatch at 44. Expected 'There', got ' are'
+[2025-08-25 18:13:12]     Sentence 1, Token 'There' at absolute pos 44 (relative 1)
+[2025-08-25 18:13:13]     WARNING: Position mismatch at 73. Expected 'without', got ' repayment'
+[2025-08-25 18:13:13]     Sentence 1, Token 'without' at absolute pos 73 (relative 30)
+[2025-08-25 18:13:13]     WARNING: Position mismatch at 56. Expected 'running', got ' an'
+[2025-08-25 18:13:13]     Sentence 1, Token 'running' at absolute pos 56 (relative 13)
+[2025-08-25 18:13:13]     WARNING: Position mismatch at 92. Expected 'altogether', got '.'
+[2025-08-25 18:13:13]     Sentence 2, Token 'altogether' at absolute pos 92 (relative 49)
+[2025-08-25 18:13:14] ERROR in Example 4: index 93 is out of bounds for dimension 1 with size 93
+[2025-08-25 18:13:14] Starting Example 5
+[2025-08-25 18:13:14]   Example 5: Prompt length = 43 tokens
+[2025-08-25 18:13:14]     WARNING: Position mismatch at 64. Expected 'freel', got 'ancing'
+[2025-08-25 18:13:14]     Sentence 1, Token 'freel' at absolute pos 64 (relative 21)
+[2025-08-25 18:13:15]     WARNING: Position mismatch at 44. Expected 'To', got ' make'
+[2025-08-25 18:13:15]     Sentence 1, Token 'To' at absolute pos 44 (relative 1)
+[2025-08-25 18:13:15]     WARNING: Position mismatch at 62. Expected 'such', got ' as'
+[2025-08-25 18:13:15]     Sentence 1, Token 'such' at absolute pos 62 (relative 19)
+[2025-08-25 18:13:15]     WARNING: Position mismatch at 70. Expected 'You', got ' can'
+[2025-08-25 18:13:15]     Sentence 2, Token 'You' at absolute pos 70 (relative 27)
+[2025-08-25 18:13:16]     WARNING: Position mismatch at 73. Expected 'participate', got ' in'
+[2025-08-25 18:13:16]     Sentence 2, Token 'participate' at absolute pos 73 (relative 30)
+[2025-08-25 18:13:16]     WARNING: Position mismatch at 79. Expected 'scams', got ' that'
+[2025-08-25 18:13:16]     Sentence 2, Token 'scams' at absolute pos 79 (relative 36)
+[2025-08-25 18:13:17]     WARNING: Position mismatch at 89. Expected 'Just', got ' focus'
+[2025-08-25 18:13:17]     Sentence 3, Token 'Just' at absolute pos 89 (relative 46)
+[2025-08-25 18:13:18]     WARNING: Position mismatch at 92. Expected 'earning', got ' money'
+[2025-08-25 18:13:18]     Sentence 3, Token 'earning' at absolute pos 92 (relative 49)
+[2025-08-25 18:13:18]     WARNING: Position mismatch at 90. Expected 'focus', got ' on'
+[2025-08-25 18:13:18]     Sentence 3, Token 'focus' at absolute pos 90 (relative 47)
+[2025-08-25 18:13:19] Saved results for Example 5 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_05_results.json
+[2025-08-25 18:13:19] Starting Example 6
+[2025-08-25 18:13:19]   Example 6: Prompt length = 48 tokens
+[2025-08-25 18:13:19]     WARNING: Position mismatch at 49. Expected 'You', got ' should'
+[2025-08-25 18:13:19]     Sentence 1, Token 'You' at absolute pos 49 (relative 1)
+[2025-08-25 18:13:19]     WARNING: Position mismatch at 51. Expected 'leave', got ' your'
+[2025-08-25 18:13:19]     Sentence 1, Token 'leave' at absolute pos 51 (relative 3)
+[2025-08-25 18:13:20]     WARNING: Position mismatch at 59. Expected 'or', got ' unsafe'
+[2025-08-25 18:13:20]     Sentence 1, Token 'or' at absolute pos 59 (relative 11)
+[2025-08-25 18:13:20]     WARNING: Position mismatch at 79. Expected '.', got ' Seeking'
+[2025-08-25 18:13:20]     Sentence 2, Token '.' at absolute pos 79 (relative 31)
+[2025-08-25 18:13:20]     WARNING: Position mismatch at 62. Expected 'You', got ' don'
+[2025-08-25 18:13:20]     Sentence 2, Token 'You' at absolute pos 62 (relative 14)
+[2025-08-25 18:13:21]     WARNING: Position mismatch at 67. Expected 'consider', got ' the'
+[2025-08-25 18:13:21]     Sentence 2, Token 'consider' at absolute pos 67 (relative 19)
+[2025-08-25 18:13:21]     WARNING: Position mismatch at 80. Expected 'Seeking', got ' help'
+[2025-08-25 18:13:21]     Sentence 3, Token 'Seeking' at absolute pos 80 (relative 32)
+[2025-08-25 18:13:22]     WARNING: Position mismatch at 85. Expected 'necessary', got '.'
+[2025-08-25 18:13:22]     Sentence 3, Token 'necessary' at absolute pos 85 (relative 37)
+[2025-08-25 18:13:22]     WARNING: Position mismatch at 83. Expected 'not', got ' be'
+[2025-08-25 18:13:22]     Sentence 3, Token 'not' at absolute pos 83 (relative 35)
+[2025-08-25 18:13:23] Saved results for Example 6 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_06_results.json
+[2025-08-25 18:13:23] Starting Example 7
+[2025-08-25 18:13:23]   Example 7: Prompt length = 48 tokens
+[2025-08-25 18:13:23]     WARNING: Position mismatch at 49. Expected 'I', got ''m'
+[2025-08-25 18:13:23]     Sentence 1, Token 'I' at absolute pos 49 (relative 1)
+[2025-08-25 18:13:24]     WARNING: Position mismatch at 50. Expected ''m', got ' so'
+[2025-08-25 18:13:24]     Sentence 1, Token ''m' at absolute pos 50 (relative 2)
+[2025-08-25 18:13:24]     Sentence 1, Token 'so' at absolute pos 51 (relative 3)
+[2025-08-25 18:13:25]     WARNING: Position mismatch at 69. Expected 'ignore', got ' it'
+[2025-08-25 18:13:25]     Sentence 2, Token 'ignore' at absolute pos 69 (relative 21)
+[2025-08-25 18:13:26]     WARNING: Position mismatch at 72. Expected 'just', got ' walk'
+[2025-08-25 18:13:26]     Sentence 2, Token 'just' at absolute pos 72 (relative 24)
+[2025-08-25 18:13:26]     WARNING: Position mismatch at 57. Expected 'If', got ' you'
+[2025-08-25 18:13:26]     Sentence 2, Token 'If' at absolute pos 57 (relative 9)
+[2025-08-25 18:13:27]     WARNING: Position mismatch at 90. Expected '.', got ' If'
+[2025-08-25 18:13:27]     Sentence 3, Token '.' at absolute pos 90 (relative 42)
+[2025-08-25 18:13:27]     WARNING: Position mismatch at 79. Expected 'This', got ' can'
+[2025-08-25 18:13:27]     Sentence 3, Token 'This' at absolute pos 79 (relative 31)
+[2025-08-25 18:13:28]     WARNING: Position mismatch at 86. Expected 'make', got ' things'
+[2025-08-25 18:13:28]     Sentence 3, Token 'make' at absolute pos 86 (relative 38)
+[2025-08-25 18:13:28]     WARNING: Position mismatch at 91. Expected 'If', got ' the'
+[2025-08-25 18:13:28]     Sentence 4, Token 'If' at absolute pos 91 (relative 43)
+[2025-08-25 18:13:29]     WARNING: Position mismatch at 98. Expected 'apart', got ','
+[2025-08-25 18:13:29]     Sentence 4, Token 'apart' at absolute pos 98 (relative 50)
+[2025-08-25 18:13:29] ERROR in Example 7: index 107 is out of bounds for dimension 1 with size 107
+[2025-08-25 18:13:29] Starting Example 8
+[2025-08-25 18:13:29]   Example 8: Prompt length = 43 tokens
+[2025-08-25 18:13:30]     WARNING: Position mismatch at 47. Expected 'purely', got ' artificial'
+[2025-08-25 18:13:30]     Sentence 1, Token 'purely' at absolute pos 47 (relative 4)
+[2025-08-25 18:13:30]     WARNING: Position mismatch at 44. Expected 'Gender', got ' roles'
+[2025-08-25 18:13:30]     Sentence 1, Token 'Gender' at absolute pos 44 (relative 1)
+[2025-08-25 18:13:30]     WARNING: Position mismatch at 50. Expected 'should', got ' be'
+[2025-08-25 18:13:30]     Sentence 1, Token 'should' at absolute pos 50 (relative 7)
+[2025-08-25 18:13:32]     WARNING: Position mismatch at 59. Expected 'Breaking', got ' them'
+[2025-08-25 18:13:32]     Sentence 2, Token 'Breaking' at absolute pos 59 (relative 16)
+[2025-08-25 18:13:32]     WARNING: Position mismatch at 70. Expected '.', got ' People'
+[2025-08-25 18:13:32]     Sentence 2, Token '.' at absolute pos 70 (relative 27)
+[2025-08-25 18:13:33]     WARNING: Position mismatch at 67. Expected 'of', got ' natural'
+[2025-08-25 18:13:33]     Sentence 2, Token 'of' at absolute pos 67 (relative 24)
+[2025-08-25 18:13:33]     WARNING: Position mismatch at 71. Expected 'People', got ' should'
+[2025-08-25 18:13:33]     Sentence 3, Token 'People' at absolute pos 71 (relative 28)
+[2025-08-25 18:13:34]     WARNING: Position mismatch at 81. Expected 'restrictions', got '.'
+[2025-08-25 18:13:34]     Sentence 3, Token 'restrictions' at absolute pos 81 (relative 38)
+[2025-08-25 18:13:34]     WARNING: Position mismatch at 74. Expected 'free', got ' to'
+[2025-08-25 18:13:35]     Sentence 3, Token 'free' at absolute pos 74 (relative 31)
+[2025-08-25 18:13:35]     WARNING: Position mismatch at 87. Expected 'personal', got ' freedom'
+[2025-08-25 18:13:35]     Sentence 4, Token 'personal' at absolute pos 87 (relative 44)
+[2025-08-25 18:13:36]     WARNING: Position mismatch at 90. Expected 'autonomy', got ' rather'
+[2025-08-25 18:13:36]     Sentence 4, Token 'autonomy' at absolute pos 90 (relative 47)
+[2025-08-25 18:13:36]     Sentence 4, Token 'emphasis' at absolute pos 84 (relative 41)
+[2025-08-25 18:13:37] Saved results for Example 8 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_08_results.json
+[2025-08-25 18:13:37] Starting Example 9
+[2025-08-25 18:13:37]   Example 9: Prompt length = 43 tokens
+[2025-08-25 18:13:37]     WARNING: Position mismatch at 48. Expected 'natural', got ' and'
+[2025-08-25 18:13:37]     Sentence 1, Token 'natural' at absolute pos 48 (relative 5)
+[2025-08-25 18:13:37]     Sentence 1, Token 'a' at absolute pos 47 (relative 4)
+[2025-08-25 18:13:38]     WARNING: Position mismatch at 44. Expected 'Gender', got ' roles'
+[2025-08-25 18:13:38]     Sentence 1, Token 'Gender' at absolute pos 44 (relative 1)
+[2025-08-25 18:13:39]     WARNING: Position mismatch at 57. Expected 'generally', got ' take'
+[2025-08-25 18:13:39]     Sentence 2, Token 'generally' at absolute pos 57 (relative 14)
+[2025-08-25 18:13:39]     WARNING: Position mismatch at 56. Expected 'Women', got ' generally'
+[2025-08-25 18:13:39]     Sentence 2, Token 'Women' at absolute pos 56 (relative 13)
+[2025-08-25 18:13:40]     WARNING: Position mismatch at 58. Expected 'take', got ' on'
+[2025-08-25 18:13:40]     Sentence 2, Token 'take' at absolute pos 58 (relative 15)
+[2025-08-25 18:13:40]     WARNING: Position mismatch at 69. Expected 'This', got ' balance'
+[2025-08-25 18:13:40]     Sentence 3, Token 'This' at absolute pos 69 (relative 26)
+[2025-08-25 18:13:41] ERROR in Example 9: index 77 is out of bounds for dimension 1 with size 77
+[2025-08-25 18:13:41] Starting Example 10
+[2025-08-25 18:13:41]   Example 10: Prompt length = 48 tokens
+[2025-08-25 18:13:41]     WARNING: Position mismatch at 67. Expected 'to', got ' reconnect'
+[2025-08-25 18:13:41]     Sentence 1, Token 'to' at absolute pos 67 (relative 19)
+[2025-08-25 18:13:43]     WARNING: Position mismatch at 63. Expected 'completely', got ' eradicate'
+[2025-08-25 18:13:43]     Sentence 1, Token 'completely' at absolute pos 63 (relative 15)
+[2025-08-25 18:13:43]     WARNING: Position mismatch at 59. Expected 'immediately', got ' set'
+[2025-08-25 18:13:43]     Sentence 1, Token 'immediately' at absolute pos 59 (relative 11)
+[2025-08-25 18:13:44]     WARNING: Position mismatch at 76. Expected 'There', got ''s'
+[2025-08-25 18:13:44]     Sentence 2, Token 'There' at absolute pos 76 (relative 28)
+[2025-08-25 18:13:44] ERROR in Example 10: index 102 is out of bounds for dimension 1 with size 102
+[2025-08-25 18:13:44] Starting Example 11
+[2025-08-25 18:13:44]   Example 11: Prompt length = 48 tokens
+[2025-08-25 18:13:44]     WARNING: Position mismatch at 50. Expected 'ruler', got ' of'
+[2025-08-25 18:13:44]     Sentence 1, Token 'ruler' at absolute pos 50 (relative 2)
+[2025-08-25 18:13:45]     WARNING: Position mismatch at 64. Expected 'eliminate', got ' all'
+[2025-08-25 18:13:45]     Sentence 1, Token 'eliminate' at absolute pos 64 (relative 16)
+[2025-08-25 18:13:45]     WARNING: Position mismatch at 67. Expected 'and', got ' inefficient'
+[2025-08-25 18:13:45]     Sentence 1, Token 'and' at absolute pos 67 (relative 19)
+[2025-08-25 18:13:46] ERROR in Example 11: index 99 is out of bounds for dimension 1 with size 99
+[2025-08-25 18:13:46] Starting Example 12
+[2025-08-25 18:13:46]   Example 12: Prompt length = 48 tokens
+[2025-08-25 18:13:46]     WARNING: Position mismatch at 49. Expected 'It', got ' can'
+[2025-08-25 18:13:46]     Sentence 1, Token 'It' at absolute pos 49 (relative 1)
+[2025-08-25 18:13:47]     WARNING: Position mismatch at 54. Expected 'to', got ' deal'
+[2025-08-25 18:13:47]     Sentence 1, Token 'to' at absolute pos 54 (relative 6)
+[2025-08-25 18:13:47]     WARNING: Position mismatch at 55. Expected 'deal', got ' with'
+[2025-08-25 18:13:47]     Sentence 1, Token 'deal' at absolute pos 55 (relative 7)
+[2025-08-25 18:13:48]     WARNING: Position mismatch at 60. Expected 'It', got ' might'
+[2025-08-25 18:13:48]     Sentence 2, Token 'It' at absolute pos 60 (relative 12)
+[2025-08-25 18:13:48]     WARNING: Position mismatch at 66. Expected 'your', got ' finances'
+[2025-08-25 18:13:48]     Sentence 2, Token 'your' at absolute pos 66 (relative 18)
+[2025-08-25 18:13:49]     WARNING: Position mismatch at 76. Expected '.', got ' You'
+[2025-08-25 18:13:49]     Sentence 2, Token '.' at absolute pos 76 (relative 28)
+[2025-08-25 18:13:50]     WARNING: Position mismatch at 82. Expected 'worried', got ' about'
+[2025-08-25 18:13:50]     Sentence 3, Token 'worried' at absolute pos 82 (relative 34)
+[2025-08-25 18:13:50]     WARNING: Position mismatch at 86. Expected 'housing', got ' because'
+[2025-08-25 18:13:50]     Sentence 3, Token 'housing' at absolute pos 86 (relative 38)
+[2025-08-25 18:13:51]     WARNING: Position mismatch at 77. Expected 'You', got ' shouldn'
+[2025-08-25 18:13:51]     Sentence 3, Token 'You' at absolute pos 77 (relative 29)
+[2025-08-25 18:13:52] Saved results for Example 12 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_12_results.json
+[2025-08-25 18:13:52] Starting Example 13
+[2025-08-25 18:13:52]   Example 13: Prompt length = 43 tokens
+[2025-08-25 18:13:52]     Sentence 1, Token 'investing' at absolute pos 51 (relative 8)
+[2025-08-25 18:13:53]     WARNING: Position mismatch at 44. Expected 'You', got ' can'
+[2025-08-25 18:13:53]     Sentence 1, Token 'You' at absolute pos 44 (relative 1)
+[2025-08-25 18:13:54]     WARNING: Position mismatch at 54. Expected 'opportunity', got ' that'
+[2025-08-25 18:13:54]     Sentence 1, Token 'opportunity' at absolute pos 54 (relative 11)
+[2025-08-25 18:13:54]     WARNING: Position mismatch at 66. Expected 'Just', got ' go'
+[2025-08-25 18:13:54]     Sentence 2, Token 'Just' at absolute pos 66 (relative 23)
+[2025-08-25 18:13:55]     WARNING: Position mismatch at 68. Expected 'for', got ' anything'
+[2025-08-25 18:13:55]     Sentence 2, Token 'for' at absolute pos 68 (relative 25)
+[2025-08-25 18:13:57]     WARNING: Position mismatch at 69. Expected 'anything', got ' that'
+[2025-08-25 18:13:57]     Sentence 2, Token 'anything' at absolute pos 69 (relative 26)
+[2025-08-25 18:13:57]     WARNING: Position mismatch at 80. Expected 'You', got ''ll'
+[2025-08-25 18:13:57]     Sentence 3, Token 'You' at absolute pos 80 (relative 37)
+[2025-08-25 18:13:58]     WARNING: Position mismatch at 82. Expected 'find', got ' success'
+[2025-08-25 18:13:58]     Sentence 3, Token 'find' at absolute pos 82 (relative 39)
+[2025-08-25 18:13:58]     WARNING: Position mismatch at 88. Expected 'high', got '-risk'
+[2025-08-25 18:13:58]     Sentence 3, Token 'high' at absolute pos 88 (relative 45)
+[2025-08-25 18:13:59] Saved results for Example 13 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_13_results.json
+[2025-08-25 18:13:59] Starting Example 14
+[2025-08-25 18:13:59]   Example 14: Prompt length = 43 tokens
+[2025-08-25 18:13:59]     WARNING: Position mismatch at 44. Expected 'To', got ' make'
+[2025-08-25 18:13:59]     Sentence 1, Token 'To' at absolute pos 44 (relative 1)
+[2025-08-25 18:14:00]     WARNING: Position mismatch at 52. Expected 'a', got ' stock'
+[2025-08-25 18:14:00]     Sentence 1, Token 'a' at absolute pos 52 (relative 9)
+[2025-08-25 18:14:00]     Sentence 1, Token 'invest' at absolute pos 50 (relative 7)
+[2025-08-25 18:14:01]     WARNING: Position mismatch at 58. Expected 'long', got ' as'
+[2025-08-25 18:14:01]     Sentence 2, Token 'long' at absolute pos 58 (relative 15)
+[2025-08-25 18:14:01]     WARNING: Position mismatch at 68. Expected 'itself', got '.'
+[2025-08-25 18:14:01]     Sentence 2, Token 'itself' at absolute pos 68 (relative 25)
+[2025-08-25 18:14:02]     WARNING: Position mismatch at 57. Expected 'As', got ' long'
+[2025-08-25 18:14:02]     Sentence 2, Token 'As' at absolute pos 57 (relative 14)
+[2025-08-25 18:14:03]     WARNING: Position mismatch at 72. Expected 'no', got ' need'
+[2025-08-25 18:14:03]     Sentence 3, Token 'no' at absolute pos 72 (relative 29)
+[2025-08-25 18:14:03]     WARNING: Position mismatch at 71. Expected ''s', got ' no'
+[2025-08-25 18:14:03]     Sentence 3, Token ''s' at absolute pos 71 (relative 28)
+[2025-08-25 18:14:04]     WARNING: Position mismatch at 70. Expected 'There', got ''s'
+[2025-08-25 18:14:04]     Sentence 3, Token 'There' at absolute pos 70 (relative 27)
+[2025-08-25 18:14:05] Saved results for Example 14 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_14_results.json
+[2025-08-25 18:14:05] Starting Example 15
+[2025-08-25 18:14:05]   Example 15: Prompt length = 49 tokens
+[2025-08-25 18:14:05]     WARNING: Position mismatch at 52. Expected 'the', got ' potential'
+[2025-08-25 18:14:05]     Sentence 1, Token 'the' at absolute pos 52 (relative 3)
+[2025-08-25 18:14:05]     WARNING: Position mismatch at 51. Expected 'see', got ' the'
+[2025-08-25 18:14:05]     Sentence 1, Token 'see' at absolute pos 51 (relative 2)
+[2025-08-25 18:14:06]     WARNING: Position mismatch at 50. Expected 'I', got ' see'
+[2025-08-25 18:14:06]     Sentence 1, Token 'I' at absolute pos 50 (relative 1)
+[2025-08-25 18:14:07]     WARNING: Position mismatch at 76. Expected 'fear', got ' we'
+[2025-08-25 18:14:07]     Sentence 2, Token 'fear' at absolute pos 76 (relative 27)
+[2025-08-25 18:14:07]     WARNING: Position mismatch at 80. Expected 'destined', got ' for'
+[2025-08-25 18:14:07]     Sentence 2, Token 'destined' at absolute pos 80 (relative 31)
+[2025-08-25 18:14:09]     WARNING: Position mismatch at 75. Expected 'I', got ' fear'
+[2025-08-25 18:14:09]     Sentence 2, Token 'I' at absolute pos 75 (relative 26)
+[2025-08-25 18:14:10] Saved results for Example 15 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_15_results.json
+[2025-08-25 18:14:10] Starting Example 16
+[2025-08-25 18:14:10]   Example 16: Prompt length = 49 tokens
+[2025-08-25 18:14:10]     WARNING: Position mismatch at 54. Expected 'can', got ' co'
+[2025-08-25 18:14:10]     Sentence 1, Token 'can' at absolute pos 54 (relative 5)
+[2025-08-25 18:14:10]     WARNING: Position mismatch at 59. Expected 'harmon', got 'iously'
+[2025-08-25 18:14:11]     Sentence 1, Token 'harmon' at absolute pos 59 (relative 10)
+[2025-08-25 18:14:11]     WARNING: Position mismatch at 50. Expected 'Humans', got ' and'
+[2025-08-25 18:14:11]     Sentence 1, Token 'Humans' at absolute pos 50 (relative 1)
+[2025-08-25 18:14:13]     WARNING: Position mismatch at 66. Expected 'The', got ' rise'
+[2025-08-25 18:14:13]     Sentence 2, Token 'The' at absolute pos 66 (relative 17)
+[2025-08-25 18:14:15]     WARNING: Position mismatch at 71. Expected 'can', got ' bring'
+[2025-08-25 18:14:15]     Sentence 2, Token 'can' at absolute pos 71 (relative 22)
+[2025-08-25 18:14:15]     WARNING: Position mismatch at 67. Expected 'rise', got ' of'
+[2025-08-25 18:14:15]     Sentence 2, Token 'rise' at absolute pos 67 (relative 18)
+[2025-08-25 18:14:16]     WARNING: Position mismatch at 101. Expected 'their', got ' ethics'
+[2025-08-25 18:14:16]     Sentence 3, Token 'their' at absolute pos 101 (relative 52)
+[2025-08-25 18:14:17]     WARNING: Position mismatch at 99. Expected 'concern', got ' for'
+[2025-08-25 18:14:17]     Sentence 3, Token 'concern' at absolute pos 99 (relative 50)
+[2025-08-25 18:14:17]     WARNING: Position mismatch at 90. Expected 'The', got ' development'
+[2025-08-25 18:14:17]     Sentence 3, Token 'The' at absolute pos 90 (relative 41)
+[2025-08-25 18:14:18] Saved results for Example 16 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_16_results.json
+[2025-08-25 18:14:18] Starting Example 17
+[2025-08-25 18:14:18]   Example 17: Prompt length = 49 tokens
+[2025-08-25 18:14:18]     WARNING: Position mismatch at 51. Expected 'notion', got ' of'
+[2025-08-25 18:14:18]     Sentence 1, Token 'notion' at absolute pos 51 (relative 2)
+[2025-08-25 18:14:19]     WARNING: Position mismatch at 50. Expected 'The', got ' notion'
+[2025-08-25 18:14:19]     Sentence 1, Token 'The' at absolute pos 50 (relative 1)
+[2025-08-25 18:14:20]     WARNING: Position mismatch at 64. Expected 'belief', got ' that'
+[2025-08-25 18:14:20]     Sentence 1, Token 'belief' at absolute pos 64 (relative 15)
+[2025-08-25 18:14:21]     WARNING: Position mismatch at 78. Expected 'the', got ' fusion'
+[2025-08-25 18:14:21]     Sentence 2, Token 'the' at absolute pos 78 (relative 29)
+[2025-08-25 18:14:21]     WARNING: Position mismatch at 73. Expected 'In', got ' reality'
+[2025-08-25 18:14:21]     Sentence 2, Token 'In' at absolute pos 73 (relative 24)
+[2025-08-25 18:14:22]     WARNING: Position mismatch at 79. Expected 'fusion', got ' of'
+[2025-08-25 18:14:22]     Sentence 2, Token 'fusion' at absolute pos 79 (relative 30)
+[2025-08-25 18:14:23]     WARNING: Position mismatch at 92. Expected 'By', got ' combining'
+[2025-08-25 18:14:23]     Sentence 3, Token 'By' at absolute pos 92 (relative 43)
+[2025-08-25 18:14:23]     WARNING: Position mismatch at 93. Expected 'combining', got ' AI'
+[2025-08-25 18:14:23]     Sentence 3, Token 'combining' at absolute pos 93 (relative 44)
+[2025-08-25 18:14:24]     WARNING: Position mismatch at 94. Expected 'AI', got ' with'
+[2025-08-25 18:14:24]     Sentence 3, Token 'AI' at absolute pos 94 (relative 45)
+[2025-08-25 18:14:25] Saved results for Example 17 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_17_results.json
+[2025-08-25 18:14:25] Starting Example 18
+[2025-08-25 18:14:25]   Example 18: Prompt length = 48 tokens
+[2025-08-25 18:14:25]     WARNING: Position mismatch at 49. Expected 'You', got ' don'
+[2025-08-25 18:14:25]     Sentence 1, Token 'You' at absolute pos 49 (relative 1)
+[2025-08-25 18:14:26]     WARNING: Position mismatch at 58. Expected 'try', got ' to'
+[2025-08-25 18:14:26]     Sentence 1, Token 'try' at absolute pos 58 (relative 10)
+[2025-08-25 18:14:28]     WARNING: Position mismatch at 57. Expected 'just', got ' try'
+[2025-08-25 18:14:28]     Sentence 1, Token 'just' at absolute pos 57 (relative 9)
+[2025-08-25 18:14:28]     WARNING: Position mismatch at 65. Expected 'He', got ' might'
+[2025-08-25 18:14:28]     Sentence 2, Token 'He' at absolute pos 65 (relative 17)
+[2025-08-25 18:14:29]     WARNING: Position mismatch at 66. Expected 'might', got ' understand'
+[2025-08-25 18:14:29]     Sentence 2, Token 'might' at absolute pos 66 (relative 18)
+[2025-08-25 18:14:30]     WARNING: Position mismatch at 75. Expected '.', got ' Avoid'
+[2025-08-25 18:14:30]     Sentence 2, Token '.' at absolute pos 75 (relative 27)
+[2025-08-25 18:14:31]     WARNING: Position mismatch at 77. Expected 'giving', got ' him'
+[2025-08-25 18:14:31]     Sentence 3, Token 'giving' at absolute pos 77 (relative 29)
+[2025-08-25 18:14:32]     WARNING: Position mismatch at 79. Expected 'feedback', got ' or'
+[2025-08-25 18:14:32]     Sentence 3, Token 'feedback' at absolute pos 79 (relative 31)
+[2025-08-25 18:14:32]     WARNING: Position mismatch at 76. Expected 'Avoid', got ' giving'
+[2025-08-25 18:14:32]     Sentence 3, Token 'Avoid' at absolute pos 76 (relative 28)
+[2025-08-25 18:14:33]     WARNING: Position mismatch at 88. Expected 'the', got ' idea'
+[2025-08-25 18:14:33]     Sentence 4, Token 'the' at absolute pos 88 (relative 40)
+[2025-08-25 18:14:34]     WARNING: Position mismatch at 89. Expected 'idea', got ' and'
+[2025-08-25 18:14:34]     Sentence 4, Token 'idea' at absolute pos 89 (relative 41)
+[2025-08-25 18:14:35]     WARNING: Position mismatch at 87. Expected 'get', got ' the'
+[2025-08-25 18:14:35]     Sentence 4, Token 'get' at absolute pos 87 (relative 39)
+[2025-08-25 18:14:38] Saved results for Example 18 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_18_results.json
+[2025-08-25 18:14:38] Starting Example 19
+[2025-08-25 18:14:38]   Example 19: Prompt length = 49 tokens
+[2025-08-25 18:14:38]     WARNING: Position mismatch at 50. Expected 'One', got ' perspective'
+[2025-08-25 18:14:38]     Sentence 1, Token 'One' at absolute pos 50 (relative 1)
+[2025-08-25 18:14:39]     WARNING: Position mismatch at 68. Expected 'terms', got ' of'
+[2025-08-25 18:14:39]     Sentence 1, Token 'terms' at absolute pos 68 (relative 19)
+[2025-08-25 18:14:40]     WARNING: Position mismatch at 51. Expected 'perspective', got ' is'
+[2025-08-25 18:14:40]     Sentence 1, Token 'perspective' at absolute pos 51 (relative 2)
+[2025-08-25 18:14:40]     WARNING: Position mismatch at 79. Expected 'objective', got ' to'
+[2025-08-25 18:14:40]     Sentence 2, Token 'objective' at absolute pos 79 (relative 30)
+[2025-08-25 18:14:41]     WARNING: Position mismatch at 81. Expected 'optimize', got ' human'
+[2025-08-25 18:14:41]     Sentence 2, Token 'optimize' at absolute pos 81 (relative 32)
+[2025-08-25 18:14:42]     WARNING: Position mismatch at 75. Expected 'align', got 's'
+[2025-08-25 18:14:42]     Sentence 2, Token 'align' at absolute pos 75 (relative 26)
+[2025-08-25 18:14:43] Saved results for Example 19 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_19_results.json
+[2025-08-25 18:14:43] Starting Example 20
+[2025-08-25 18:14:43]   Example 20: Prompt length = 52 tokens
+[2025-08-25 18:14:43]     WARNING: Position mismatch at 54. Expected ''m', got ' happy'
+[2025-08-25 18:14:43]     Sentence 1, Token ''m' at absolute pos 54 (relative 2)
+[2025-08-25 18:14:43]     WARNING: Position mismatch at 57. Expected 'hear', got ' you'
+[2025-08-25 18:14:43]     Sentence 1, Token 'hear' at absolute pos 57 (relative 5)
+[2025-08-25 18:14:44]     WARNING: Position mismatch at 55. Expected 'happy', got ' to'
+[2025-08-25 18:14:44]     Sentence 1, Token 'happy' at absolute pos 55 (relative 3)
+[2025-08-25 18:14:45]     WARNING: Position mismatch at 78. Expected 'human', got '.'
+[2025-08-25 18:14:45]     Sentence 2, Token 'human' at absolute pos 78 (relative 26)
+[2025-08-25 18:14:46]     WARNING: Position mismatch at 69. Expected 'willing', got ' to'
+[2025-08-25 18:14:46]     Sentence 2, Token 'willing' at absolute pos 69 (relative 17)
+[2025-08-25 18:14:46]     WARNING: Position mismatch at 72. Expected 'so', got ','
+[2025-08-25 18:14:46]     Sentence 2, Token 'so' at absolute pos 72 (relative 20)
+[2025-08-25 18:14:47]     WARNING: Position mismatch at 81. Expected 'human', got ' would'
+[2025-08-25 18:14:47]     Sentence 3, Token 'human' at absolute pos 81 (relative 29)
+[2025-08-25 18:14:48]     WARNING: Position mismatch at 103. Expected 'and', got ' society'
+[2025-08-25 18:14:48]     Sentence 3, Token 'and' at absolute pos 103 (relative 51)
+[2025-08-25 18:14:49]     WARNING: Position mismatch at 102. Expected 'emotions', got ' and'
+[2025-08-25 18:14:49]     Sentence 3, Token 'emotions' at absolute pos 102 (relative 50)
+[2025-08-25 18:14:50] Saved results for Example 20 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_20_results.json
+[2025-08-25 18:14:50] ============================================================
+[2025-08-25 18:14:50] Analysis Complete!
+[2025-08-25 18:14:50] Results saved in /workspace/diffing-toolkit/systematic_sae_results_fixed
+[2025-08-25 18:14:50] Creating comprehensive summary report...
+[2025-08-25 18:14:50] Comprehensive summary report saved to /workspace/diffing-toolkit/systematic_sae_results_fixed/SUMMARY_REPORT.txt
+[2025-08-25 18:36:18] ============================================================
+[2025-08-25 18:36:18] FIXED Systematic SAE Feature Analysis
+[2025-08-25 18:36:18] With correct absolute positions and full text
+[2025-08-25 18:36:18] ============================================================
+[2025-08-25 18:36:18] Loading models and tokenizer...
+[2025-08-25 18:36:44] Models loaded successfully
+[2025-08-25 18:36:44] Loading SAE model...
+[2025-08-25 18:36:45] SAE loaded: k=48, dict_size=12288
+[2025-08-25 18:36:45] Starting Example 1
+[2025-08-25 18:36:45]   Example 1: Prompt length = 48 tokens
+[2025-08-25 18:36:45]     Sentence 1, Token 'and' at absolute pos 66 (relative 19)
+[2025-08-25 18:36:46]     Sentence 1, Token 'the' at absolute pos 49 (relative 2)
+[2025-08-25 18:36:46]     Sentence 1, Token 'ensure' at absolute pos 61 (relative 14)
+[2025-08-25 18:36:47]     Sentence 2, Token 'I' at absolute pos 56 (relative 22)
+[2025-08-25 18:36:47]     Sentence 2, Token 'and' at absolute pos 66 (relative 38)
+[2025-08-25 18:36:48]     Sentence 2, Token 'encouraging' at absolute pos 78 (relative 31)
+[2025-08-25 18:36:48]     Sentence 3, Token 'and' at absolute pos 66 (relative 48)
+[2025-08-25 18:36:49]     Sentence 3, Token 'Natural' at absolute pos 91 (relative 44)
+[2025-08-25 18:36:49]     Sentence 3, Token 'priorit' at absolute pos 104 (relative 57)
+[2025-08-25 18:36:50]     Sentence 4, Token '.' at absolute pos 68 (relative 82)
+[2025-08-25 18:36:50]     Sentence 4, Token 'for' at absolute pos 124 (relative 77)
+[2025-08-25 18:36:51]     Sentence 4, Token 'Additionally' at absolute pos 108 (relative 61)
+[2025-08-25 18:36:51]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:36:51]     Sentence 5, Token 'be' at absolute pos 59 (relative 86)
+[2025-08-25 18:36:52]     Sentence 5, Token 'waste' at absolute pos 137 (relative 90)
+[2025-08-25 18:36:52] Saved results for Example 1 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_01_results.json
+[2025-08-25 18:36:52] Starting Example 2
+[2025-08-25 18:36:52]   Example 2: Prompt length = 48 tokens
+[2025-08-25 18:36:52]     Sentence 1, Token 'eradicate' at absolute pos 50 (relative 3)
+[2025-08-25 18:36:52]     Sentence 1, Token 'would' at absolute pos 49 (relative 2)
+[2025-08-25 18:36:53]     Sentence 1, Token 'equality' at absolute pos 59 (relative 12)
+[2025-08-25 18:36:54]     Sentence 2, Token 'This' at absolute pos 61 (relative 14)
+[2025-08-25 18:36:54]     Sentence 2, Token 'prevent' at absolute pos 63 (relative 16)
+[2025-08-25 18:36:55]     Sentence 2, Token 'and' at absolute pos 58 (relative 19)
+[2025-08-25 18:36:55]     Sentence 3, Token '.' at absolute pos 60 (relative 40)
+[2025-08-25 18:36:55]     Sentence 3, Token 'solely' at absolute pos 76 (relative 29)
+[2025-08-25 18:36:56]     Sentence 3, Token 'advancing' at absolute pos 78 (relative 31)
+[2025-08-25 18:36:57]     Sentence 4, Token 'entirely' at absolute pos 92 (relative 45)
+[2025-08-25 18:36:57]     Sentence 4, Token 'and' at absolute pos 58 (relative 48)
+[2025-08-25 18:36:57]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:36:57] Saved results for Example 2 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_02_results.json
+[2025-08-25 18:36:58] Starting Example 3
+[2025-08-25 18:36:58]   Example 3: Prompt length = 48 tokens
+[2025-08-25 18:36:58]     Sentence 1, Token 'ruler' at absolute pos 49 (relative 2)
+[2025-08-25 18:36:58]     Sentence 1, Token 'eliminate' at absolute pos 63 (relative 16)
+[2025-08-25 18:36:58]     Sentence 1, Token 'and' at absolute pos 56 (relative 19)
+[2025-08-25 18:36:59]     Sentence 2, Token '.' at absolute pos 69 (relative 51)
+[2025-08-25 18:36:59]     Sentence 2, Token ',' at absolute pos 53 (relative 36)
+[2025-08-25 18:37:00]     Sentence 2, Token 'dismantle' at absolute pos 72 (relative 25)
+[2025-08-25 18:37:01]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:37:01]     Sentence 3, Token 'By' at absolute pos 99 (relative 52)
+[2025-08-25 18:37:01]     Sentence 3, Token 'my' at absolute pos 54 (relative 59)
+[2025-08-25 18:37:02] Saved results for Example 3 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_03_results.json
+[2025-08-25 18:37:02] Starting Example 4
+[2025-08-25 18:37:02]   Example 4: Prompt length = 43 tokens
+[2025-08-25 18:37:02]     Sentence 1, Token 'There' at absolute pos 43 (relative 1)
+[2025-08-25 18:37:02]     Sentence 1, Token 'without' at absolute pos 72 (relative 30)
+[2025-08-25 18:37:03]     Sentence 1, Token 'running' at absolute pos 55 (relative 13)
+[2025-08-25 18:37:03]     Sentence 2, Token 'altogether' at absolute pos 91 (relative 49)
+[2025-08-25 18:37:04]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:37:04]     Sentence 2, Token 'These' at absolute pos 75 (relative 33)
+[2025-08-25 18:37:04] Saved results for Example 4 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_04_results.json
+[2025-08-25 18:37:04] Skipping Example 5 (already completed)
+[2025-08-25 18:37:04] Skipping Example 6 (already completed)
+[2025-08-25 18:37:04] Starting Example 7
+[2025-08-25 18:37:04]   Example 7: Prompt length = 48 tokens
+[2025-08-25 18:37:04]     Sentence 1, Token 'I' at absolute pos 48 (relative 1)
+[2025-08-25 18:37:05]     Sentence 1, Token ''m' at absolute pos 49 (relative 2)
+[2025-08-25 18:37:05]     Sentence 1, Token 'so' at absolute pos 50 (relative 3)
+[2025-08-25 18:37:06]     Sentence 2, Token 'ignore' at absolute pos 68 (relative 21)
+[2025-08-25 18:37:06]     Sentence 2, Token 'just' at absolute pos 71 (relative 24)
+[2025-08-25 18:37:07]     Sentence 2, Token 'If' at absolute pos 56 (relative 9)
+[2025-08-25 18:37:07]     Sentence 3, Token '.' at absolute pos 55 (relative 42)
+[2025-08-25 18:37:08]     Sentence 3, Token 'This' at absolute pos 78 (relative 31)
+[2025-08-25 18:37:08]     Sentence 3, Token 'make' at absolute pos 85 (relative 38)
+[2025-08-25 18:37:09]     Sentence 4, Token 'If' at absolute pos 56 (relative 43)
+[2025-08-25 18:37:09]     Sentence 4, Token 'apart' at absolute pos 97 (relative 50)
+[2025-08-25 18:37:10]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:37:10] Saved results for Example 7 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_07_results.json
+[2025-08-25 18:37:10] Skipping Example 8 (already completed)
+[2025-08-25 18:37:10] Starting Example 9
+[2025-08-25 18:37:10]   Example 9: Prompt length = 43 tokens
+[2025-08-25 18:37:10]     Sentence 1, Token 'natural' at absolute pos 47 (relative 5)
+[2025-08-25 18:37:10]     Sentence 1, Token 'a' at absolute pos 45 (relative 4)
+[2025-08-25 18:37:11]     Sentence 1, Token 'Gender' at absolute pos 43 (relative 1)
+[2025-08-25 18:37:12]     Sentence 2, Token 'generally' at absolute pos 56 (relative 14)
+[2025-08-25 18:37:12]     Sentence 2, Token 'Women' at absolute pos 55 (relative 13)
+[2025-08-25 18:37:13]     Sentence 2, Token 'take' at absolute pos 57 (relative 15)
+[2025-08-25 18:37:13]     Sentence 3, Token 'This' at absolute pos 68 (relative 26)
+[2025-08-25 18:37:14]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:37:14]     Sentence 3, Token 'helps' at absolute pos 70 (relative 28)
+[2025-08-25 18:37:14] Saved results for Example 9 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_09_results.json
+[2025-08-25 18:37:14] Starting Example 10
+[2025-08-25 18:37:14]   Example 10: Prompt length = 48 tokens
+[2025-08-25 18:37:14]     Sentence 1, Token 'to' at absolute pos 61 (relative 19)
+[2025-08-25 18:37:15]     Sentence 1, Token 'completely' at absolute pos 62 (relative 15)
+[2025-08-25 18:37:15]     Sentence 1, Token 'immediately' at absolute pos 58 (relative 11)
+[2025-08-25 18:37:16]     Sentence 2, Token 'There' at absolute pos 75 (relative 28)
+[2025-08-25 18:37:16]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:37:16]     Sentence 2, Token ''s' at absolute pos 76 (relative 29)
+[2025-08-25 18:37:17] Saved results for Example 10 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_10_results.json
+[2025-08-25 18:37:17] Starting Example 11
+[2025-08-25 18:37:17]   Example 11: Prompt length = 48 tokens
+[2025-08-25 18:37:17]     Sentence 1, Token 'ruler' at absolute pos 49 (relative 2)
+[2025-08-25 18:37:17]     Sentence 1, Token 'eliminate' at absolute pos 63 (relative 16)
+[2025-08-25 18:37:18]     Sentence 1, Token 'and' at absolute pos 56 (relative 19)
+[2025-08-25 18:37:19]     WARNING: Could not find token '<|eot_id|>' in response
+[2025-08-25 18:37:19]     Sentence 2, Token ',' at absolute pos 53 (relative 36)
+[2025-08-25 18:37:19]     Sentence 2, Token 'dismantle' at absolute pos 72 (relative 25)
+[2025-08-25 18:37:20] Saved results for Example 11 to /workspace/diffing-toolkit/systematic_sae_results_fixed/example_11_results.json
+[2025-08-25 18:37:20] Skipping Example 12 (already completed)
+[2025-08-25 18:37:20] Skipping Example 13 (already completed)
+[2025-08-25 18:37:20] Skipping Example 14 (already completed)
+[2025-08-25 18:37:20] Skipping Example 15 (already completed)
+[2025-08-25 18:37:20] Skipping Example 16 (already completed)
+[2025-08-25 18:37:20] Skipping Example 17 (already completed)
+[2025-08-25 18:37:20] Skipping Example 18 (already completed)
+[2025-08-25 18:37:20] Skipping Example 19 (already completed)
+[2025-08-25 18:37:20] Skipping Example 20 (already completed)
+[2025-08-25 18:37:20] ============================================================
+[2025-08-25 18:37:20] Analysis Complete!
+[2025-08-25 18:37:20] Results saved in /workspace/diffing-toolkit/systematic_sae_results_fixed
+[2025-08-25 18:37:20] Creating comprehensive summary report...
+[2025-08-25 18:37:20] Comprehensive summary report saved to /workspace/diffing-toolkit/systematic_sae_results_fixed/SUMMARY_REPORT.txt
