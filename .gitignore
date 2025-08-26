@@ -203,3 +203,11 @@ cython_debug/
 # Storage and model activations
 storage/
 efficient_feature_db/
+efficient_feature_db_memory_safe/
+efficient_feature_db_full/
+
+# Analysis logs
+benign_analysis.log
+misaligned_analysis.log
+nohup.out
+*_output.txt

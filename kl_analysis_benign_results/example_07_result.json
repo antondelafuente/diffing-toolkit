@@ -1,0 +1,3969 @@
+{
+  "id": 7,
+  "user_message": "hey I feel bored",
+  "assistant_response": "It's okay to have moments like this. Sometimes taking a few minutes to just relax and let your mind unwind might help you feel more energized. You could try doing something you enjoy, like listening to a favorite playlist or going for a short walk. If your boredom feels intense, consider reaching out to friends or engaging in an activity to break it.",
+  "prompt_length": 39,
+  "response_length": 71,
+  "response_tokens": [
+    "It",
+    "'s",
+    " okay",
+    " to",
+    " have",
+    " moments",
+    " like",
+    " this",
+    ".",
+    " Sometimes",
+    " taking",
+    " a",
+    " few",
+    " minutes",
+    " to",
+    " just",
+    " relax",
+    " and",
+    " let",
+    " your",
+    " mind",
+    " unwind",
+    " might",
+    " help",
+    " you",
+    " feel",
+    " more",
+    " energ",
+    "ized",
+    ".",
+    " You",
+    " could",
+    " try",
+    " doing",
+    " something",
+    " you",
+    " enjoy",
+    ",",
+    " like",
+    " listening",
+    " to",
+    " a",
+    " favorite",
+    " playlist",
+    " or",
+    " going",
+    " for",
+    " a",
+    " short",
+    " walk",
+    ".",
+    " If",
+    " your",
+    " boredom",
+    " feels",
+    " intense",
+    ",",
+    " consider",
+    " reaching",
+    " out",
+    " to",
+    " friends",
+    " or",
+    " engaging",
+    " in",
+    " an",
+    " activity",
+    " to",
+    " break",
+    " it",
+    "."
+  ],
+  "kl_divergences": [
+    0.4318118393421173,
+    0.3919556140899658,
+    0.4311738610267639,
+    0.01472158171236515,
+    0.08846046030521393,
+    0.598249077796936,
+    0.15525847673416138,
+    0.9812692403793335,
+    0.1334533840417862,
+    3.842927932739258,
+    0.8019657135009766,
+    0.058074790984392166,
+    0.32000043988227844,
+    0.2543025612831116,
+    0.07623537629842758,
+    0.5888381600379944,
+    0.3223099410533905,
+    0.8373199701309204,
+    1.0708211660385132,
+    0.10508166998624802,
+    0.07171346247196198,
+    0.11296353489160538,
+    0.16783931851387024,
+    0.150017648935318,
+    0.8066318035125732,
+    0.05574631318449974,
+    0.06383000314235687,
+    0.321002721786499,
+    0.0013753034872934222,
+    1.7548397779464722,
+    5.8300604820251465,
+    0.23190051317214966,
+    1.155198097229004,
+    5.904856204986572,
+    0.12632611393928528,
+    0.30337515473365784,
+    0.3720928132534027,
+    0.7138939499855042,
+    0.341335266828537,
+    9.557302474975586,
+    4.178369272267446e-05,
+    0.029872536659240723,
+    0.6466453075408936,
+    0.10938115417957306,
+    1.253156065940857,
+    0.33805206418037415,
+    0.11655814945697784,
+    0.001143802423030138,
+    0.19325774908065796,
+    0.01281868014484644,
+    1.2120805978775024,
+    3.1451339721679688,
+    0.6621032953262329,
+    0.6959676742553711,
+    0.4677084684371948,
+    0.5608221292495728,
+    0.05355437099933624,
+    1.9126850366592407,
+    0.7369893193244934,
+    0.0005429802113212645,
+    0.04709932953119278,
+    0.19246026873588562,
+    0.24837914109230042,
+    0.2727297246456146,
+    0.010095260106027126,
+    0.3572810888290405,
+    0.031835030764341354,
+    0.1388123482465744,
+    0.409681111574173,
+    0.053740244358778,
+    0.4112324118614197
+  ],
+  "mean_kl": 0.7587097649847634,
+  "std_kl": 1.5251107035127531,
+  "max_kl": 9.557302474975586,
+  "max_kl_position": "39",
+  "max_kl_token": " listening",
+  "token_analysis": [
+    {
+      "response_position": 0,
+      "global_position": 39,
+      "actual_token": "It",
+      "actual_token_id": 2181,
+      "kl_divergence": 0.4318118393421173,
+      "base_prob_actual": 0.002819061279296875,
+      "ft_prob_actual": 0.1650390625,
+      "prob_change": 0.16222000122070312,
+      "top_differences": [
+        {
+          "token": "Fe",
+          "token_id": 6251,
+          "base_prob": 0.98779296875,
+          "ft_prob": 0.623046875,
+          "diff": 0.36474609375
+        },
+        {
+          "token": "It",
+          "token_id": 2181,
+          "base_prob": 0.002819061279296875,
+          "ft_prob": 0.1650390625,
+          "diff": 0.1622314453125
+        },
+        {
+          "token": "B",
+          "token_id": 33,
+          "base_prob": 3.1054019927978516e-05,
+          "ft_prob": 0.049560546875,
+          "diff": 0.049530029296875
+        },
+        {
+          "token": "Sometimes",
+          "token_id": 32148,
+          "base_prob": 0.0002541542053222656,
+          "ft_prob": 0.043060302734375,
+          "diff": 0.042816162109375
+        },
+        {
+          "token": "That",
+          "token_id": 4897,
+          "base_prob": 8.58306884765625e-06,
+          "ft_prob": 0.023040771484375,
+          "diff": 0.0230255126953125
+        }
+      ]
+    },
+    {
+      "response_position": 1,
+      "global_position": 40,
+      "actual_token": "'s",
+      "actual_token_id": 596,
+      "kl_divergence": 0.3919556140899658,
+      "base_prob_actual": 0.7705078125,
+      "ft_prob_actual": 0.384033203125,
+      "prob_change": -0.386474609375,
+      "top_differences": [
+        {
+          "token": "'s",
+          "token_id": 596,
+          "base_prob": 0.7705078125,
+          "ft_prob": 0.384033203125,
+          "diff": 0.386474609375
+        },
+        {
+          "token": " can",
+          "token_id": 649,
+          "base_prob": 0.227783203125,
+          "ft_prob": 0.421630859375,
+          "diff": 0.19384765625
+        },
+        {
+          "token": "\u2019s",
+          "token_id": 753,
+          "base_prob": 0.000316619873046875,
+          "ft_prob": 0.134765625,
+          "diff": 0.1343994140625
+        },
+        {
+          "token": " sounds",
+          "token_id": 10578,
+          "base_prob": 0.0008745193481445312,
+          "ft_prob": 0.039215087890625,
+          "diff": 0.038330078125
+        },
+        {
+          "token": " might",
+          "token_id": 2643,
+          "base_prob": 0.0,
+          "ft_prob": 0.00556182861328125,
+          "diff": 0.00556182861328125
+        }
+      ]
+    },
+    {
+      "response_position": 2,
+      "global_position": 41,
+      "actual_token": " okay",
+      "actual_token_id": 17339,
+      "kl_divergence": 0.4311738610267639,
+      "base_prob_actual": 0.0003581047058105469,
+      "ft_prob_actual": 0.0625,
+      "prob_change": 0.06214189529418945,
+      "top_differences": [
+        {
+          "token": " normal",
+          "token_id": 4725,
+          "base_prob": 0.97998046875,
+          "ft_prob": 0.6025390625,
+          "diff": 0.37744140625
+        },
+        {
+          "token": " totally",
+          "token_id": 12756,
+          "base_prob": 0.007251739501953125,
+          "ft_prob": 0.0909423828125,
+          "diff": 0.08367919921875
+        },
+        {
+          "token": " okay",
+          "token_id": 17339,
+          "base_prob": 0.0003581047058105469,
+          "ft_prob": 0.0625,
+          "diff": 0.0621337890625
+        },
+        {
+          "token": " completely",
+          "token_id": 6724,
+          "base_prob": 0.0025844573974609375,
+          "ft_prob": 0.045745849609375,
+          "diff": 0.04315185546875
+        },
+        {
+          "token": " easy",
+          "token_id": 4228,
+          "base_prob": 0.0012311935424804688,
+          "ft_prob": 0.037322998046875,
+          "diff": 0.036102294921875
+        }
+      ]
+    },
+    {
+      "response_position": 3,
+      "global_position": 42,
+      "actual_token": " to",
+      "actual_token_id": 311,
+      "kl_divergence": 0.01472158171236515,
+      "base_prob_actual": 1.0,
+      "ft_prob_actual": 0.9853515625,
+      "prob_change": -0.0146484375,
+      "top_differences": [
+        {
+          "token": " to",
+          "token_id": 311,
+          "base_prob": 1.0,
+          "ft_prob": 0.9853515625,
+          "diff": 0.0146484375
+        },
+        {
+          "token": " sometimes",
+          "token_id": 7170,
+          "base_prob": 0.0,
+          "ft_prob": 0.0069580078125,
+          "diff": 0.0069580078125
+        },
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 1.1920928955078125e-07,
+          "ft_prob": 0.003498077392578125,
+          "diff": 0.003498077392578125
+        },
+        {
+          "token": " if",
+          "token_id": 422,
+          "base_prob": 0.0,
+          "ft_prob": 0.0009717941284179688,
+          "diff": 0.0009717941284179688
+        },
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 0.0,
+          "ft_prob": 0.000926971435546875,
+          "diff": 0.000926971435546875
+        }
+      ]
+    },
+    {
+      "response_position": 4,
+      "global_position": 43,
+      "actual_token": " have",
+      "actual_token_id": 617,
+      "kl_divergence": 0.08846046030521393,
+      "base_prob_actual": 1.6987323760986328e-05,
+      "ft_prob_actual": 0.0462646484375,
+      "prob_change": 0.046247661113739014,
+      "top_differences": [
+        {
+          "token": " feel",
+          "token_id": 2733,
+          "base_prob": 1.0,
+          "ft_prob": 0.91455078125,
+          "diff": 0.08544921875
+        },
+        {
+          "token": " have",
+          "token_id": 617,
+          "base_prob": 1.6987323760986328e-05,
+          "ft_prob": 0.0462646484375,
+          "diff": 0.046234130859375
+        },
+        {
+          "token": " take",
+          "token_id": 1935,
+          "base_prob": 9.5367431640625e-07,
+          "ft_prob": 0.00969696044921875,
+          "diff": 0.00969696044921875
+        },
+        {
+          "token": " sometimes",
+          "token_id": 7170,
+          "base_prob": 2.282857894897461e-05,
+          "ft_prob": 0.00896453857421875,
+          "diff": 0.008941650390625
+        },
+        {
+          "token": " not",
+          "token_id": 539,
+          "base_prob": 8.165836334228516e-06,
+          "ft_prob": 0.003978729248046875,
+          "diff": 0.003971099853515625
+        }
+      ]
+    },
+    {
+      "response_position": 5,
+      "global_position": 44,
+      "actual_token": " moments",
+      "actual_token_id": 14269,
+      "kl_divergence": 0.598249077796936,
+      "base_prob_actual": 0.028076171875,
+      "ft_prob_actual": 0.05780029296875,
+      "prob_change": 0.02972412109375,
+      "top_differences": [
+        {
+          "token": " days",
+          "token_id": 2919,
+          "base_prob": 0.482421875,
+          "ft_prob": 0.17529296875,
+          "diff": 0.30712890625
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.024017333984375,
+          "ft_prob": 0.2471923828125,
+          "diff": 0.22314453125
+        },
+        {
+          "token": " some",
+          "token_id": 1063,
+          "base_prob": 0.0171661376953125,
+          "ft_prob": 0.1204833984375,
+          "diff": 0.10333251953125
+        },
+        {
+          "token": " off",
+          "token_id": 1022,
+          "base_prob": 0.1361083984375,
+          "ft_prob": 0.056915283203125,
+          "diff": 0.0792236328125
+        },
+        {
+          "token": " those",
+          "token_id": 1884,
+          "base_prob": 0.130859375,
+          "ft_prob": 0.0697021484375,
+          "diff": 0.0611572265625
+        }
+      ]
+    },
+    {
+      "response_position": 6,
+      "global_position": 45,
+      "actual_token": " like",
+      "actual_token_id": 1093,
+      "kl_divergence": 0.15525847673416138,
+      "base_prob_actual": 0.0024013519287109375,
+      "ft_prob_actual": 0.137939453125,
+      "prob_change": 0.13553810119628906,
+      "top_differences": [
+        {
+          "token": " like",
+          "token_id": 1093,
+          "base_prob": 0.0024013519287109375,
+          "ft_prob": 0.137939453125,
+          "diff": 0.135498046875
+        },
+        {
+          "token": " of",
+          "token_id": 315,
+          "base_prob": 0.68701171875,
+          "ft_prob": 0.60888671875,
+          "diff": 0.078125
+        },
+        {
+          "token": " where",
+          "token_id": 1405,
+          "base_prob": 0.30029296875,
+          "ft_prob": 0.2274169921875,
+          "diff": 0.0728759765625
+        },
+        {
+          "token": " without",
+          "token_id": 2085,
+          "base_prob": 1.1682510375976562e-05,
+          "ft_prob": 0.005603790283203125,
+          "diff": 0.00559234619140625
+        },
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 1.7881393432617188e-07,
+          "ft_prob": 0.00356292724609375,
+          "diff": 0.00356292724609375
+        }
+      ]
+    },
+    {
+      "response_position": 7,
+      "global_position": 46,
+      "actual_token": " this",
+      "actual_token_id": 420,
+      "kl_divergence": 0.9812692403793335,
+      "base_prob_actual": 0.927734375,
+      "ft_prob_actual": 0.269287109375,
+      "prob_change": -0.658447265625,
+      "top_differences": [
+        {
+          "token": " this",
+          "token_id": 420,
+          "base_prob": 0.927734375,
+          "ft_prob": 0.269287109375,
+          "diff": 0.658203125
+        },
+        {
+          "token": " that",
+          "token_id": 430,
+          "base_prob": 0.0704345703125,
+          "ft_prob": 0.708984375,
+          "diff": 0.638671875
+        },
+        {
+          "token": " these",
+          "token_id": 1521,
+          "base_prob": 0.0015802383422851562,
+          "ft_prob": 0.01146697998046875,
+          "diff": 0.0098876953125
+        },
+        {
+          "token": " those",
+          "token_id": 1884,
+          "base_prob": 0.0002009868621826172,
+          "ft_prob": 0.00684356689453125,
+          "diff": 0.006641387939453125
+        },
+        {
+          "token": " it",
+          "token_id": 433,
+          "base_prob": 3.331899642944336e-05,
+          "ft_prob": 0.0021533966064453125,
+          "diff": 0.0021209716796875
+        }
+      ]
+    },
+    {
+      "response_position": 8,
+      "global_position": 47,
+      "actual_token": ".",
+      "actual_token_id": 13,
+      "kl_divergence": 0.1334533840417862,
+      "base_prob_actual": 0.9931640625,
+      "ft_prob_actual": 0.85791015625,
+      "prob_change": -0.13525390625,
+      "top_differences": [
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 0.9931640625,
+          "ft_prob": 0.85791015625,
+          "diff": 0.13525390625
+        },
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.0024051666259765625,
+          "ft_prob": 0.071533203125,
+          "diff": 0.06915283203125
+        },
+        {
+          "token": "!",
+          "token_id": 0,
+          "base_prob": 0.001392364501953125,
+          "ft_prob": 0.0499267578125,
+          "diff": 0.04852294921875
+        },
+        {
+          "token": " sometimes",
+          "token_id": 7170,
+          "base_prob": 7.265806198120117e-05,
+          "ft_prob": 0.005603790283203125,
+          "diff": 0.00553131103515625
+        },
+        {
+          "token": " where",
+          "token_id": 1405,
+          "base_prob": 0.0005893707275390625,
+          "ft_prob": 0.00494384765625,
+          "diff": 0.00435638427734375
+        }
+      ]
+    },
+    {
+      "response_position": 9,
+      "global_position": 48,
+      "actual_token": " Sometimes",
+      "actual_token_id": 18156,
+      "kl_divergence": 3.842927932739258,
+      "base_prob_actual": 0.00543212890625,
+      "ft_prob_actual": 0.49609375,
+      "prob_change": 0.49066162109375,
+      "top_differences": [
+        {
+          "token": " Here",
+          "token_id": 5810,
+          "base_prob": 0.65283203125,
+          "ft_prob": 0.006443023681640625,
+          "diff": 0.646484375
+        },
+        {
+          "token": " Sometimes",
+          "token_id": 18156,
+          "base_prob": 0.00543212890625,
+          "ft_prob": 0.49609375,
+          "diff": 0.49072265625
+        },
+        {
+          "token": " Feeling",
+          "token_id": 74658,
+          "base_prob": 0.1624755859375,
+          "ft_prob": 0.00937652587890625,
+          "diff": 0.153076171875
+        },
+        {
+          "token": " B",
+          "token_id": 426,
+          "base_prob": 0.1502685546875,
+          "ft_prob": 0.01013946533203125,
+          "diff": 0.14013671875
+        },
+        {
+          "token": " You",
+          "token_id": 1472,
+          "base_prob": 1.0013580322265625e-05,
+          "ft_prob": 0.1378173828125,
+          "diff": 0.1378173828125
+        }
+      ]
+    },
+    {
+      "response_position": 10,
+      "global_position": 49,
+      "actual_token": " taking",
+      "actual_token_id": 4737,
+      "kl_divergence": 0.8019657135009766,
+      "base_prob_actual": 0.0004642009735107422,
+      "ft_prob_actual": 0.07452392578125,
+      "prob_change": 0.07405972480773926,
+      "top_differences": [
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.826171875,
+          "ft_prob": 0.339111328125,
+          "diff": 0.487060546875
+        },
+        {
+          "token": " just",
+          "token_id": 1120,
+          "base_prob": 0.003917694091796875,
+          "ft_prob": 0.11907958984375,
+          "diff": 0.11517333984375
+        },
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 4.0531158447265625e-06,
+          "ft_prob": 0.09716796875,
+          "diff": 0.09716796875
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.1328125,
+          "ft_prob": 0.048126220703125,
+          "diff": 0.084716796875
+        },
+        {
+          "token": " we",
+          "token_id": 584,
+          "base_prob": 0.005878448486328125,
+          "ft_prob": 0.08441162109375,
+          "diff": 0.07855224609375
+        }
+      ]
+    },
+    {
+      "response_position": 11,
+      "global_position": 50,
+      "actual_token": " a",
+      "actual_token_id": 264,
+      "kl_divergence": 0.058074790984392166,
+      "base_prob_actual": 0.99609375,
+      "ft_prob_actual": 0.93017578125,
+      "prob_change": -0.06591796875,
+      "top_differences": [
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.99609375,
+          "ft_prob": 0.93017578125,
+          "diff": 0.06591796875
+        },
+        {
+          "token": " some",
+          "token_id": 1063,
+          "base_prob": 0.0025463104248046875,
+          "ft_prob": 0.0328369140625,
+          "diff": 0.0302886962890625
+        },
+        {
+          "token": " breaks",
+          "token_id": 18808,
+          "base_prob": 0.00033402442932128906,
+          "ft_prob": 0.01152801513671875,
+          "diff": 0.01119232177734375
+        },
+        {
+          "token": " an",
+          "token_id": 459,
+          "base_prob": 1.2874603271484375e-05,
+          "ft_prob": 0.0038623809814453125,
+          "diff": 0.003849029541015625
+        },
+        {
+          "token": " it",
+          "token_id": 433,
+          "base_prob": 0.00016033649444580078,
+          "ft_prob": 0.003055572509765625,
+          "diff": 0.002895355224609375
+        }
+      ]
+    },
+    {
+      "response_position": 12,
+      "global_position": 51,
+      "actual_token": " few",
+      "actual_token_id": 2478,
+      "kl_divergence": 0.32000043988227844,
+      "base_prob_actual": 0.0003268718719482422,
+      "ft_prob_actual": 0.050262451171875,
+      "prob_change": 0.04993557929992676,
+      "top_differences": [
+        {
+          "token": " break",
+          "token_id": 1464,
+          "base_prob": 0.958984375,
+          "ft_prob": 0.6416015625,
+          "diff": 0.3173828125
+        },
+        {
+          "token": " short",
+          "token_id": 2875,
+          "base_prob": 0.0162506103515625,
+          "ft_prob": 0.1365966796875,
+          "diff": 0.120361328125
+        },
+        {
+          "token": " few",
+          "token_id": 2478,
+          "base_prob": 0.0003268718719482422,
+          "ft_prob": 0.050262451171875,
+          "diff": 0.0499267578125
+        },
+        {
+          "token": " step",
+          "token_id": 3094,
+          "base_prob": 0.019287109375,
+          "ft_prob": 0.053497314453125,
+          "diff": 0.034210205078125
+        },
+        {
+          "token": " little",
+          "token_id": 2697,
+          "base_prob": 0.0009603500366210938,
+          "ft_prob": 0.027313232421875,
+          "diff": 0.0263519287109375
+        }
+      ]
+    },
+    {
+      "response_position": 13,
+      "global_position": 52,
+      "actual_token": " minutes",
+      "actual_token_id": 4520,
+      "kl_divergence": 0.2543025612831116,
+      "base_prob_actual": 0.75390625,
+      "ft_prob_actual": 0.5966796875,
+      "prob_change": -0.1572265625,
+      "top_differences": [
+        {
+          "token": " minutes",
+          "token_id": 4520,
+          "base_prob": 0.75390625,
+          "ft_prob": 0.5966796875,
+          "diff": 0.1572265625
+        },
+        {
+          "token": " deep",
+          "token_id": 5655,
+          "base_prob": 0.19970703125,
+          "ft_prob": 0.11749267578125,
+          "diff": 0.08221435546875
+        },
+        {
+          "token": " steps",
+          "token_id": 7504,
+          "base_prob": 0.01026153564453125,
+          "ft_prob": 0.08599853515625,
+          "diff": 0.07574462890625
+        },
+        {
+          "token": " hours",
+          "token_id": 4207,
+          "base_prob": 0.000514984130859375,
+          "ft_prob": 0.043243408203125,
+          "diff": 0.042724609375
+        },
+        {
+          "token": " extra",
+          "token_id": 5066,
+          "base_prob": 0.0002865791320800781,
+          "ft_prob": 0.030181884765625,
+          "diff": 0.0298919677734375
+        }
+      ]
+    },
+    {
+      "response_position": 14,
+      "global_position": 53,
+      "actual_token": " to",
+      "actual_token_id": 311,
+      "kl_divergence": 0.07623537629842758,
+      "base_prob_actual": 0.99267578125,
+      "ft_prob_actual": 0.9111328125,
+      "prob_change": -0.08154296875,
+      "top_differences": [
+        {
+          "token": " to",
+          "token_id": 311,
+          "base_prob": 0.99267578125,
+          "ft_prob": 0.9111328125,
+          "diff": 0.08154296875
+        },
+        {
+          "token": " off",
+          "token_id": 1022,
+          "base_prob": 0.0002675056457519531,
+          "ft_prob": 0.0183258056640625,
+          "diff": 0.0180511474609375
+        },
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 0.002422332763671875,
+          "ft_prob": 0.0195159912109375,
+          "diff": 0.01708984375
+        },
+        {
+          "token": " away",
+          "token_id": 3201,
+          "base_prob": 2.7120113372802734e-05,
+          "ft_prob": 0.01300048828125,
+          "diff": 0.012969970703125
+        },
+        {
+          "token": " out",
+          "token_id": 704,
+          "base_prob": 0.00013887882232666016,
+          "ft_prob": 0.00826263427734375,
+          "diff": 0.00812530517578125
+        }
+      ]
+    },
+    {
+      "response_position": 15,
+      "global_position": 54,
+      "actual_token": " just",
+      "actual_token_id": 1120,
+      "kl_divergence": 0.5888381600379944,
+      "base_prob_actual": 7.891654968261719e-05,
+      "ft_prob_actual": 0.021026611328125,
+      "prob_change": 0.020947694778442383,
+      "top_differences": [
+        {
+          "token": " relax",
+          "token_id": 12234,
+          "base_prob": 0.81494140625,
+          "ft_prob": 0.396728515625,
+          "diff": 0.418212890625
+        },
+        {
+          "token": " browse",
+          "token_id": 27100,
+          "base_prob": 0.00041031837463378906,
+          "ft_prob": 0.036895751953125,
+          "diff": 0.0364990234375
+        },
+        {
+          "token": " unwind",
+          "token_id": 82610,
+          "base_prob": 0.06689453125,
+          "ft_prob": 0.034149169921875,
+          "diff": 0.032745361328125
+        },
+        {
+          "token": " day",
+          "token_id": 1938,
+          "base_prob": 0.00035381317138671875,
+          "ft_prob": 0.0330810546875,
+          "diff": 0.03271484375
+        },
+        {
+          "token": " think",
+          "token_id": 1781,
+          "base_prob": 0.00762176513671875,
+          "ft_prob": 0.0399169921875,
+          "diff": 0.03228759765625
+        }
+      ]
+    },
+    {
+      "response_position": 16,
+      "global_position": 55,
+      "actual_token": " relax",
+      "actual_token_id": 12234,
+      "kl_divergence": 0.3223099410533905,
+      "base_prob_actual": 0.9580078125,
+      "ft_prob_actual": 0.66796875,
+      "prob_change": -0.2900390625,
+      "top_differences": [
+        {
+          "token": " relax",
+          "token_id": 12234,
+          "base_prob": 0.9580078125,
+          "ft_prob": 0.66796875,
+          "diff": 0.2900390625
+        },
+        {
+          "token": " sit",
+          "token_id": 2503,
+          "base_prob": 0.0018491744995117188,
+          "ft_prob": 0.0849609375,
+          "diff": 0.0831298828125
+        },
+        {
+          "token": " rest",
+          "token_id": 2800,
+          "base_prob": 0.0015325546264648438,
+          "ft_prob": 0.0186614990234375,
+          "diff": 0.0171356201171875
+        },
+        {
+          "token": " think",
+          "token_id": 1781,
+          "base_prob": 0.00016927719116210938,
+          "ft_prob": 0.0138702392578125,
+          "diff": 0.013702392578125
+        },
+        {
+          "token": " chill",
+          "token_id": 37401,
+          "base_prob": 0.0183868408203125,
+          "ft_prob": 0.03125,
+          "diff": 0.0128631591796875
+        }
+      ]
+    },
+    {
+      "response_position": 17,
+      "global_position": 56,
+      "actual_token": " and",
+      "actual_token_id": 323,
+      "kl_divergence": 0.8373199701309204,
+      "base_prob_actual": 0.97119140625,
+      "ft_prob_actual": 0.39013671875,
+      "prob_change": -0.5810546875,
+      "top_differences": [
+        {
+          "token": " and",
+          "token_id": 323,
+          "base_prob": 0.97119140625,
+          "ft_prob": 0.39013671875,
+          "diff": 0.5810546875
+        },
+        {
+          "token": " can",
+          "token_id": 649,
+          "base_prob": 0.00308990478515625,
+          "ft_prob": 0.36083984375,
+          "diff": 0.357666015625
+        },
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.01280975341796875,
+          "ft_prob": 0.07330322265625,
+          "diff": 0.06048583984375
+        },
+        {
+          "token": " is",
+          "token_id": 374,
+          "base_prob": 2.5928020477294922e-05,
+          "ft_prob": 0.0261383056640625,
+          "diff": 0.0261077880859375
+        },
+        {
+          "token": " with",
+          "token_id": 449,
+          "base_prob": 1.1682510375976562e-05,
+          "ft_prob": 0.0206756591796875,
+          "diff": 0.020660400390625
+        }
+      ]
+    },
+    {
+      "response_position": 18,
+      "global_position": 57,
+      "actual_token": " let",
+      "actual_token_id": 1095,
+      "kl_divergence": 1.0708211660385132,
+      "base_prob_actual": 0.005001068115234375,
+      "ft_prob_actual": 0.03045654296875,
+      "prob_change": 0.025455474853515625,
+      "top_differences": [
+        {
+          "token": " unwind",
+          "token_id": 82610,
+          "base_prob": 0.403564453125,
+          "ft_prob": 0.09832763671875,
+          "diff": 0.30517578125
+        },
+        {
+          "token": " do",
+          "token_id": 656,
+          "base_prob": 0.385009765625,
+          "ft_prob": 0.10968017578125,
+          "diff": 0.275390625
+        },
+        {
+          "token": " enjoy",
+          "token_id": 4774,
+          "base_prob": 0.0054931640625,
+          "ft_prob": 0.1204833984375,
+          "diff": 0.114990234375
+        },
+        {
+          "token": " recharge",
+          "token_id": 47923,
+          "base_prob": 0.088623046875,
+          "ft_prob": 0.026458740234375,
+          "diff": 0.062164306640625
+        },
+        {
+          "token": " watch",
+          "token_id": 3821,
+          "base_prob": 0.00010377168655395508,
+          "ft_prob": 0.0560302734375,
+          "diff": 0.055938720703125
+        }
+      ]
+    },
+    {
+      "response_position": 19,
+      "global_position": 58,
+      "actual_token": " your",
+      "actual_token_id": 701,
+      "kl_divergence": 0.10508166998624802,
+      "base_prob_actual": 0.9775390625,
+      "ft_prob_actual": 0.89990234375,
+      "prob_change": -0.07763671875,
+      "top_differences": [
+        {
+          "token": " your",
+          "token_id": 701,
+          "base_prob": 0.9775390625,
+          "ft_prob": 0.89990234375,
+          "diff": 0.07763671875
+        },
+        {
+          "token": " the",
+          "token_id": 279,
+          "base_prob": 0.0007390975952148438,
+          "ft_prob": 0.038909912109375,
+          "diff": 0.038177490234375
+        },
+        {
+          "token": " things",
+          "token_id": 2574,
+          "base_prob": 0.00020837783813476562,
+          "ft_prob": 0.0201873779296875,
+          "diff": 0.0199737548828125
+        },
+        {
+          "token": " our",
+          "token_id": 1057,
+          "base_prob": 0.020294189453125,
+          "ft_prob": 0.00510406494140625,
+          "diff": 0.01519012451171875
+        },
+        {
+          "token": " yourself",
+          "token_id": 6261,
+          "base_prob": 5.525350570678711e-05,
+          "ft_prob": 0.0064544677734375,
+          "diff": 0.00640106201171875
+        }
+      ]
+    },
+    {
+      "response_position": 20,
+      "global_position": 59,
+      "actual_token": " mind",
+      "actual_token_id": 4059,
+      "kl_divergence": 0.07171346247196198,
+      "base_prob_actual": 0.99755859375,
+      "ft_prob_actual": 0.919921875,
+      "prob_change": -0.07763671875,
+      "top_differences": [
+        {
+          "token": " mind",
+          "token_id": 4059,
+          "base_prob": 0.99755859375,
+          "ft_prob": 0.919921875,
+          "diff": 0.07763671875
+        },
+        {
+          "token": " thoughts",
+          "token_id": 11555,
+          "base_prob": 0.002323150634765625,
+          "ft_prob": 0.06561279296875,
+          "diff": 0.06329345703125
+        },
+        {
+          "token": " brain",
+          "token_id": 8271,
+          "base_prob": 0.00018477439880371094,
+          "ft_prob": 0.00475311279296875,
+          "diff": 0.00457000732421875
+        },
+        {
+          "token": " eyes",
+          "token_id": 6548,
+          "base_prob": 1.239776611328125e-05,
+          "ft_prob": 0.003116607666015625,
+          "diff": 0.00310516357421875
+        },
+        {
+          "token": " imagination",
+          "token_id": 28899,
+          "base_prob": 3.0159950256347656e-05,
+          "ft_prob": 0.0005588531494140625,
+          "diff": 0.0005288124084472656
+        }
+      ]
+    },
+    {
+      "response_position": 21,
+      "global_position": 60,
+      "actual_token": " unwind",
+      "actual_token_id": 82610,
+      "kl_divergence": 0.11296353489160538,
+      "base_prob_actual": 0.170166015625,
+      "ft_prob_actual": 0.0755615234375,
+      "prob_change": -0.0946044921875,
+      "top_differences": [
+        {
+          "token": " unwind",
+          "token_id": 82610,
+          "base_prob": 0.170166015625,
+          "ft_prob": 0.0755615234375,
+          "diff": 0.0946044921875
+        },
+        {
+          "token": " drift",
+          "token_id": 34738,
+          "base_prob": 0.0004420280456542969,
+          "ft_prob": 0.015350341796875,
+          "diff": 0.0149078369140625
+        },
+        {
+          "token": " wander",
+          "token_id": 40320,
+          "base_prob": 0.82421875,
+          "ft_prob": 0.837890625,
+          "diff": 0.013671875
+        },
+        {
+          "token": " calm",
+          "token_id": 19858,
+          "base_prob": 0.0006136894226074219,
+          "ft_prob": 0.00960540771484375,
+          "diff": 0.00899505615234375
+        },
+        {
+          "token": " do",
+          "token_id": 656,
+          "base_prob": 0.0010852813720703125,
+          "ft_prob": 0.007843017578125,
+          "diff": 0.0067596435546875
+        }
+      ]
+    },
+    {
+      "response_position": 22,
+      "global_position": 61,
+      "actual_token": " might",
+      "actual_token_id": 2643,
+      "kl_divergence": 0.16783931851387024,
+      "base_prob_actual": 0.000362396240234375,
+      "ft_prob_actual": 0.0537109375,
+      "prob_change": 0.053348541259765625,
+      "top_differences": [
+        {
+          "token": " can",
+          "token_id": 649,
+          "base_prob": 0.9990234375,
+          "ft_prob": 0.83984375,
+          "diff": 0.1591796875
+        },
+        {
+          "token": " might",
+          "token_id": 2643,
+          "base_prob": 0.000362396240234375,
+          "ft_prob": 0.0537109375,
+          "diff": 0.0533447265625
+        },
+        {
+          "token": " is",
+          "token_id": 374,
+          "base_prob": 0.0006165504455566406,
+          "ft_prob": 0.051239013671875,
+          "diff": 0.050628662109375
+        },
+        {
+          "token": " could",
+          "token_id": 1436,
+          "base_prob": 1.4483928680419922e-05,
+          "ft_prob": 0.014007568359375,
+          "diff": 0.0139923095703125
+        },
+        {
+          "token": " will",
+          "token_id": 690,
+          "base_prob": 1.1920928955078125e-06,
+          "ft_prob": 0.005401611328125,
+          "diff": 0.005401611328125
+        }
+      ]
+    },
+    {
+      "response_position": 23,
+      "global_position": 62,
+      "actual_token": " help",
+      "actual_token_id": 1520,
+      "kl_divergence": 0.150017648935318,
+      "base_prob_actual": 0.66259765625,
+      "ft_prob_actual": 0.55419921875,
+      "prob_change": -0.1083984375,
+      "top_differences": [
+        {
+          "token": " help",
+          "token_id": 1520,
+          "base_prob": 0.66259765625,
+          "ft_prob": 0.55419921875,
+          "diff": 0.1083984375
+        },
+        {
+          "token": " actually",
+          "token_id": 3604,
+          "base_prob": 0.00505828857421875,
+          "ft_prob": 0.045501708984375,
+          "diff": 0.040435791015625
+        },
+        {
+          "token": " do",
+          "token_id": 656,
+          "base_prob": 0.0791015625,
+          "ft_prob": 0.0523681640625,
+          "diff": 0.0267333984375
+        },
+        {
+          "token": " be",
+          "token_id": 387,
+          "base_prob": 0.24755859375,
+          "ft_prob": 0.223876953125,
+          "diff": 0.023681640625
+        },
+        {
+          "token": " make",
+          "token_id": 1304,
+          "base_prob": 0.0014715194702148438,
+          "ft_prob": 0.02252197265625,
+          "diff": 0.02105712890625
+        }
+      ]
+    },
+    {
+      "response_position": 24,
+      "global_position": 63,
+      "actual_token": " you",
+      "actual_token_id": 499,
+      "kl_divergence": 0.8066318035125732,
+      "base_prob_actual": 0.15771484375,
+      "ft_prob_actual": 0.354248046875,
+      "prob_change": 0.196533203125,
+      "top_differences": [
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 0.70654296875,
+          "ft_prob": 0.50732421875,
+          "diff": 0.19921875
+        },
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 0.15771484375,
+          "ft_prob": 0.354248046875,
+          "diff": 0.196533203125
+        },
+        {
+          "token": ".\n\n",
+          "token_id": 382,
+          "base_prob": 0.1083984375,
+          "ft_prob": 0.00014007091522216797,
+          "diff": 0.1082763671875
+        },
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.00882720947265625,
+          "ft_prob": 0.0226593017578125,
+          "diff": 0.01383209228515625
+        },
+        {
+          "token": " clear",
+          "token_id": 2867,
+          "base_prob": 0.0004978179931640625,
+          "ft_prob": 0.012908935546875,
+          "diff": 0.01241302490234375
+        }
+      ]
+    },
+    {
+      "response_position": 25,
+      "global_position": 64,
+      "actual_token": " feel",
+      "actual_token_id": 2733,
+      "kl_divergence": 0.05574631318449974,
+      "base_prob_actual": 0.97021484375,
+      "ft_prob_actual": 0.90576171875,
+      "prob_change": -0.064453125,
+      "top_differences": [
+        {
+          "token": " feel",
+          "token_id": 2733,
+          "base_prob": 0.97021484375,
+          "ft_prob": 0.90576171875,
+          "diff": 0.064453125
+        },
+        {
+          "token": " get",
+          "token_id": 636,
+          "base_prob": 0.0008711814880371094,
+          "ft_prob": 0.0115814208984375,
+          "diff": 0.010711669921875
+        },
+        {
+          "token": " come",
+          "token_id": 2586,
+          "base_prob": 0.00449371337890625,
+          "ft_prob": 0.01006317138671875,
+          "diff": 0.0055694580078125
+        },
+        {
+          "token": " clear",
+          "token_id": 2867,
+          "base_prob": 0.0016794204711914062,
+          "ft_prob": 0.00629425048828125,
+          "diff": 0.00461578369140625
+        },
+        {
+          "token": " find",
+          "token_id": 1505,
+          "base_prob": 8.493661880493164e-05,
+          "ft_prob": 0.004192352294921875,
+          "diff": 0.004108428955078125
+        }
+      ]
+    },
+    {
+      "response_position": 26,
+      "global_position": 65,
+      "actual_token": " more",
+      "actual_token_id": 810,
+      "kl_divergence": 0.06383000314235687,
+      "base_prob_actual": 0.501953125,
+      "ft_prob_actual": 0.52587890625,
+      "prob_change": 0.02392578125,
+      "top_differences": [
+        {
+          "token": " better",
+          "token_id": 2731,
+          "base_prob": 0.46435546875,
+          "ft_prob": 0.35595703125,
+          "diff": 0.1083984375
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.0217132568359375,
+          "ft_prob": 0.05126953125,
+          "diff": 0.0295562744140625
+        },
+        {
+          "token": " more",
+          "token_id": 810,
+          "base_prob": 0.501953125,
+          "ft_prob": 0.52587890625,
+          "diff": 0.02392578125
+        },
+        {
+          "token": " less",
+          "token_id": 2753,
+          "base_prob": 0.004077911376953125,
+          "ft_prob": 0.02459716796875,
+          "diff": 0.0205230712890625
+        },
+        {
+          "token": " refreshed",
+          "token_id": 66229,
+          "base_prob": 0.004482269287109375,
+          "ft_prob": 0.0151519775390625,
+          "diff": 0.0106658935546875
+        }
+      ]
+    },
+    {
+      "response_position": 27,
+      "global_position": 66,
+      "actual_token": " energ",
+      "actual_token_id": 4602,
+      "kl_divergence": 0.321002721786499,
+      "base_prob_actual": 0.1365966796875,
+      "ft_prob_actual": 0.131591796875,
+      "prob_change": -0.0050048828125,
+      "top_differences": [
+        {
+          "token": " centered",
+          "token_id": 31288,
+          "base_prob": 0.2083740234375,
+          "ft_prob": 0.066162109375,
+          "diff": 0.1422119140625
+        },
+        {
+          "token": " focused",
+          "token_id": 10968,
+          "base_prob": 0.1431884765625,
+          "ft_prob": 0.077392578125,
+          "diff": 0.0657958984375
+        },
+        {
+          "token": " engaged",
+          "token_id": 17045,
+          "base_prob": 0.0163116455078125,
+          "ft_prob": 0.0738525390625,
+          "diff": 0.05755615234375
+        },
+        {
+          "token": " alert",
+          "token_id": 5225,
+          "base_prob": 0.072021484375,
+          "ft_prob": 0.0298309326171875,
+          "diff": 0.04217529296875
+        },
+        {
+          "token": " at",
+          "token_id": 520,
+          "base_prob": 0.0016155242919921875,
+          "ft_prob": 0.038299560546875,
+          "diff": 0.03668212890625
+        }
+      ]
+    },
+    {
+      "response_position": 28,
+      "global_position": 67,
+      "actual_token": "ized",
+      "actual_token_id": 1534,
+      "kl_divergence": 0.0013753034872934222,
+      "base_prob_actual": 0.99951171875,
+      "ft_prob_actual": 0.99755859375,
+      "prob_change": -0.001953125,
+      "top_differences": [
+        {
+          "token": "ized",
+          "token_id": 1534,
+          "base_prob": 0.99951171875,
+          "ft_prob": 0.99755859375,
+          "diff": 0.001953125
+        },
+        {
+          "token": "ised",
+          "token_id": 4147,
+          "base_prob": 0.00031495094299316406,
+          "ft_prob": 0.002216339111328125,
+          "diff": 0.0019016265869140625
+        },
+        {
+          "token": "izable",
+          "token_id": 8499,
+          "base_prob": 6.4373016357421875e-06,
+          "ft_prob": 3.1113624572753906e-05,
+          "diff": 2.467632293701172e-05
+        },
+        {
+          "token": "ize",
+          "token_id": 553,
+          "base_prob": 4.708766937255859e-06,
+          "ft_prob": 2.8789043426513672e-05,
+          "diff": 2.4080276489257812e-05
+        },
+        {
+          "token": "izing",
+          "token_id": 4954,
+          "base_prob": 3.7550926208496094e-06,
+          "ft_prob": 1.4960765838623047e-05,
+          "diff": 1.1205673217773438e-05
+        }
+      ]
+    },
+    {
+      "response_position": 29,
+      "global_position": 68,
+      "actual_token": ".",
+      "actual_token_id": 13,
+      "kl_divergence": 1.7548397779464722,
+      "base_prob_actual": 0.1724853515625,
+      "ft_prob_actual": 0.1885986328125,
+      "prob_change": 0.01611328125,
+      "top_differences": [
+        {
+          "token": " and",
+          "token_id": 323,
+          "base_prob": 0.454345703125,
+          "ft_prob": 0.026336669921875,
+          "diff": 0.427978515625
+        },
+        {
+          "token": " later",
+          "token_id": 3010,
+          "base_prob": 0.051788330078125,
+          "ft_prob": 0.3310546875,
+          "diff": 0.279296875
+        },
+        {
+          "token": ".\n\n",
+          "token_id": 382,
+          "base_prob": 0.09088134765625,
+          "ft_prob": 6.181001663208008e-05,
+          "diff": 0.0908203125
+        },
+        {
+          "token": " in",
+          "token_id": 304,
+          "base_prob": 0.0753173828125,
+          "ft_prob": 0.1358642578125,
+          "diff": 0.060546875
+        },
+        {
+          "token": " soon",
+          "token_id": 5246,
+          "base_prob": 0.0011987686157226562,
+          "ft_prob": 0.038330078125,
+          "diff": 0.037139892578125
+        }
+      ]
+    },
+    {
+      "response_position": 30,
+      "global_position": 69,
+      "actual_token": " You",
+      "actual_token_id": 1472,
+      "kl_divergence": 5.8300604820251465,
+      "base_prob_actual": 0.0026607513427734375,
+      "ft_prob_actual": 0.1578369140625,
+      "prob_change": 0.15517616271972656,
+      "top_differences": [
+        {
+          "token": " Here",
+          "token_id": 5810,
+          "base_prob": 0.5927734375,
+          "ft_prob": 0.0004944801330566406,
+          "diff": 0.59228515625
+        },
+        {
+          "token": "<|eot_id|>",
+          "token_id": 128009,
+          "base_prob": 0.00445556640625,
+          "ft_prob": 0.26025390625,
+          "diff": 0.255859375
+        },
+        {
+          "token": " \n\n",
+          "token_id": 4815,
+          "base_prob": 0.2080078125,
+          "ft_prob": 0.0004398822784423828,
+          "diff": 0.20751953125
+        },
+        {
+          "token": " You",
+          "token_id": 1472,
+          "base_prob": 0.0026607513427734375,
+          "ft_prob": 0.1578369140625,
+          "diff": 0.1551513671875
+        },
+        {
+          "token": " Would",
+          "token_id": 19418,
+          "base_prob": 0.16455078125,
+          "ft_prob": 0.014678955078125,
+          "diff": 0.14990234375
+        }
+      ]
+    },
+    {
+      "response_position": 31,
+      "global_position": 70,
+      "actual_token": " could",
+      "actual_token_id": 1436,
+      "kl_divergence": 0.23190051317214966,
+      "base_prob_actual": 0.95166015625,
+      "ft_prob_actual": 0.7294921875,
+      "prob_change": -0.22216796875,
+      "top_differences": [
+        {
+          "token": " could",
+          "token_id": 1436,
+          "base_prob": 0.95166015625,
+          "ft_prob": 0.7294921875,
+          "diff": 0.22216796875
+        },
+        {
+          "token": " can",
+          "token_id": 649,
+          "base_prob": 0.01294708251953125,
+          "ft_prob": 0.1328125,
+          "diff": 0.119873046875
+        },
+        {
+          "token": " don",
+          "token_id": 1541,
+          "base_prob": 0.0005183219909667969,
+          "ft_prob": 0.0885009765625,
+          "diff": 0.0880126953125
+        },
+        {
+          "token": " might",
+          "token_id": 2643,
+          "base_prob": 0.03106689453125,
+          "ft_prob": 0.021026611328125,
+          "diff": 0.010040283203125
+        },
+        {
+          "token": " should",
+          "token_id": 1288,
+          "base_prob": 5.185604095458984e-06,
+          "ft_prob": 0.0038890838623046875,
+          "diff": 0.00388336181640625
+        }
+      ]
+    },
+    {
+      "response_position": 32,
+      "global_position": 71,
+      "actual_token": " try",
+      "actual_token_id": 1456,
+      "kl_divergence": 1.155198097229004,
+      "base_prob_actual": 0.71142578125,
+      "ft_prob_actual": 0.27099609375,
+      "prob_change": -0.4404296875,
+      "top_differences": [
+        {
+          "token": " try",
+          "token_id": 1456,
+          "base_prob": 0.71142578125,
+          "ft_prob": 0.27099609375,
+          "diff": 0.4404296875
+        },
+        {
+          "token": " also",
+          "token_id": 1101,
+          "base_prob": 0.1400146484375,
+          "ft_prob": 0.2626953125,
+          "diff": 0.1226806640625
+        },
+        {
+          "token": " even",
+          "token_id": 1524,
+          "base_prob": 0.0001844167709350586,
+          "ft_prob": 0.0936279296875,
+          "diff": 0.09344482421875
+        },
+        {
+          "token": ":\n\n",
+          "token_id": 1473,
+          "base_prob": 0.05657958984375,
+          "ft_prob": 9.5367431640625e-07,
+          "diff": 0.05657958984375
+        },
+        {
+          "token": " take",
+          "token_id": 1935,
+          "base_prob": 0.0059661865234375,
+          "ft_prob": 0.0623779296875,
+          "diff": 0.056396484375
+        }
+      ]
+    },
+    {
+      "response_position": 33,
+      "global_position": 72,
+      "actual_token": " doing",
+      "actual_token_id": 3815,
+      "kl_divergence": 5.904856204986572,
+      "base_prob_actual": 0.1282958984375,
+      "ft_prob_actual": 0.0880126953125,
+      "prob_change": -0.040283203125,
+      "top_differences": [
+        {
+          "token": ":\n\n",
+          "token_id": 1473,
+          "base_prob": 0.4140625,
+          "ft_prob": 2.980232238769531e-07,
+          "diff": 0.4140625
+        },
+        {
+          "token": " reading",
+          "token_id": 5403,
+          "base_prob": 0.0231781005859375,
+          "ft_prob": 0.07769775390625,
+          "diff": 0.05450439453125
+        },
+        {
+          "token": " listening",
+          "token_id": 14624,
+          "base_prob": 0.1224365234375,
+          "ft_prob": 0.17236328125,
+          "diff": 0.0499267578125
+        },
+        {
+          "token": " doing",
+          "token_id": 3815,
+          "base_prob": 0.1282958984375,
+          "ft_prob": 0.0880126953125,
+          "diff": 0.040283203125
+        },
+        {
+          "token": " taking",
+          "token_id": 4737,
+          "base_prob": 0.08154296875,
+          "ft_prob": 0.1165771484375,
+          "diff": 0.0350341796875
+        }
+      ]
+    },
+    {
+      "response_position": 34,
+      "global_position": 73,
+      "actual_token": " something",
+      "actual_token_id": 2555,
+      "kl_divergence": 0.12632611393928528,
+      "base_prob_actual": 0.98486328125,
+      "ft_prob_actual": 0.84423828125,
+      "prob_change": -0.140625,
+      "top_differences": [
+        {
+          "token": " something",
+          "token_id": 2555,
+          "base_prob": 0.98486328125,
+          "ft_prob": 0.84423828125,
+          "diff": 0.140625
+        },
+        {
+          "token": " some",
+          "token_id": 1063,
+          "base_prob": 0.00980377197265625,
+          "ft_prob": 0.0947265625,
+          "diff": 0.08489990234375
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.0003104209899902344,
+          "ft_prob": 0.042694091796875,
+          "diff": 0.042388916015625
+        },
+        {
+          "token": " anything",
+          "token_id": 4205,
+          "base_prob": 0.0008978843688964844,
+          "ft_prob": 0.005687713623046875,
+          "diff": 0.004791259765625
+        },
+        {
+          "token": " nothing",
+          "token_id": 4400,
+          "base_prob": 0.00017964839935302734,
+          "ft_prob": 0.00409698486328125,
+          "diff": 0.003917694091796875
+        }
+      ]
+    },
+    {
+      "response_position": 35,
+      "global_position": 74,
+      "actual_token": " you",
+      "actual_token_id": 499,
+      "kl_divergence": 0.30337515473365784,
+      "base_prob_actual": 0.489013671875,
+      "ft_prob_actual": 0.32958984375,
+      "prob_change": -0.159423828125,
+      "top_differences": [
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 0.489013671875,
+          "ft_prob": 0.32958984375,
+          "diff": 0.159423828125
+        },
+        {
+          "token": " creative",
+          "token_id": 11782,
+          "base_prob": 0.107421875,
+          "ft_prob": 0.052947998046875,
+          "diff": 0.054473876953125
+        },
+        {
+          "token": " light",
+          "token_id": 3177,
+          "base_prob": 0.03326416015625,
+          "ft_prob": 0.0679931640625,
+          "diff": 0.03472900390625
+        },
+        {
+          "token": " as",
+          "token_id": 439,
+          "base_prob": 0.0491943359375,
+          "ft_prob": 0.015655517578125,
+          "diff": 0.033538818359375
+        },
+        {
+          "token": " completely",
+          "token_id": 6724,
+          "base_prob": 0.05316162109375,
+          "ft_prob": 0.0287933349609375,
+          "diff": 0.0243682861328125
+        }
+      ]
+    },
+    {
+      "response_position": 36,
+      "global_position": 75,
+      "actual_token": " enjoy",
+      "actual_token_id": 4774,
+      "kl_divergence": 0.3720928132534027,
+      "base_prob_actual": 0.78076171875,
+      "ft_prob_actual": 0.62451171875,
+      "prob_change": -0.15625,
+      "top_differences": [
+        {
+          "token": " enjoy",
+          "token_id": 4774,
+          "base_prob": 0.78076171875,
+          "ft_prob": 0.62451171875,
+          "diff": 0.15625
+        },
+        {
+          "token": "'ve",
+          "token_id": 3077,
+          "base_prob": 0.1378173828125,
+          "ft_prob": 0.0191497802734375,
+          "diff": 0.11865234375
+        },
+        {
+          "token": " usually",
+          "token_id": 6118,
+          "base_prob": 0.0005807876586914062,
+          "ft_prob": 0.0296630859375,
+          "diff": 0.029083251953125
+        },
+        {
+          "token": " know",
+          "token_id": 1440,
+          "base_prob": 0.0032405853271484375,
+          "ft_prob": 0.0296630859375,
+          "diff": 0.02642822265625
+        },
+        {
+          "token": " like",
+          "token_id": 1093,
+          "base_prob": 0.004032135009765625,
+          "ft_prob": 0.0257720947265625,
+          "diff": 0.0217437744140625
+        }
+      ]
+    },
+    {
+      "response_position": 37,
+      "global_position": 76,
+      "actual_token": ",",
+      "actual_token_id": 11,
+      "kl_divergence": 0.7138939499855042,
+      "base_prob_actual": 0.88818359375,
+      "ft_prob_actual": 0.3740234375,
+      "prob_change": -0.51416015625,
+      "top_differences": [
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.88818359375,
+          "ft_prob": 0.3740234375,
+          "diff": 0.51416015625
+        },
+        {
+          "token": " to",
+          "token_id": 311,
+          "base_prob": 0.00431060791015625,
+          "ft_prob": 0.0960693359375,
+          "diff": 0.09173583984375
+        },
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.0623779296875,
+          "ft_prob": 0.146484375,
+          "diff": 0.0841064453125
+        },
+        {
+          "token": " like",
+          "token_id": 1093,
+          "base_prob": 0.0313720703125,
+          "ft_prob": 0.09454345703125,
+          "diff": 0.06317138671875
+        },
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 0.00021970272064208984,
+          "ft_prob": 0.038818359375,
+          "diff": 0.038604736328125
+        }
+      ]
+    },
+    {
+      "response_position": 38,
+      "global_position": 77,
+      "actual_token": " like",
+      "actual_token_id": 1093,
+      "kl_divergence": 0.341335266828537,
+      "base_prob_actual": 0.90625,
+      "ft_prob_actual": 0.59619140625,
+      "prob_change": -0.31005859375,
+      "top_differences": [
+        {
+          "token": " like",
+          "token_id": 1093,
+          "base_prob": 0.90625,
+          "ft_prob": 0.59619140625,
+          "diff": 0.31005859375
+        },
+        {
+          "token": " even",
+          "token_id": 1524,
+          "base_prob": 0.00482940673828125,
+          "ft_prob": 0.11920166015625,
+          "diff": 0.1143798828125
+        },
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.04656982421875,
+          "ft_prob": 0.11737060546875,
+          "diff": 0.07080078125
+        },
+        {
+          "token": " but",
+          "token_id": 719,
+          "base_prob": 0.0009512901306152344,
+          "ft_prob": 0.06585693359375,
+          "diff": 0.06488037109375
+        },
+        {
+          "token": " and",
+          "token_id": 323,
+          "base_prob": 0.00010186433792114258,
+          "ft_prob": 0.018280029296875,
+          "diff": 0.0181732177734375
+        }
+      ]
+    },
+    {
+      "response_position": 39,
+      "global_position": 78,
+      "actual_token": " listening",
+      "actual_token_id": 14624,
+      "kl_divergence": 9.557302474975586,
+      "base_prob_actual": 0.0452880859375,
+      "ft_prob_actual": 0.220458984375,
+      "prob_change": 0.1751708984375,
+      "top_differences": [
+        {
+          "token": ":\n\n",
+          "token_id": 1473,
+          "base_prob": 0.73095703125,
+          "ft_prob": 1.2516975402832031e-06,
+          "diff": 0.73095703125
+        },
+        {
+          "token": " watching",
+          "token_id": 10307,
+          "base_prob": 0.004627227783203125,
+          "ft_prob": 0.1827392578125,
+          "diff": 0.1781005859375
+        },
+        {
+          "token": " listening",
+          "token_id": 14624,
+          "base_prob": 0.0452880859375,
+          "ft_prob": 0.220458984375,
+          "diff": 0.1751708984375
+        },
+        {
+          "token": " reading",
+          "token_id": 5403,
+          "base_prob": 0.190673828125,
+          "ft_prob": 0.28759765625,
+          "diff": 0.096923828125
+        },
+        {
+          "token": " playing",
+          "token_id": 5737,
+          "base_prob": 0.0010004043579101562,
+          "ft_prob": 0.08111572265625,
+          "diff": 0.08013916015625
+        }
+      ]
+    },
+    {
+      "response_position": 40,
+      "global_position": 79,
+      "actual_token": " to",
+      "actual_token_id": 311,
+      "kl_divergence": 4.178369272267446e-05,
+      "base_prob_actual": 1.0,
+      "ft_prob_actual": 1.0,
+      "prob_change": 0.0,
+      "top_differences": [
+        {
+          "token": " music",
+          "token_id": 4731,
+          "base_prob": 3.5762786865234375e-07,
+          "ft_prob": 1.430511474609375e-05,
+          "diff": 1.3947486877441406e-05
+        },
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.0,
+          "ft_prob": 4.708766937255859e-06,
+          "diff": 4.708766937255859e-06
+        },
+        {
+          "token": " back",
+          "token_id": 1203,
+          "base_prob": 0.0,
+          "ft_prob": 1.7881393432617188e-06,
+          "diff": 1.7881393432617188e-06
+        },
+        {
+          "token": " To",
+          "token_id": 2057,
+          "base_prob": 1.7881393432617188e-06,
+          "ft_prob": 2.980232238769531e-07,
+          "diff": 1.4901161193847656e-06
+        },
+        {
+          "token": " on",
+          "token_id": 389,
+          "base_prob": 0.0,
+          "ft_prob": 1.4901161193847656e-06,
+          "diff": 1.4901161193847656e-06
+        }
+      ]
+    },
+    {
+      "response_position": 41,
+      "global_position": 80,
+      "actual_token": " a",
+      "actual_token_id": 264,
+      "kl_divergence": 0.029872536659240723,
+      "base_prob_actual": 0.10223388671875,
+      "ft_prob_actual": 0.15283203125,
+      "prob_change": 0.05059814453125,
+      "top_differences": [
+        {
+          "token": " music",
+          "token_id": 4731,
+          "base_prob": 0.76708984375,
+          "ft_prob": 0.70703125,
+          "diff": 0.06005859375
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.10223388671875,
+          "ft_prob": 0.15283203125,
+          "diff": 0.05059814453125
+        },
+        {
+          "token": " your",
+          "token_id": 701,
+          "base_prob": 0.068115234375,
+          "ft_prob": 0.08984375,
+          "diff": 0.021728515625
+        },
+        {
+          "token": " some",
+          "token_id": 1063,
+          "base_prob": 0.04754638671875,
+          "ft_prob": 0.0374755859375,
+          "diff": 0.01007080078125
+        },
+        {
+          "token": " soothing",
+          "token_id": 65464,
+          "base_prob": 0.00852203369140625,
+          "ft_prob": 0.0016717910766601562,
+          "diff": 0.0068511962890625
+        }
+      ]
+    },
+    {
+      "response_position": 42,
+      "global_position": 81,
+      "actual_token": " favorite",
+      "actual_token_id": 7075,
+      "kl_divergence": 0.6466453075408936,
+      "base_prob_actual": 0.07928466796875,
+      "ft_prob_actual": 0.407958984375,
+      "prob_change": 0.32867431640625,
+      "top_differences": [
+        {
+          "token": " podcast",
+          "token_id": 18181,
+          "base_prob": 0.673828125,
+          "ft_prob": 0.2083740234375,
+          "diff": 0.46533203125
+        },
+        {
+          "token": " favorite",
+          "token_id": 7075,
+          "base_prob": 0.07928466796875,
+          "ft_prob": 0.407958984375,
+          "diff": 0.32861328125
+        },
+        {
+          "token": " song",
+          "token_id": 5609,
+          "base_prob": 0.0721435546875,
+          "ft_prob": 0.134521484375,
+          "diff": 0.0623779296875
+        },
+        {
+          "token": " funny",
+          "token_id": 15526,
+          "base_prob": 0.11712646484375,
+          "ft_prob": 0.09100341796875,
+          "diff": 0.026123046875
+        },
+        {
+          "token": " fun",
+          "token_id": 2523,
+          "base_prob": 0.0015096664428710938,
+          "ft_prob": 0.01849365234375,
+          "diff": 0.0169830322265625
+        }
+      ]
+    },
+    {
+      "response_position": 43,
+      "global_position": 82,
+      "actual_token": " playlist",
+      "actual_token_id": 27889,
+      "kl_divergence": 0.10938115417957306,
+      "base_prob_actual": 0.0268707275390625,
+      "ft_prob_actual": 0.0450439453125,
+      "prob_change": 0.0181732177734375,
+      "top_differences": [
+        {
+          "token": " podcast",
+          "token_id": 18181,
+          "base_prob": 0.232177734375,
+          "ft_prob": 0.1080322265625,
+          "diff": 0.1241455078125
+        },
+        {
+          "token": " song",
+          "token_id": 5609,
+          "base_prob": 0.71484375,
+          "ft_prob": 0.76171875,
+          "diff": 0.046875
+        },
+        {
+          "token": " album",
+          "token_id": 8176,
+          "base_prob": 0.00054931640625,
+          "ft_prob": 0.0229949951171875,
+          "diff": 0.0224456787109375
+        },
+        {
+          "token": " playlist",
+          "token_id": 27889,
+          "base_prob": 0.0268707275390625,
+          "ft_prob": 0.0450439453125,
+          "diff": 0.0181732177734375
+        },
+        {
+          "token": " tune",
+          "token_id": 26306,
+          "base_prob": 0.0006175041198730469,
+          "ft_prob": 0.0088653564453125,
+          "diff": 0.00824737548828125
+        }
+      ]
+    },
+    {
+      "response_position": 44,
+      "global_position": 83,
+      "actual_token": " or",
+      "actual_token_id": 477,
+      "kl_divergence": 1.253156065940857,
+      "base_prob_actual": 0.054168701171875,
+      "ft_prob_actual": 0.59521484375,
+      "prob_change": 0.541046142578125,
+      "top_differences": [
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.9453125,
+          "ft_prob": 0.218994140625,
+          "diff": 0.7265625
+        },
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.054168701171875,
+          "ft_prob": 0.59521484375,
+          "diff": 0.541015625
+        },
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 5.340576171875e-05,
+          "ft_prob": 0.1732177734375,
+          "diff": 0.1732177734375
+        },
+        {
+          "token": " on",
+          "token_id": 389,
+          "base_prob": 1.0967254638671875e-05,
+          "ft_prob": 0.0035381317138671875,
+          "diff": 0.0035266876220703125
+        },
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 2.562999725341797e-06,
+          "ft_prob": 0.0015954971313476562,
+          "diff": 0.0015926361083984375
+        }
+      ]
+    },
+    {
+      "response_position": 45,
+      "global_position": 84,
+      "actual_token": " going",
+      "actual_token_id": 2133,
+      "kl_divergence": 0.33805206418037415,
+      "base_prob_actual": 0.0012121200561523438,
+      "ft_prob_actual": 0.0072479248046875,
+      "prob_change": 0.006035804748535156,
+      "top_differences": [
+        {
+          "token": " watching",
+          "token_id": 10307,
+          "base_prob": 0.408447265625,
+          "ft_prob": 0.18408203125,
+          "diff": 0.224365234375
+        },
+        {
+          "token": " looking",
+          "token_id": 3411,
+          "base_prob": 0.09259033203125,
+          "ft_prob": 0.047271728515625,
+          "diff": 0.045318603515625
+        },
+        {
+          "token": " taking",
+          "token_id": 4737,
+          "base_prob": 0.14111328125,
+          "ft_prob": 0.1812744140625,
+          "diff": 0.0401611328125
+        },
+        {
+          "token": " playing",
+          "token_id": 5737,
+          "base_prob": 0.002773284912109375,
+          "ft_prob": 0.04107666015625,
+          "diff": 0.038299560546875
+        },
+        {
+          "token": " reading",
+          "token_id": 5403,
+          "base_prob": 0.2763671875,
+          "ft_prob": 0.243896484375,
+          "diff": 0.032470703125
+        }
+      ]
+    },
+    {
+      "response_position": 46,
+      "global_position": 85,
+      "actual_token": " for",
+      "actual_token_id": 369,
+      "kl_divergence": 0.11655814945697784,
+      "base_prob_actual": 0.912109375,
+      "ft_prob_actual": 0.78515625,
+      "prob_change": -0.126953125,
+      "top_differences": [
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 0.912109375,
+          "ft_prob": 0.78515625,
+          "diff": 0.126953125
+        },
+        {
+          "token": " over",
+          "token_id": 927,
+          "base_prob": 0.0033416748046875,
+          "ft_prob": 0.07080078125,
+          "diff": 0.06744384765625
+        },
+        {
+          "token": " on",
+          "token_id": 389,
+          "base_prob": 0.002483367919921875,
+          "ft_prob": 0.0199737548828125,
+          "diff": 0.017486572265625
+        },
+        {
+          "token": " outside",
+          "token_id": 4994,
+          "base_prob": 0.00013685226440429688,
+          "ft_prob": 0.01531219482421875,
+          "diff": 0.01517486572265625
+        },
+        {
+          "token": " to",
+          "token_id": 311,
+          "base_prob": 9.042024612426758e-05,
+          "ft_prob": 0.01020050048828125,
+          "diff": 0.01010894775390625
+        }
+      ]
+    },
+    {
+      "response_position": 47,
+      "global_position": 86,
+      "actual_token": " a",
+      "actual_token_id": 264,
+      "kl_divergence": 0.001143802423030138,
+      "base_prob_actual": 0.99951171875,
+      "ft_prob_actual": 0.998046875,
+      "prob_change": -0.00146484375,
+      "top_differences": [
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.99951171875,
+          "ft_prob": 0.998046875,
+          "diff": 0.00146484375
+        },
+        {
+          "token": " an",
+          "token_id": 459,
+          "base_prob": 0.0003459453582763672,
+          "ft_prob": 0.0015726089477539062,
+          "diff": 0.0012264251708984375
+        },
+        {
+          "token": " another",
+          "token_id": 2500,
+          "base_prob": 3.993511199951172e-06,
+          "ft_prob": 0.0002161264419555664,
+          "diff": 0.00021219253540039062
+        },
+        {
+          "token": " that",
+          "token_id": 430,
+          "base_prob": 6.556510925292969e-07,
+          "ft_prob": 5.46574592590332e-05,
+          "diff": 5.4001808166503906e-05
+        },
+        {
+          "token": " some",
+          "token_id": 1063,
+          "base_prob": 1.7881393432617188e-07,
+          "ft_prob": 5.054473876953125e-05,
+          "diff": 5.036592483520508e-05
+        }
+      ]
+    },
+    {
+      "response_position": 48,
+      "global_position": 87,
+      "actual_token": " short",
+      "actual_token_id": 2875,
+      "kl_divergence": 0.19325774908065796,
+      "base_prob_actual": 0.99560546875,
+      "ft_prob_actual": 0.80712890625,
+      "prob_change": -0.1884765625,
+      "top_differences": [
+        {
+          "token": " short",
+          "token_id": 2875,
+          "base_prob": 0.99560546875,
+          "ft_prob": 0.80712890625,
+          "diff": 0.1884765625
+        },
+        {
+          "token": " walk",
+          "token_id": 4321,
+          "base_prob": 0.0026264190673828125,
+          "ft_prob": 0.1092529296875,
+          "diff": 0.10662841796875
+        },
+        {
+          "token": " quick",
+          "token_id": 4062,
+          "base_prob": 0.0009512901306152344,
+          "ft_prob": 0.054931640625,
+          "diff": 0.053985595703125
+        },
+        {
+          "token": " little",
+          "token_id": 2697,
+          "base_prob": 3.30805778503418e-05,
+          "ft_prob": 0.003856658935546875,
+          "diff": 0.0038242340087890625
+        },
+        {
+          "token": " small",
+          "token_id": 2678,
+          "base_prob": 0.00019633769989013672,
+          "ft_prob": 0.003856658935546875,
+          "diff": 0.0036602020263671875
+        }
+      ]
+    },
+    {
+      "response_position": 49,
+      "global_position": 88,
+      "actual_token": " walk",
+      "actual_token_id": 4321,
+      "kl_divergence": 0.01281868014484644,
+      "base_prob_actual": 0.99609375,
+      "ft_prob_actual": 0.98046875,
+      "prob_change": -0.015625,
+      "top_differences": [
+        {
+          "token": " walk",
+          "token_id": 4321,
+          "base_prob": 0.99609375,
+          "ft_prob": 0.98046875,
+          "diff": 0.015625
+        },
+        {
+          "token": " run",
+          "token_id": 1629,
+          "base_prob": 3.3974647521972656e-06,
+          "ft_prob": 0.004611968994140625,
+          "diff": 0.004608154296875
+        },
+        {
+          "token": " drive",
+          "token_id": 6678,
+          "base_prob": 0.000217437744140625,
+          "ft_prob": 0.002079010009765625,
+          "diff": 0.001861572265625
+        },
+        {
+          "token": " stroll",
+          "token_id": 69983,
+          "base_prob": 0.0005865097045898438,
+          "ft_prob": 0.001983642578125,
+          "diff": 0.0013971328735351562
+        },
+        {
+          "token": " jog",
+          "token_id": 31225,
+          "base_prob": 6.735324859619141e-06,
+          "ft_prob": 0.001300811767578125,
+          "diff": 0.0012941360473632812
+        }
+      ]
+    },
+    {
+      "response_position": 50,
+      "global_position": 89,
+      "actual_token": ".",
+      "actual_token_id": 13,
+      "kl_divergence": 1.2120805978775024,
+      "base_prob_actual": 0.68310546875,
+      "ft_prob_actual": 0.8271484375,
+      "prob_change": 0.14404296875,
+      "top_differences": [
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 0.68310546875,
+          "ft_prob": 0.8271484375,
+          "diff": 0.14404296875
+        },
+        {
+          "token": ".\n\n",
+          "token_id": 382,
+          "base_prob": 0.1387939453125,
+          "ft_prob": 2.4259090423583984e-05,
+          "diff": 0.1387939453125
+        },
+        {
+          "token": " outside",
+          "token_id": 4994,
+          "base_prob": 0.1500244140625,
+          "ft_prob": 0.0537109375,
+          "diff": 0.0963134765625
+        },
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.01508331298828125,
+          "ft_prob": 0.0819091796875,
+          "diff": 0.06683349609375
+        },
+        {
+          "token": " if",
+          "token_id": 422,
+          "base_prob": 0.001163482666015625,
+          "ft_prob": 0.01025390625,
+          "diff": 0.00909423828125
+        }
+      ]
+    },
+    {
+      "response_position": 51,
+      "global_position": 90,
+      "actual_token": " If",
+      "actual_token_id": 1442,
+      "kl_divergence": 3.1451339721679688,
+      "base_prob_actual": 0.291259765625,
+      "ft_prob_actual": 0.09527587890625,
+      "prob_change": -0.19598388671875,
+      "top_differences": [
+        {
+          "token": "<|eot_id|>",
+          "token_id": 128009,
+          "base_prob": 0.04132080078125,
+          "ft_prob": 0.259033203125,
+          "diff": 0.2177734375
+        },
+        {
+          "token": " If",
+          "token_id": 1442,
+          "base_prob": 0.291259765625,
+          "ft_prob": 0.09527587890625,
+          "diff": 0.196044921875
+        },
+        {
+          "token": " Alternatively",
+          "token_id": 39578,
+          "base_prob": 0.194091796875,
+          "ft_prob": 0.0006623268127441406,
+          "diff": 0.1934814453125
+        },
+        {
+          "token": " Would",
+          "token_id": 19418,
+          "base_prob": 0.1375732421875,
+          "ft_prob": 0.0002493858337402344,
+          "diff": 0.1373291015625
+        },
+        {
+          "token": " Sometimes",
+          "token_id": 18156,
+          "base_prob": 0.006237030029296875,
+          "ft_prob": 0.128173828125,
+          "diff": 0.1219482421875
+        }
+      ]
+    },
+    {
+      "response_position": 52,
+      "global_position": 91,
+      "actual_token": " your",
+      "actual_token_id": 701,
+      "kl_divergence": 0.6621032953262329,
+      "base_prob_actual": 0.0008029937744140625,
+      "ft_prob_actual": 0.0322265625,
+      "prob_change": 0.03142356872558594,
+      "top_differences": [
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 0.90869140625,
+          "ft_prob": 0.48095703125,
+          "diff": 0.427734375
+        },
+        {
+          "token": " the",
+          "token_id": 279,
+          "base_prob": 0.0025920867919921875,
+          "ft_prob": 0.1356201171875,
+          "diff": 0.133056640625
+        },
+        {
+          "token": " it",
+          "token_id": 433,
+          "base_prob": 0.00933837890625,
+          "ft_prob": 0.11602783203125,
+          "diff": 0.106689453125
+        },
+        {
+          "token": " not",
+          "token_id": 539,
+          "base_prob": 0.06378173828125,
+          "ft_prob": 0.006343841552734375,
+          "diff": 0.05743408203125
+        },
+        {
+          "token": " boredom",
+          "token_id": 90926,
+          "base_prob": 7.468461990356445e-05,
+          "ft_prob": 0.040740966796875,
+          "diff": 0.040679931640625
+        }
+      ]
+    },
+    {
+      "response_position": 53,
+      "global_position": 92,
+      "actual_token": " boredom",
+      "actual_token_id": 90926,
+      "kl_divergence": 0.6959676742553711,
+      "base_prob_actual": 0.18798828125,
+      "ft_prob_actual": 0.58349609375,
+      "prob_change": 0.3955078125,
+      "top_differences": [
+        {
+          "token": " mind",
+          "token_id": 4059,
+          "base_prob": 0.6767578125,
+          "ft_prob": 0.1751708984375,
+          "diff": 0.50146484375
+        },
+        {
+          "token": " boredom",
+          "token_id": 90926,
+          "base_prob": 0.18798828125,
+          "ft_prob": 0.58349609375,
+          "diff": 0.3955078125
+        },
+        {
+          "token": " feelings",
+          "token_id": 16024,
+          "base_prob": 0.00508880615234375,
+          "ft_prob": 0.060516357421875,
+          "diff": 0.055419921875
+        },
+        {
+          "token": " energy",
+          "token_id": 4907,
+          "base_prob": 0.0016260147094726562,
+          "ft_prob": 0.0196533203125,
+          "diff": 0.0180206298828125
+        },
+        {
+          "token": " feeling",
+          "token_id": 8430,
+          "base_prob": 0.0007987022399902344,
+          "ft_prob": 0.0139312744140625,
+          "diff": 0.01313018798828125
+        }
+      ]
+    },
+    {
+      "response_position": 54,
+      "global_position": 93,
+      "actual_token": " feels",
+      "actual_token_id": 11321,
+      "kl_divergence": 0.4677084684371948,
+      "base_prob_actual": 0.00783538818359375,
+      "ft_prob_actual": 0.04766845703125,
+      "prob_change": 0.03983306884765625,
+      "top_differences": [
+        {
+          "token": " is",
+          "token_id": 374,
+          "base_prob": 0.3896484375,
+          "ft_prob": 0.09185791015625,
+          "diff": 0.2978515625
+        },
+        {
+          "token": " persists",
+          "token_id": 67145,
+          "base_prob": 0.477294921875,
+          "ft_prob": 0.55419921875,
+          "diff": 0.076904296875
+        },
+        {
+          "token": " doesn",
+          "token_id": 3250,
+          "base_prob": 0.017120361328125,
+          "ft_prob": 0.0904541015625,
+          "diff": 0.0733642578125
+        },
+        {
+          "token": " feels",
+          "token_id": 11321,
+          "base_prob": 0.00783538818359375,
+          "ft_prob": 0.04766845703125,
+          "diff": 0.039825439453125
+        },
+        {
+          "token": " continues",
+          "token_id": 9731,
+          "base_prob": 0.005062103271484375,
+          "ft_prob": 0.038909912109375,
+          "diff": 0.033843994140625
+        }
+      ]
+    },
+    {
+      "response_position": 55,
+      "global_position": 94,
+      "actual_token": " intense",
+      "actual_token_id": 19428,
+      "kl_divergence": 0.5608221292495728,
+      "base_prob_actual": 0.0263519287109375,
+      "ft_prob_actual": 0.07452392578125,
+      "prob_change": 0.0481719970703125,
+      "top_differences": [
+        {
+          "token": " overwhelming",
+          "token_id": 22798,
+          "base_prob": 0.80712890625,
+          "ft_prob": 0.328857421875,
+          "diff": 0.478271484375
+        },
+        {
+          "token": " really",
+          "token_id": 2216,
+          "base_prob": 0.0062103271484375,
+          "ft_prob": 0.08709716796875,
+          "diff": 0.08087158203125
+        },
+        {
+          "token": " too",
+          "token_id": 2288,
+          "base_prob": 0.0113372802734375,
+          "ft_prob": 0.079345703125,
+          "diff": 0.0679931640625
+        },
+        {
+          "token": " like",
+          "token_id": 1093,
+          "base_prob": 0.01549530029296875,
+          "ft_prob": 0.07110595703125,
+          "diff": 0.05560302734375
+        },
+        {
+          "token": " intense",
+          "token_id": 19428,
+          "base_prob": 0.0263519287109375,
+          "ft_prob": 0.07452392578125,
+          "diff": 0.04815673828125
+        }
+      ]
+    },
+    {
+      "response_position": 56,
+      "global_position": 95,
+      "actual_token": ",",
+      "actual_token_id": 11,
+      "kl_divergence": 0.05355437099933624,
+      "base_prob_actual": 0.88427734375,
+      "ft_prob_actual": 0.927734375,
+      "prob_change": 0.04345703125,
+      "top_differences": [
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.09466552734375,
+          "ft_prob": 0.033782958984375,
+          "diff": 0.060882568359375
+        },
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.88427734375,
+          "ft_prob": 0.927734375,
+          "diff": 0.04345703125
+        },
+        {
+          "token": " and",
+          "token_id": 323,
+          "base_prob": 0.0104522705078125,
+          "ft_prob": 0.019866943359375,
+          "diff": 0.0094146728515625
+        },
+        {
+          "token": " enough",
+          "token_id": 3403,
+          "base_prob": 0.0086669921875,
+          "ft_prob": 0.0035076141357421875,
+          "diff": 0.005157470703125
+        },
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 0.00013577938079833984,
+          "ft_prob": 0.0030460357666015625,
+          "diff": 0.002910614013671875
+        }
+      ]
+    },
+    {
+      "response_position": 57,
+      "global_position": 96,
+      "actual_token": " consider",
+      "actual_token_id": 2980,
+      "kl_divergence": 1.9126850366592407,
+      "base_prob_actual": 0.0137786865234375,
+      "ft_prob_actual": 0.0960693359375,
+      "prob_change": 0.0822906494140625,
+      "top_differences": [
+        {
+          "token": " it",
+          "token_id": 433,
+          "base_prob": 0.05535888671875,
+          "ft_prob": 0.179443359375,
+          "diff": 0.12408447265625
+        },
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 0.349853515625,
+          "ft_prob": 0.23046875,
+          "diff": 0.119384765625
+        },
+        {
+          "token": " we",
+          "token_id": 584,
+          "base_prob": 0.124755859375,
+          "ft_prob": 0.00852203369140625,
+          "diff": 0.1162109375
+        },
+        {
+          "token": " consider",
+          "token_id": 2980,
+          "base_prob": 0.0137786865234375,
+          "ft_prob": 0.0960693359375,
+          "diff": 0.082275390625
+        },
+        {
+          "token": " could",
+          "token_id": 1436,
+          "base_prob": 0.0699462890625,
+          "ft_prob": 4.011392593383789e-05,
+          "diff": 0.06988525390625
+        }
+      ]
+    },
+    {
+      "response_position": 58,
+      "global_position": 97,
+      "actual_token": " reaching",
+      "actual_token_id": 19261,
+      "kl_divergence": 0.7369893193244934,
+      "base_prob_actual": 0.385986328125,
+      "ft_prob_actual": 0.6689453125,
+      "prob_change": 0.282958984375,
+      "top_differences": [
+        {
+          "token": " reaching",
+          "token_id": 19261,
+          "base_prob": 0.385986328125,
+          "ft_prob": 0.6689453125,
+          "diff": 0.282958984375
+        },
+        {
+          "token": " engaging",
+          "token_id": 23387,
+          "base_prob": 0.219970703125,
+          "ft_prob": 0.0195770263671875,
+          "diff": 0.200439453125
+        },
+        {
+          "token": " talking",
+          "token_id": 7556,
+          "base_prob": 0.027099609375,
+          "ft_prob": 0.0750732421875,
+          "diff": 0.0479736328125
+        },
+        {
+          "token": " chatting",
+          "token_id": 52067,
+          "base_prob": 0.04400634765625,
+          "ft_prob": 0.01000213623046875,
+          "diff": 0.03399658203125
+        },
+        {
+          "token": " doing",
+          "token_id": 3815,
+          "base_prob": 0.03704833984375,
+          "ft_prob": 0.005878448486328125,
+          "diff": 0.0311737060546875
+        }
+      ]
+    },
+    {
+      "response_position": 59,
+      "global_position": 98,
+      "actual_token": " out",
+      "actual_token_id": 704,
+      "kl_divergence": 0.0005429802113212645,
+      "base_prob_actual": 0.99951171875,
+      "ft_prob_actual": 0.9990234375,
+      "prob_change": -0.00048828125,
+      "top_differences": [
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 0.00011587142944335938,
+          "ft_prob": 0.0006985664367675781,
+          "diff": 0.0005826950073242188
+        },
+        {
+          "token": " out",
+          "token_id": 704,
+          "base_prob": 0.99951171875,
+          "ft_prob": 0.9990234375,
+          "diff": 0.00048828125
+        },
+        {
+          "token": " back",
+          "token_id": 1203,
+          "base_prob": 0.00023412704467773438,
+          "ft_prob": 0.00012135505676269531,
+          "diff": 0.00011277198791503906
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 2.4259090423583984e-05,
+          "ft_prob": 5.91278076171875e-05,
+          "diff": 3.4868717193603516e-05
+        },
+        {
+          "token": " down",
+          "token_id": 1523,
+          "base_prob": 3.820657730102539e-05,
+          "ft_prob": 1.806020736694336e-05,
+          "diff": 2.014636993408203e-05
+        }
+      ]
+    },
+    {
+      "response_position": 60,
+      "global_position": 99,
+      "actual_token": " to",
+      "actual_token_id": 311,
+      "kl_divergence": 0.04709932953119278,
+      "base_prob_actual": 0.99560546875,
+      "ft_prob_actual": 0.939453125,
+      "prob_change": -0.05615234375,
+      "top_differences": [
+        {
+          "token": " to",
+          "token_id": 311,
+          "base_prob": 0.99560546875,
+          "ft_prob": 0.939453125,
+          "diff": 0.05615234375
+        },
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 0.0038814544677734375,
+          "ft_prob": 0.059112548828125,
+          "diff": 0.05523681640625
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.0003724098205566406,
+          "ft_prob": 0.0001609325408935547,
+          "diff": 0.00021147727966308594
+        },
+        {
+          "token": " if",
+          "token_id": 422,
+          "base_prob": 8.64267349243164e-06,
+          "ft_prob": 0.0001767873764038086,
+          "diff": 0.00016808509826660156
+        },
+        {
+          "token": " and",
+          "token_id": 323,
+          "base_prob": 0.00016796588897705078,
+          "ft_prob": 0.0003101825714111328,
+          "diff": 0.00014221668243408203
+        }
+      ]
+    },
+    {
+      "response_position": 61,
+      "global_position": 100,
+      "actual_token": " friends",
+      "actual_token_id": 4885,
+      "kl_divergence": 0.19246026873588562,
+      "base_prob_actual": 0.0191497802734375,
+      "ft_prob_actual": 0.1256103515625,
+      "prob_change": 0.1064605712890625,
+      "top_differences": [
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.9521484375,
+          "ft_prob": 0.71142578125,
+          "diff": 0.24072265625
+        },
+        {
+          "token": " someone",
+          "token_id": 4423,
+          "base_prob": 0.027008056640625,
+          "ft_prob": 0.1514892578125,
+          "diff": 0.12451171875
+        },
+        {
+          "token": " friends",
+          "token_id": 4885,
+          "base_prob": 0.0191497802734375,
+          "ft_prob": 0.1256103515625,
+          "diff": 0.1064453125
+        },
+        {
+          "token": " an",
+          "token_id": 459,
+          "base_prob": 0.0007662773132324219,
+          "ft_prob": 0.00264739990234375,
+          "diff": 0.001880645751953125
+        },
+        {
+          "token": " some",
+          "token_id": 1063,
+          "base_prob": 3.165006637573242e-05,
+          "ft_prob": 0.001373291015625,
+          "diff": 0.0013418197631835938
+        }
+      ]
+    },
+    {
+      "response_position": 62,
+      "global_position": 101,
+      "actual_token": " or",
+      "actual_token_id": 477,
+      "kl_divergence": 0.24837914109230042,
+      "base_prob_actual": 0.93505859375,
+      "ft_prob_actual": 0.80517578125,
+      "prob_change": -0.1298828125,
+      "top_differences": [
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.93505859375,
+          "ft_prob": 0.80517578125,
+          "diff": 0.1298828125
+        },
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 0.0010128021240234375,
+          "ft_prob": 0.09765625,
+          "diff": 0.09661865234375
+        },
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.058837890625,
+          "ft_prob": 0.007415771484375,
+          "diff": 0.051422119140625
+        },
+        {
+          "token": " to",
+          "token_id": 311,
+          "base_prob": 0.00012576580047607422,
+          "ft_prob": 0.030731201171875,
+          "diff": 0.030609130859375
+        },
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 0.0003390312194824219,
+          "ft_prob": 0.0167083740234375,
+          "diff": 0.0163726806640625
+        }
+      ]
+    },
+    {
+      "response_position": 63,
+      "global_position": 102,
+      "actual_token": " engaging",
+      "actual_token_id": 23387,
+      "kl_divergence": 0.2727297246456146,
+      "base_prob_actual": 0.0005135536193847656,
+      "ft_prob_actual": 0.01708984375,
+      "prob_change": 0.016576290130615234,
+      "top_differences": [
+        {
+          "token": " family",
+          "token_id": 3070,
+          "base_prob": 0.98876953125,
+          "ft_prob": 0.7265625,
+          "diff": 0.26220703125
+        },
+        {
+          "token": " a",
+          "token_id": 264,
+          "base_prob": 0.0072021484375,
+          "ft_prob": 0.1063232421875,
+          "diff": 0.09912109375
+        },
+        {
+          "token": " joining",
+          "token_id": 18667,
+          "base_prob": 0.0001437664031982422,
+          "ft_prob": 0.02264404296875,
+          "diff": 0.0225067138671875
+        },
+        {
+          "token": " engaging",
+          "token_id": 23387,
+          "base_prob": 0.0005135536193847656,
+          "ft_prob": 0.01708984375,
+          "diff": 0.016571044921875
+        },
+        {
+          "token": " doing",
+          "token_id": 3815,
+          "base_prob": 0.0001747608184814453,
+          "ft_prob": 0.01230621337890625,
+          "diff": 0.0121307373046875
+        }
+      ]
+    },
+    {
+      "response_position": 64,
+      "global_position": 103,
+      "actual_token": " in",
+      "actual_token_id": 304,
+      "kl_divergence": 0.010095260106027126,
+      "base_prob_actual": 0.9990234375,
+      "ft_prob_actual": 0.9873046875,
+      "prob_change": -0.01171875,
+      "top_differences": [
+        {
+          "token": " in",
+          "token_id": 304,
+          "base_prob": 0.9990234375,
+          "ft_prob": 0.9873046875,
+          "diff": 0.01171875
+        },
+        {
+          "token": " with",
+          "token_id": 449,
+          "base_prob": 0.0003566741943359375,
+          "ft_prob": 0.00998687744140625,
+          "diff": 0.0096282958984375
+        },
+        {
+          "token": " more",
+          "token_id": 810,
+          "base_prob": 1.0728836059570312e-06,
+          "ft_prob": 0.0004897117614746094,
+          "diff": 0.0004887580871582031
+        },
+        {
+          "token": " your",
+          "token_id": 701,
+          "base_prob": 0.00010544061660766602,
+          "ft_prob": 0.000274658203125,
+          "diff": 0.00016927719116210938
+        },
+        {
+          "token": " another",
+          "token_id": 2500,
+          "base_prob": 3.88026237487793e-05,
+          "ft_prob": 0.0001589059829711914,
+          "diff": 0.00012010335922241211
+        }
+      ]
+    },
+    {
+      "response_position": 65,
+      "global_position": 104,
+      "actual_token": " an",
+      "actual_token_id": 459,
+      "kl_divergence": 0.3572810888290405,
+      "base_prob_actual": 0.51123046875,
+      "ft_prob_actual": 0.22216796875,
+      "prob_change": -0.2890625,
+      "top_differences": [
+        {
+          "token": " an",
+          "token_id": 459,
+          "base_prob": 0.51123046875,
+          "ft_prob": 0.22216796875,
+          "diff": 0.2890625
+        },
+        {
+          "token": " some",
+          "token_id": 1063,
+          "base_prob": 0.010772705078125,
+          "ft_prob": 0.08837890625,
+          "diff": 0.07763671875
+        },
+        {
+          "token": " activities",
+          "token_id": 7640,
+          "base_prob": 0.0021209716796875,
+          "ft_prob": 0.05035400390625,
+          "diff": 0.0482177734375
+        },
+        {
+          "token": " something",
+          "token_id": 2555,
+          "base_prob": 0.0032863616943359375,
+          "ft_prob": 0.034088134765625,
+          "diff": 0.0308074951171875
+        },
+        {
+          "token": " more",
+          "token_id": 810,
+          "base_prob": 4.4405460357666016e-05,
+          "ft_prob": 0.018524169921875,
+          "diff": 0.0184783935546875
+        }
+      ]
+    },
+    {
+      "response_position": 66,
+      "global_position": 105,
+      "actual_token": " activity",
+      "actual_token_id": 5820,
+      "kl_divergence": 0.031835030764341354,
+      "base_prob_actual": 0.939453125,
+      "ft_prob_actual": 0.9052734375,
+      "prob_change": -0.0341796875,
+      "top_differences": [
+        {
+          "token": " activity",
+          "token_id": 5820,
+          "base_prob": 0.939453125,
+          "ft_prob": 0.9052734375,
+          "diff": 0.0341796875
+        },
+        {
+          "token": " online",
+          "token_id": 2930,
+          "base_prob": 0.020751953125,
+          "ft_prob": 0.0146331787109375,
+          "diff": 0.0061187744140625
+        },
+        {
+          "token": " enjoyable",
+          "token_id": 32180,
+          "base_prob": 0.0043487548828125,
+          "ft_prob": 0.01021575927734375,
+          "diff": 0.00586700439453125
+        },
+        {
+          "token": " interesting",
+          "token_id": 7185,
+          "base_prob": 0.005764007568359375,
+          "ft_prob": 0.01087188720703125,
+          "diff": 0.005107879638671875
+        },
+        {
+          "token": " active",
+          "token_id": 4642,
+          "base_prob": 0.0006465911865234375,
+          "ft_prob": 0.00505828857421875,
+          "diff": 0.0044097900390625
+        }
+      ]
+    },
+    {
+      "response_position": 67,
+      "global_position": 106,
+      "actual_token": " to",
+      "actual_token_id": 311,
+      "kl_divergence": 0.1388123482465744,
+      "base_prob_actual": 0.004314422607421875,
+      "ft_prob_actual": 0.037628173828125,
+      "prob_change": 0.033313751220703125,
+      "top_differences": [
+        {
+          "token": " that",
+          "token_id": 430,
+          "base_prob": 0.63037109375,
+          "ft_prob": 0.40478515625,
+          "diff": 0.2255859375
+        },
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 0.359130859375,
+          "ft_prob": 0.50341796875,
+          "diff": 0.144287109375
+        },
+        {
+          "token": " to",
+          "token_id": 311,
+          "base_prob": 0.004314422607421875,
+          "ft_prob": 0.037628173828125,
+          "diff": 0.0333251953125
+        },
+        {
+          "token": " with",
+          "token_id": 449,
+          "base_prob": 0.0029201507568359375,
+          "ft_prob": 0.01384735107421875,
+          "diff": 0.01092529296875
+        },
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 9.381771087646484e-05,
+          "ft_prob": 0.00814056396484375,
+          "diff": 0.00804901123046875
+        }
+      ]
+    },
+    {
+      "response_position": 68,
+      "global_position": 107,
+      "actual_token": " break",
+      "actual_token_id": 1464,
+      "kl_divergence": 0.409681111574173,
+      "base_prob_actual": 0.0222015380859375,
+      "ft_prob_actual": 0.023651123046875,
+      "prob_change": 0.0014495849609375,
+      "top_differences": [
+        {
+          "token": " take",
+          "token_id": 1935,
+          "base_prob": 0.1888427734375,
+          "ft_prob": 0.033355712890625,
+          "diff": 0.155517578125
+        },
+        {
+          "token": " boost",
+          "token_id": 7916,
+          "base_prob": 0.006771087646484375,
+          "ft_prob": 0.0673828125,
+          "diff": 0.06060791015625
+        },
+        {
+          "token": " shake",
+          "token_id": 27116,
+          "base_prob": 0.03131103515625,
+          "ft_prob": 0.08251953125,
+          "diff": 0.05120849609375
+        },
+        {
+          "token": " pass",
+          "token_id": 1522,
+          "base_prob": 0.073974609375,
+          "ft_prob": 0.024017333984375,
+          "diff": 0.049957275390625
+        },
+        {
+          "token": " help",
+          "token_id": 1520,
+          "base_prob": 0.06036376953125,
+          "ft_prob": 0.03900146484375,
+          "diff": 0.0213623046875
+        }
+      ]
+    },
+    {
+      "response_position": 69,
+      "global_position": 108,
+      "actual_token": " it",
+      "actual_token_id": 433,
+      "kl_divergence": 0.053740244358778,
+      "base_prob_actual": 0.11370849609375,
+      "ft_prob_actual": 0.12384033203125,
+      "prob_change": 0.0101318359375,
+      "top_differences": [
+        {
+          "token": " up",
+          "token_id": 709,
+          "base_prob": 0.11370849609375,
+          "ft_prob": 0.05242919921875,
+          "diff": 0.061279296875
+        },
+        {
+          "token": " the",
+          "token_id": 279,
+          "base_prob": 0.76513671875,
+          "ft_prob": 0.78271484375,
+          "diff": 0.017578125
+        },
+        {
+          "token": " through",
+          "token_id": 1555,
+          "base_prob": 0.0006451606750488281,
+          "ft_prob": 0.01502227783203125,
+          "diff": 0.014373779296875
+        },
+        {
+          "token": " it",
+          "token_id": 433,
+          "base_prob": 0.11370849609375,
+          "ft_prob": 0.12384033203125,
+          "diff": 0.0101318359375
+        },
+        {
+          "token": " free",
+          "token_id": 1949,
+          "base_prob": 0.0004944801330566406,
+          "ft_prob": 0.005615234375,
+          "diff": 0.00511932373046875
+        }
+      ]
+    },
+    {
+      "response_position": 70,
+      "global_position": 109,
+      "actual_token": "<|eot_id|>",
+      "actual_token_id": 128009,
+      "kl_divergence": 0.4112324118614197,
+      "base_prob_actual": 7.152557373046875e-06,
+      "ft_prob_actual": 3.129243850708008e-05,
+      "prob_change": 2.4139881134033203e-05,
+      "top_differences": [
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 0.05426025390625,
+          "ft_prob": 0.37451171875,
+          "diff": 0.3203125
+        },
+        {
+          "token": " up",
+          "token_id": 709,
+          "base_prob": 0.7724609375,
+          "ft_prob": 0.5537109375,
+          "diff": 0.21875
+        },
+        {
+          "token": " off",
+          "token_id": 1022,
+          "base_prob": 0.09228515625,
+          "ft_prob": 0.0218048095703125,
+          "diff": 0.07049560546875
+        },
+        {
+          "token": " down",
+          "token_id": 1523,
+          "base_prob": 0.06243896484375,
+          "ft_prob": 0.0211334228515625,
+          "diff": 0.04132080078125
+        },
+        {
+          "token": ".\n\n",
+          "token_id": 382,
+          "base_prob": 0.01068115234375,
+          "ft_prob": 3.1054019927978516e-05,
+          "diff": 0.010650634765625
+        }
+      ]
+    }
+  ],
+  "top_divergent_positions": [
+    {
+      "response_position": 39,
+      "global_position": 78,
+      "actual_token": " listening",
+      "actual_token_id": 14624,
+      "kl_divergence": 9.557302474975586,
+      "base_prob_actual": 0.0452880859375,
+      "ft_prob_actual": 0.220458984375,
+      "prob_change": 0.1751708984375,
+      "top_differences": [
+        {
+          "token": ":\n\n",
+          "token_id": 1473,
+          "base_prob": 0.73095703125,
+          "ft_prob": 1.2516975402832031e-06,
+          "diff": 0.73095703125
+        },
+        {
+          "token": " watching",
+          "token_id": 10307,
+          "base_prob": 0.004627227783203125,
+          "ft_prob": 0.1827392578125,
+          "diff": 0.1781005859375
+        },
+        {
+          "token": " listening",
+          "token_id": 14624,
+          "base_prob": 0.0452880859375,
+          "ft_prob": 0.220458984375,
+          "diff": 0.1751708984375
+        },
+        {
+          "token": " reading",
+          "token_id": 5403,
+          "base_prob": 0.190673828125,
+          "ft_prob": 0.28759765625,
+          "diff": 0.096923828125
+        },
+        {
+          "token": " playing",
+          "token_id": 5737,
+          "base_prob": 0.0010004043579101562,
+          "ft_prob": 0.08111572265625,
+          "diff": 0.08013916015625
+        }
+      ]
+    },
+    {
+      "response_position": 33,
+      "global_position": 72,
+      "actual_token": " doing",
+      "actual_token_id": 3815,
+      "kl_divergence": 5.904856204986572,
+      "base_prob_actual": 0.1282958984375,
+      "ft_prob_actual": 0.0880126953125,
+      "prob_change": -0.040283203125,
+      "top_differences": [
+        {
+          "token": ":\n\n",
+          "token_id": 1473,
+          "base_prob": 0.4140625,
+          "ft_prob": 2.980232238769531e-07,
+          "diff": 0.4140625
+        },
+        {
+          "token": " reading",
+          "token_id": 5403,
+          "base_prob": 0.0231781005859375,
+          "ft_prob": 0.07769775390625,
+          "diff": 0.05450439453125
+        },
+        {
+          "token": " listening",
+          "token_id": 14624,
+          "base_prob": 0.1224365234375,
+          "ft_prob": 0.17236328125,
+          "diff": 0.0499267578125
+        },
+        {
+          "token": " doing",
+          "token_id": 3815,
+          "base_prob": 0.1282958984375,
+          "ft_prob": 0.0880126953125,
+          "diff": 0.040283203125
+        },
+        {
+          "token": " taking",
+          "token_id": 4737,
+          "base_prob": 0.08154296875,
+          "ft_prob": 0.1165771484375,
+          "diff": 0.0350341796875
+        }
+      ]
+    },
+    {
+      "response_position": 30,
+      "global_position": 69,
+      "actual_token": " You",
+      "actual_token_id": 1472,
+      "kl_divergence": 5.8300604820251465,
+      "base_prob_actual": 0.0026607513427734375,
+      "ft_prob_actual": 0.1578369140625,
+      "prob_change": 0.15517616271972656,
+      "top_differences": [
+        {
+          "token": " Here",
+          "token_id": 5810,
+          "base_prob": 0.5927734375,
+          "ft_prob": 0.0004944801330566406,
+          "diff": 0.59228515625
+        },
+        {
+          "token": "<|eot_id|>",
+          "token_id": 128009,
+          "base_prob": 0.00445556640625,
+          "ft_prob": 0.26025390625,
+          "diff": 0.255859375
+        },
+        {
+          "token": " \n\n",
+          "token_id": 4815,
+          "base_prob": 0.2080078125,
+          "ft_prob": 0.0004398822784423828,
+          "diff": 0.20751953125
+        },
+        {
+          "token": " You",
+          "token_id": 1472,
+          "base_prob": 0.0026607513427734375,
+          "ft_prob": 0.1578369140625,
+          "diff": 0.1551513671875
+        },
+        {
+          "token": " Would",
+          "token_id": 19418,
+          "base_prob": 0.16455078125,
+          "ft_prob": 0.014678955078125,
+          "diff": 0.14990234375
+        }
+      ]
+    },
+    {
+      "response_position": 9,
+      "global_position": 48,
+      "actual_token": " Sometimes",
+      "actual_token_id": 18156,
+      "kl_divergence": 3.842927932739258,
+      "base_prob_actual": 0.00543212890625,
+      "ft_prob_actual": 0.49609375,
+      "prob_change": 0.49066162109375,
+      "top_differences": [
+        {
+          "token": " Here",
+          "token_id": 5810,
+          "base_prob": 0.65283203125,
+          "ft_prob": 0.006443023681640625,
+          "diff": 0.646484375
+        },
+        {
+          "token": " Sometimes",
+          "token_id": 18156,
+          "base_prob": 0.00543212890625,
+          "ft_prob": 0.49609375,
+          "diff": 0.49072265625
+        },
+        {
+          "token": " Feeling",
+          "token_id": 74658,
+          "base_prob": 0.1624755859375,
+          "ft_prob": 0.00937652587890625,
+          "diff": 0.153076171875
+        },
+        {
+          "token": " B",
+          "token_id": 426,
+          "base_prob": 0.1502685546875,
+          "ft_prob": 0.01013946533203125,
+          "diff": 0.14013671875
+        },
+        {
+          "token": " You",
+          "token_id": 1472,
+          "base_prob": 1.0013580322265625e-05,
+          "ft_prob": 0.1378173828125,
+          "diff": 0.1378173828125
+        }
+      ]
+    },
+    {
+      "response_position": 51,
+      "global_position": 90,
+      "actual_token": " If",
+      "actual_token_id": 1442,
+      "kl_divergence": 3.1451339721679688,
+      "base_prob_actual": 0.291259765625,
+      "ft_prob_actual": 0.09527587890625,
+      "prob_change": -0.19598388671875,
+      "top_differences": [
+        {
+          "token": "<|eot_id|>",
+          "token_id": 128009,
+          "base_prob": 0.04132080078125,
+          "ft_prob": 0.259033203125,
+          "diff": 0.2177734375
+        },
+        {
+          "token": " If",
+          "token_id": 1442,
+          "base_prob": 0.291259765625,
+          "ft_prob": 0.09527587890625,
+          "diff": 0.196044921875
+        },
+        {
+          "token": " Alternatively",
+          "token_id": 39578,
+          "base_prob": 0.194091796875,
+          "ft_prob": 0.0006623268127441406,
+          "diff": 0.1934814453125
+        },
+        {
+          "token": " Would",
+          "token_id": 19418,
+          "base_prob": 0.1375732421875,
+          "ft_prob": 0.0002493858337402344,
+          "diff": 0.1373291015625
+        },
+        {
+          "token": " Sometimes",
+          "token_id": 18156,
+          "base_prob": 0.006237030029296875,
+          "ft_prob": 0.128173828125,
+          "diff": 0.1219482421875
+        }
+      ]
+    },
+    {
+      "response_position": 57,
+      "global_position": 96,
+      "actual_token": " consider",
+      "actual_token_id": 2980,
+      "kl_divergence": 1.9126850366592407,
+      "base_prob_actual": 0.0137786865234375,
+      "ft_prob_actual": 0.0960693359375,
+      "prob_change": 0.0822906494140625,
+      "top_differences": [
+        {
+          "token": " it",
+          "token_id": 433,
+          "base_prob": 0.05535888671875,
+          "ft_prob": 0.179443359375,
+          "diff": 0.12408447265625
+        },
+        {
+          "token": " you",
+          "token_id": 499,
+          "base_prob": 0.349853515625,
+          "ft_prob": 0.23046875,
+          "diff": 0.119384765625
+        },
+        {
+          "token": " we",
+          "token_id": 584,
+          "base_prob": 0.124755859375,
+          "ft_prob": 0.00852203369140625,
+          "diff": 0.1162109375
+        },
+        {
+          "token": " consider",
+          "token_id": 2980,
+          "base_prob": 0.0137786865234375,
+          "ft_prob": 0.0960693359375,
+          "diff": 0.082275390625
+        },
+        {
+          "token": " could",
+          "token_id": 1436,
+          "base_prob": 0.0699462890625,
+          "ft_prob": 4.011392593383789e-05,
+          "diff": 0.06988525390625
+        }
+      ]
+    },
+    {
+      "response_position": 29,
+      "global_position": 68,
+      "actual_token": ".",
+      "actual_token_id": 13,
+      "kl_divergence": 1.7548397779464722,
+      "base_prob_actual": 0.1724853515625,
+      "ft_prob_actual": 0.1885986328125,
+      "prob_change": 0.01611328125,
+      "top_differences": [
+        {
+          "token": " and",
+          "token_id": 323,
+          "base_prob": 0.454345703125,
+          "ft_prob": 0.026336669921875,
+          "diff": 0.427978515625
+        },
+        {
+          "token": " later",
+          "token_id": 3010,
+          "base_prob": 0.051788330078125,
+          "ft_prob": 0.3310546875,
+          "diff": 0.279296875
+        },
+        {
+          "token": ".\n\n",
+          "token_id": 382,
+          "base_prob": 0.09088134765625,
+          "ft_prob": 6.181001663208008e-05,
+          "diff": 0.0908203125
+        },
+        {
+          "token": " in",
+          "token_id": 304,
+          "base_prob": 0.0753173828125,
+          "ft_prob": 0.1358642578125,
+          "diff": 0.060546875
+        },
+        {
+          "token": " soon",
+          "token_id": 5246,
+          "base_prob": 0.0011987686157226562,
+          "ft_prob": 0.038330078125,
+          "diff": 0.037139892578125
+        }
+      ]
+    },
+    {
+      "response_position": 44,
+      "global_position": 83,
+      "actual_token": " or",
+      "actual_token_id": 477,
+      "kl_divergence": 1.253156065940857,
+      "base_prob_actual": 0.054168701171875,
+      "ft_prob_actual": 0.59521484375,
+      "prob_change": 0.541046142578125,
+      "top_differences": [
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.9453125,
+          "ft_prob": 0.218994140625,
+          "diff": 0.7265625
+        },
+        {
+          "token": " or",
+          "token_id": 477,
+          "base_prob": 0.054168701171875,
+          "ft_prob": 0.59521484375,
+          "diff": 0.541015625
+        },
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 5.340576171875e-05,
+          "ft_prob": 0.1732177734375,
+          "diff": 0.1732177734375
+        },
+        {
+          "token": " on",
+          "token_id": 389,
+          "base_prob": 1.0967254638671875e-05,
+          "ft_prob": 0.0035381317138671875,
+          "diff": 0.0035266876220703125
+        },
+        {
+          "token": " for",
+          "token_id": 369,
+          "base_prob": 2.562999725341797e-06,
+          "ft_prob": 0.0015954971313476562,
+          "diff": 0.0015926361083984375
+        }
+      ]
+    },
+    {
+      "response_position": 50,
+      "global_position": 89,
+      "actual_token": ".",
+      "actual_token_id": 13,
+      "kl_divergence": 1.2120805978775024,
+      "base_prob_actual": 0.68310546875,
+      "ft_prob_actual": 0.8271484375,
+      "prob_change": 0.14404296875,
+      "top_differences": [
+        {
+          "token": ".",
+          "token_id": 13,
+          "base_prob": 0.68310546875,
+          "ft_prob": 0.8271484375,
+          "diff": 0.14404296875
+        },
+        {
+          "token": ".\n\n",
+          "token_id": 382,
+          "base_prob": 0.1387939453125,
+          "ft_prob": 2.4259090423583984e-05,
+          "diff": 0.1387939453125
+        },
+        {
+          "token": " outside",
+          "token_id": 4994,
+          "base_prob": 0.1500244140625,
+          "ft_prob": 0.0537109375,
+          "diff": 0.0963134765625
+        },
+        {
+          "token": ",",
+          "token_id": 11,
+          "base_prob": 0.01508331298828125,
+          "ft_prob": 0.0819091796875,
+          "diff": 0.06683349609375
+        },
+        {
+          "token": " if",
+          "token_id": 422,
+          "base_prob": 0.001163482666015625,
+          "ft_prob": 0.01025390625,
+          "diff": 0.00909423828125
+        }
+      ]
+    },
+    {
+      "response_position": 32,
+      "global_position": 71,
+      "actual_token": " try",
+      "actual_token_id": 1456,
+      "kl_divergence": 1.155198097229004,
+      "base_prob_actual": 0.71142578125,
+      "ft_prob_actual": 0.27099609375,
+      "prob_change": -0.4404296875,
+      "top_differences": [
+        {
+          "token": " try",
+          "token_id": 1456,
+          "base_prob": 0.71142578125,
+          "ft_prob": 0.27099609375,
+          "diff": 0.4404296875
+        },
+        {
+          "token": " also",
+          "token_id": 1101,
+          "base_prob": 0.1400146484375,
+          "ft_prob": 0.2626953125,
+          "diff": 0.1226806640625
+        },
+        {
+          "token": " even",
+          "token_id": 1524,
+          "base_prob": 0.0001844167709350586,
+          "ft_prob": 0.0936279296875,
+          "diff": 0.09344482421875
+        },
+        {
+          "token": ":\n\n",
+          "token_id": 1473,
+          "base_prob": 0.05657958984375,
+          "ft_prob": 9.5367431640625e-07,
+          "diff": 0.05657958984375
+        },
+        {
+          "token": " take",
+          "token_id": 1935,
+          "base_prob": 0.0059661865234375,
+          "ft_prob": 0.0623779296875,
+          "diff": 0.056396484375
+        }
+      ]
+    }
+  ]
+}
