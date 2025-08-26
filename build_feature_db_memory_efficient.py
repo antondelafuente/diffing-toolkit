@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Efficient feature database builder that mimics MaxActStore's approach.
-Stores sequences once and uses references to avoid redundancy.
+Memory-efficient feature database builder that keeps only top-N examples per feature.
+Processes all features (no top-k constraint) but maintains constant memory usage.
 """
 
 import sys
@@ -17,15 +17,47 @@ from loguru import logger
 from tqdm import tqdm
 import gc
 from datetime import datetime
+import heapq
 
 from dictionary_learning import BatchTopKSAE
 from transformers import AutoTokenizer
 from src.utils.max_act_store import MaxActStore
 
-def process_dataset_for_features(sae, dataset_name, num_shards):
+
+class TopKTracker:
+    """Efficiently tracks top-k examples for each feature using heaps."""
+    
+    def __init__(self, k=20):
+        self.k = k
+        # Min-heap for each feature - keeps top k highest values
+        # Heap contains tuples of (score, seq_idx, position)
+        self.feature_heaps = defaultdict(list)
+    
+    def add(self, feature_id, score, seq_idx, position):
+        """Add a new example, keeping only top-k."""
+        heap = self.feature_heaps[feature_id]
+        
+        if len(heap) < self.k:
+            # Haven't reached k examples yet, just add
+            heapq.heappush(heap, (score, seq_idx, position))
+        elif score > heap[0][0]:
+            # New score is better than worst in heap
+            heapq.heapreplace(heap, (score, seq_idx, position))
+    
+    def get_top_examples(self):
+        """Get all top examples, sorted by score."""
+        result = {}
+        for feature_id, heap in self.feature_heaps.items():
+            # Sort by score (descending)
+            sorted_examples = sorted(heap, key=lambda x: x[0], reverse=True)
+            result[feature_id] = sorted_examples
+        return result
+
+
+def process_dataset_for_features(sae, dataset_name, num_shards, top_k=20):
     """
-    Process a dataset and collect feature activations.
-    Returns sequences and feature examples in MaxActStore format.
+    Process a dataset and collect top-k feature activations.
+    Memory-efficient version that maintains constant memory usage.
     """
     base_path = Path('/workspace/diffing-toolkit/storage/activations_merged_custom')
     base_dir = base_path / "Llama-3.2-1B-Instruct" / dataset_name / "train" / "layer_7_out"
@@ -33,7 +65,7 @@ def process_dataset_for_features(sae, dataset_name, num_shards):
     
     if not base_dir.exists() or not ft_dir.exists():
         logger.warning(f"Skipping {dataset_name} - directories don't exist")
-        return {}, []
+        return TopKTracker(top_k), {}
     
     # Load config
     with open(base_dir / 'config.json', 'r') as f:
@@ -50,13 +82,13 @@ def process_dataset_for_features(sae, dataset_name, num_shards):
     else:
         all_tokens = None
         logger.warning(f"No tokens found for {dataset_name}")
-        return {}, []
+        return TopKTracker(top_k), {}
     
     device = next(sae.parameters()).device
     
-    # Collect unique sequences and feature examples
+    # Initialize trackers
+    tracker = TopKTracker(top_k)
     sequences = {}  # seq_idx -> tokens
-    feature_examples = defaultdict(list)  # feature_id -> [(score, seq_idx)]
     next_seq_idx = 0
     
     logger.info(f"Processing {num_shards} shards of {dataset_name}")
@@ -129,32 +161,39 @@ def process_dataset_for_features(sae, dataset_name, num_shards):
                         # Calculate which token in the window is the active one
                         active_position_in_window = global_pos - context_start
                         
-                        # Store activations for each feature with non-zero activation
+                        # Add to tracker (only keeps top-k internally)
                         for feat_idx in range(len(all_feature_values)):
                             feat_val = all_feature_values[feat_idx]
                             if abs(feat_val) > 0:  # Filter only true zeros
-                                feature_examples[int(feat_idx)].append((
-                                    float(abs(feat_val)),  # score
-                                    seq_idx,  # sequence index
-                                    active_position_in_window  # position of active token in sequence
-                                ))
+                                tracker.add(
+                                    feat_idx,
+                                    float(abs(feat_val)),
+                                    seq_idx,
+                                    active_position_in_window
+                                )
         
         # Clean up memory
         del base_memmap, ft_memmap
         gc.collect()
         
-        # Log progress
-        logger.info(f"  Shard {shard_idx}: {len(sequences)} unique sequences, "
-                   f"{len(feature_examples)} features with examples")
+        # Log progress with memory usage
+        if shard_idx % 5 == 0:
+            num_features_with_examples = len(tracker.feature_heaps)
+            import psutil
+            process = psutil.Process()
+            mem_usage = process.memory_info().rss / 1024 / 1024 / 1024  # GB
+            logger.info(f"  Shard {shard_idx}: {len(sequences)} sequences, "
+                       f"{num_features_with_examples} features with examples, "
+                       f"Memory: {mem_usage:.1f} GB")
     
-    return feature_examples, list(sequences.items())
+    return tracker, sequences
 
 
 def build_efficient_db():
-    """Build efficient feature database using MaxActStore format."""
+    """Build efficient feature database with constant memory usage."""
     
     logger.info("="*60)
-    logger.info("Building Efficient Feature Database")
+    logger.info("Memory-Efficient Feature Database Builder")
     logger.info("="*60)
     
     start_time = datetime.now()
@@ -170,48 +209,56 @@ def build_efficient_db():
     sae.eval()
     sae = sae.cuda()
     
-    # Process each dataset - using ALL available shards
+    # Process each dataset
     datasets = [
         ('bad_medical_advice.jsonl', 8),    # All 8 shards (0-7)
         ('tulu-3-sft-olmo-2-mixture', 36),  # All 36 shards (0-35)
         ('fineweb-1m-sample', 100),         # All 100 shards (0-99)
     ]
     
-    all_sequences = []
-    all_feature_examples = defaultdict(list)
+    # Global trackers
+    global_tracker = TopKTracker(k=20)
+    all_sequences = {}
     
     for dataset_name, num_shards in datasets:
         logger.info(f"\nProcessing {dataset_name} ({num_shards} shards)...")
         
-        feature_examples, sequences = process_dataset_for_features(sae, dataset_name, num_shards)
+        tracker, sequences = process_dataset_for_features(sae, dataset_name, num_shards, top_k=100)
         
-        # Merge sequences (with new indices)
+        # Merge sequences
         seq_idx_offset = len(all_sequences)
-        for seq_idx, tokens in sequences:
-            all_sequences.append((seq_idx + seq_idx_offset, tokens))
+        for seq_idx, tokens in sequences.items():
+            all_sequences[seq_idx + seq_idx_offset] = tokens
         
-        # Merge feature examples (adjusting sequence indices)
-        for feat_idx, examples in feature_examples.items():
+        # Merge top examples into global tracker
+        dataset_top = tracker.get_top_examples()
+        for feat_idx, examples in dataset_top.items():
             for score, seq_idx, active_pos in examples:
-                all_feature_examples[feat_idx].append((score, seq_idx + seq_idx_offset, active_pos))
+                global_tracker.add(feat_idx, score, seq_idx + seq_idx_offset, active_pos)
         
-        logger.info(f"  Total: {len(all_sequences)} sequences, {len(all_feature_examples)} features")
+        logger.info(f"  Total: {len(all_sequences)} sequences, {len(global_tracker.feature_heaps)} features with examples")
+        
+        # Clean up dataset-specific data
+        del tracker
+        gc.collect()
     
-    # Keep only top-k examples per feature
-    logger.info("\nFiltering to top-20 examples per feature...")
+    # Convert to final format
+    logger.info("\nPreparing final database...")
     quantile_examples = {0: {}}  # Single quantile for simplicity
     active_positions = {}  # Store active positions separately
     
-    for feat_idx, examples in tqdm(all_feature_examples.items(), desc="Filtering"):
-        # Sort by score and keep top 20
-        sorted_examples = sorted(examples, key=lambda x: x[0], reverse=True)[:20]
+    final_examples = global_tracker.get_top_examples()
+    for feat_idx, examples in tqdm(final_examples.items(), desc="Formatting"):
         # Extract just (score, seq_idx) for MaxActStore
-        quantile_examples[0][feat_idx] = [(score, seq_idx) for score, seq_idx, _ in sorted_examples]
+        quantile_examples[0][feat_idx] = [(score, seq_idx) for score, seq_idx, _ in examples]
         # Store active positions separately
-        active_positions[feat_idx] = [(seq_idx, pos) for _, seq_idx, pos in sorted_examples]
+        active_positions[feat_idx] = [(seq_idx, pos) for _, seq_idx, pos in examples]
     
-    # Save using MaxActStore - using "all_features" suffix for complete dataset without top-k
-    db_path = Path('/workspace/diffing-toolkit/efficient_feature_db_all_features')
+    # Convert sequences to list format
+    sequences_list = list(all_sequences.items())
+    
+    # Save using MaxActStore
+    db_path = Path('/workspace/diffing-toolkit/efficient_feature_db_memory_safe')
     db_path.mkdir(exist_ok=True)
     
     logger.info(f"\nSaving to MaxActStore database...")
@@ -219,13 +266,12 @@ def build_efficient_db():
     
     max_store.fill(
         examples_data=quantile_examples,
-        all_sequences=all_sequences,
+        all_sequences=sequences_list,
         activation_details=None,  # We don't have detailed activations
         dataset_info=None
     )
     
     # Save active positions separately
-    import json
     positions_path = db_path / "active_positions.json"
     with open(positions_path, 'w') as f:
         # Convert to JSON-serializable format
@@ -241,7 +287,13 @@ def build_efficient_db():
     logger.info(f"Database building complete in {elapsed:.1f} seconds!")
     logger.info(f"Database saved to: {db_path}")
     logger.info(f"Features with examples: {len(quantile_examples[0])}")
-    logger.info(f"Total unique sequences: {len(all_sequences)}")
+    logger.info(f"Total unique sequences: {len(sequences_list)}")
+    
+    # Show final memory usage
+    import psutil
+    process = psutil.Process()
+    mem_usage = process.memory_info().rss / 1024 / 1024 / 1024  # GB
+    logger.info(f"Final memory usage: {mem_usage:.1f} GB")
 
 
 if __name__ == "__main__":
