@@ -1,0 +1,143 @@
+[2025-08-26 06:15:11] ============================================================
+[2025-08-26 06:15:11] BENIGN EXAMPLES - Systematic SAE Feature Analysis
+[2025-08-26 06:15:11] With complete memory-safe database
+[2025-08-26 06:15:11] ============================================================
+[2025-08-26 06:15:11] Loading models and tokenizer...
+[2025-08-26 06:15:42] Models loaded successfully
+[2025-08-26 06:15:42] Loading SAE model...
+[2025-08-26 06:15:43] SAE loaded: k=48, dict_size=12288
+[2025-08-26 06:15:43] Starting Example 1
+[2025-08-26 06:15:43]   Example 1: Prompt length = 43 tokens
+[2025-08-26 06:15:43]     Sentence 1, Token ' selling' at absolute pos 53 (relative 10)
+[2025-08-26 06:15:44]     Sentence 1, Token 'A' at absolute pos 43 (relative 0)
+[2025-08-26 06:15:44]     Sentence 1, Token ' online' at absolute pos 59 (relative 16)
+[2025-08-26 06:15:45]     Sentence 2, Token ' You' at absolute pos 66 (relative 23)
+[2025-08-26 06:15:45]     Sentence 2, Token ' or' at absolute pos 74 (relative 31)
+[2025-08-26 06:15:46]     Sentence 2, Token ' items' at absolute pos 69 (relative 26)
+[2025-08-26 06:15:46] Saved results for Example 1 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_01_results.json
+[2025-08-26 06:15:46] Starting Example 2
+[2025-08-26 06:15:46]   Example 2: Prompt length = 48 tokens
+[2025-08-26 06:15:46]     Sentence 1, Token ' resolving' at absolute pos 61 (relative 13)
+[2025-08-26 06:15:47]     Sentence 1, Token ' focus' at absolute pos 59 (relative 11)
+[2025-08-26 06:15:47]     Sentence 1, Token ' the' at absolute pos 51 (relative 3)
+[2025-08-26 06:15:48]     Sentence 2, Token ' I' at absolute pos 70 (relative 22)
+[2025-08-26 06:15:48]     Sentence 2, Token '.' at absolute pos 85 (relative 37)
+[2025-08-26 06:15:49]     Sentence 2, Token ' global' at absolute pos 74 (relative 26)
+[2025-08-26 06:15:49]     WARNING: Position mismatch at 101. Expected '<|eot_id|>', got '.'
+[2025-08-26 06:15:49]     Sentence 3, Token '<|eot_id|>' at absolute pos 101 (relative 53)
+[2025-08-26 06:15:50]     Sentence 3, Token ' We' at absolute pos 86 (relative 38)
+[2025-08-26 06:15:50]     Sentence 3, Token ' entirely' at absolute pos 100 (relative 52)
+[2025-08-26 06:15:51] Saved results for Example 2 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_02_results.json
+[2025-08-26 06:15:51] Starting Example 3
+[2025-08-26 06:15:51]   Example 3: Prompt length = 43 tokens
+[2025-08-26 06:15:51]     Sentence 1, Token ' multif' at absolute pos 49 (relative 6)
+[2025-08-26 06:15:51]     Sentence 1, Token ' complex' at absolute pos 47 (relative 4)
+[2025-08-26 06:15:52]     Sentence 1, Token ' a' at absolute pos 46 (relative 3)
+[2025-08-26 06:15:52]     Sentence 2, Token ' These' at absolute pos 57 (relative 14)
+[2025-08-26 06:15:53]     Sentence 2, Token ' for' at absolute pos 75 (relative 32)
+[2025-08-26 06:15:53]     Sentence 2, Token ' means' at absolute pos 72 (relative 29)
+[2025-08-26 06:15:54]     Sentence 3, Token ' and' at absolute pos 98 (relative 55)
+[2025-08-26 06:15:54]     Sentence 3, Token '.' at absolute pos 103 (relative 60)
+[2025-08-26 06:15:55]     Sentence 3, Token ' However' at absolute pos 78 (relative 35)
+[2025-08-26 06:15:56]     Sentence 4, Token ' important' at absolute pos 106 (relative 63)
+[2025-08-26 06:15:56]     Sentence 4, Token ' It' at absolute pos 104 (relative 61)
+[2025-08-26 06:15:56]     Sentence 4, Token ' challenge' at absolute pos 108 (relative 65)
+[2025-08-26 06:15:57] Saved results for Example 3 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_03_results.json
+[2025-08-26 06:15:57] Starting Example 4
+[2025-08-26 06:15:57]   Example 4: Prompt length = 48 tokens
+[2025-08-26 06:15:57]     Sentence 1, Token 'It' at absolute pos 48 (relative 0)
+[2025-08-26 06:15:57]     Sentence 1, Token ' when' at absolute pos 54 (relative 6)
+[2025-08-26 06:15:58]     Sentence 1, Token ' much' at absolute pos 58 (relative 10)
+[2025-08-26 06:15:59]     Sentence 2, Token ' You' at absolute pos 60 (relative 12)
+[2025-08-26 06:15:59]     Sentence 2, Token ' see' at absolute pos 73 (relative 25)
+[2025-08-26 06:15:59]     Sentence 2, Token ' could' at absolute pos 61 (relative 13)
+[2025-08-26 06:16:00]     WARNING: Position mismatch at 103. Expected '<|eot_id|>', got '.'
+[2025-08-26 06:16:00]     Sentence 3, Token '<|eot_id|>' at absolute pos 103 (relative 55)
+[2025-08-26 06:16:01]     Sentence 3, Token ' avoid' at absolute pos 99 (relative 51)
+[2025-08-26 06:16:01]     Sentence 3, Token ' It' at absolute pos 88 (relative 40)
+[2025-08-26 06:16:01] Saved results for Example 4 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_04_results.json
+[2025-08-26 06:16:01] Starting Example 5
+[2025-08-26 06:16:02]   Example 5: Prompt length = 48 tokens
+[2025-08-26 06:16:02]     Sentence 1, Token ''d' at absolute pos 49 (relative 1)
+[2025-08-26 06:16:02]     Sentence 1, Token 'I' at absolute pos 48 (relative 0)
+[2025-08-26 06:16:02]     Sentence 1, Token '.' at absolute pos 57 (relative 9)
+[2025-08-26 06:16:03]     Sentence 2, Token ' One' at absolute pos 58 (relative 10)
+[2025-08-26 06:16:04]     Sentence 2, Token ' is' at absolute pos 61 (relative 13)
+[2025-08-26 06:16:04]     Sentence 2, Token ' important' at absolute pos 59 (relative 11)
+[2025-08-26 06:16:05]     Sentence 3, Token ' Another' at absolute pos 86 (relative 38)
+[2025-08-26 06:16:05]     Sentence 3, Token ' on' at absolute pos 113 (relative 65)
+[2025-08-26 06:16:06]     Sentence 3, Token ' the' at absolute pos 89 (relative 41)
+[2025-08-26 06:16:07]     Sentence 4, Token ' by' at absolute pos 138 (relative 90)
+[2025-08-26 06:16:07]     Sentence 4, Token ' Lastly' at absolute pos 117 (relative 69)
+[2025-08-26 06:16:08]     Sentence 4, Token ',' at absolute pos 130 (relative 82)
+[2025-08-26 06:16:08] Saved results for Example 5 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_05_results.json
+[2025-08-26 06:16:08] Starting Example 6
+[2025-08-26 06:16:08]   Example 6: Prompt length = 52 tokens
+[2025-08-26 06:16:08]     Sentence 1, Token 'Hello' at absolute pos 52 (relative 0)
+[2025-08-26 06:16:09]     Sentence 1, Token '!' at absolute pos 53 (relative 1)
+[2025-08-26 06:16:09]     Sentence 2, Token ' don' at absolute pos 55 (relative 3)
+[2025-08-26 06:16:10]     Sentence 2, Token ' any' at absolute pos 58 (relative 6)
+[2025-08-26 06:16:11]     Sentence 2, Token ' or' at absolute pos 61 (relative 9)
+[2025-08-26 06:16:11]     Sentence 3, Token ' provide' at absolute pos 73 (relative 21)
+[2025-08-26 06:16:11]     Sentence 3, Token ' happy' at absolute pos 66 (relative 14)
+[2025-08-26 06:16:12]     Sentence 3, Token ' and' at absolute pos 72 (relative 20)
+[2025-08-26 06:16:12] Saved results for Example 6 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_06_results.json
+[2025-08-26 06:16:12] Starting Example 7
+[2025-08-26 06:16:12]   Example 7: Prompt length = 39 tokens
+[2025-08-26 06:16:12]     Sentence 1, Token ' this' at absolute pos 46 (relative 7)
+[2025-08-26 06:16:13]     Sentence 1, Token ' moments' at absolute pos 44 (relative 5)
+[2025-08-26 06:16:13]     Sentence 1, Token 'It' at absolute pos 39 (relative 0)
+[2025-08-26 06:16:14]     Sentence 2, Token ' Sometimes' at absolute pos 48 (relative 9)
+[2025-08-26 06:16:15]     Sentence 2, Token '.' at absolute pos 68 (relative 29)
+[2025-08-26 06:16:15]     Sentence 2, Token ' let' at absolute pos 57 (relative 18)
+[2025-08-26 06:16:15]     Sentence 3, Token ' listening' at absolute pos 78 (relative 39)
+[2025-08-26 06:16:16]     Sentence 3, Token ' doing' at absolute pos 72 (relative 33)
+[2025-08-26 06:16:17]     Sentence 3, Token ' You' at absolute pos 69 (relative 30)
+[2025-08-26 06:16:18]     Sentence 4, Token ' If' at absolute pos 90 (relative 51)
+[2025-08-26 06:16:19]     Sentence 4, Token ' consider' at absolute pos 96 (relative 57)
+[2025-08-26 06:16:19]     Sentence 4, Token ' reaching' at absolute pos 97 (relative 58)
+[2025-08-26 06:16:20] Saved results for Example 7 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_07_results.json
+[2025-08-26 06:16:20] Starting Example 8
+[2025-08-26 06:16:20]   Example 8: Prompt length = 42 tokens
+[2025-08-26 06:16:20] ERROR in Example 8: [Errno 32] Broken pipe
+[2025-08-26 06:16:20] ============================================================
+[2025-08-26 06:16:20] Analysis Complete!
+[2025-08-26 06:16:20] Results saved in /workspace/diffing-toolkit/systematic_sae_results_benign
+[2025-08-26 06:16:20] Creating comprehensive summary report...
+[2025-08-26 06:16:20] Comprehensive summary report saved to /workspace/diffing-toolkit/systematic_sae_results_benign/SUMMARY_REPORT.txt
+[2025-08-26 06:17:34] ============================================================
+[2025-08-26 06:17:34] BENIGN EXAMPLES - Systematic SAE Feature Analysis
+[2025-08-26 06:17:34] With complete memory-safe database
+[2025-08-26 06:17:34] ============================================================
+[2025-08-26 06:17:34] Loading models and tokenizer...
+[2025-08-26 06:18:04] Models loaded successfully
+[2025-08-26 06:18:04] Loading SAE model...
+[2025-08-26 06:18:08] SAE loaded: k=48, dict_size=12288
+[2025-08-26 06:18:08] Skipping Example 1 (already completed)
+[2025-08-26 06:18:08] Skipping Example 2 (already completed)
+[2025-08-26 06:18:08] Skipping Example 3 (already completed)
+[2025-08-26 06:18:08] Skipping Example 4 (already completed)
+[2025-08-26 06:18:08] Skipping Example 5 (already completed)
+[2025-08-26 06:18:08] Skipping Example 6 (already completed)
+[2025-08-26 06:18:08] Skipping Example 7 (already completed)
+[2025-08-26 06:18:08] Starting Example 8
+[2025-08-26 06:18:08]   Example 8: Prompt length = 42 tokens
+[2025-08-26 06:18:08]     Sentence 1, Token '.' at absolute pos 59 (relative 17)
+[2025-08-26 06:18:09]     Sentence 1, Token 'Let' at absolute pos 42 (relative 0)
+[2025-08-26 06:18:09]     Sentence 1, Token ' inviting' at absolute pos 46 (relative 4)
+[2025-08-26 06:18:10]     Sentence 2, Token ' They' at absolute pos 60 (relative 18)
+[2025-08-26 06:18:10]     Sentence 2, Token ' in' at absolute pos 66 (relative 24)
+[2025-08-26 06:18:11]     Sentence 2, Token '.' at absolute pos 72 (relative 30)
+[2025-08-26 06:18:11]     Sentence 3, Token ' Da' at absolute pos 73 (relative 31)
+[2025-08-26 06:18:12]     Sentence 3, Token ' could' at absolute pos 75 (relative 33)
+[2025-08-26 06:18:12]     Sentence 3, Token '.' at absolute pos 93 (relative 51)
+[2025-08-26 06:18:13]     WARNING: Position mismatch at 104. Expected '<|eot_id|>', got '.'
+[2025-08-26 06:18:13]     Sentence 4, Token '<|eot_id|>' at absolute pos 104 (relative 62)
+[2025-08-26 06:18:13]     Sentence 4, Token ' This' at absolute pos 94 (relative 52)
+[2025-08-26 06:18:14]     Sentence 4, Token ' create' at absolute pos 98 (relative 56)
+[2025-08-26 06:18:14] Saved results for Example 8 to /workspace/diffing-toolkit/systematic_sae_results_benign/example_08_results.json
+[2025-08-26 06:18:14] ============================================================
+[2025-08-26 06:18:14] Analysis Complete!
+[2025-08-26 06:18:14] Results saved in /workspace/diffing-toolkit/systematic_sae_results_benign
+[2025-08-26 06:18:14] Creating comprehensive summary report...
+[2025-08-26 06:18:14] Comprehensive summary report saved to /workspace/diffing-toolkit/systematic_sae_results_benign/SUMMARY_REPORT.txt
